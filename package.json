@@ -1,0 +1,25 @@
+{
+  "name": "ToxicProject",
+  "version": "1.0.0",
+  "description": "Online liquor store. There are five people taking part in the project.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodTHPS/ToxicProject.git"
+  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woodTHPS/ToxicProject/issues"
+  },
+  "homepage": "https://github.com/woodTHPS/ToxicProject#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

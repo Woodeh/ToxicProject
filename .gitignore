@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /node_modules
 /.pnp
 .pnp.js
@@ -20,3 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 
 /node_modules
+=======
+node_modules
+>>>>>>> Stashed changes

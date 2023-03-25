@@ -1,11 +1,9 @@
 .about-us {
-max-width: 1440px;
-margin: 0 auto;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.about-us-pic {
-
-}
+.about-us-pic {}
 
 .about-us-title {
     font-family: 'Yeseva One';
@@ -14,7 +12,7 @@ margin: 0 auto;
     font-size: 56px;
     line-height: 72px;
     text-align: center;
-    
+
 }
 
 .about-us-text {
@@ -30,7 +28,7 @@ margin: 0 auto;
     padding-bottom: 50px;
 }
 
-.about-us-link { 
+.about-us-link {
     display: flex;
     justify-content: center;
     font-family: 'Josefin Sans', sans-serif;

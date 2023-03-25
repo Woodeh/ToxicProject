@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hendrick {
+    width: 312px;
+    height: 312px;
+}
+
+.card-new-products {
+    min-height: 524px;
+    max-width: 312px;
+    width: 100%;
+    position: relative;
+}
+
+.title-new-products {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    margin-bottom: 60px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 72px;
+}
+
+.card-price-new-product {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 16px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.add-btn {
+    max-width: 312px;
+    width: 100%;
+    min-height: 52px;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.cards-new-produts {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.add-btn:hover {
+    background-color: #74D0E3;
+    border: 2px solid #74D0E3;
+}
+
+.sale {
+    position: absolute;
+    left: 22px;
+    top: 22px;
+}
+
+.fa-heart {
+    position: absolute;
+    top: 32px;
+    right: 22px
+}
+
+.fa-heart::before {
+    border: 1px solid #FF3877;
+    border-radius: 50%;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.fa-heart:hover {
+    color: #FF3877;
+}
+
+.card-new-products-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.pink {
+    color: #FF3877;
+}

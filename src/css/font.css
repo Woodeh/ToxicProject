@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: local('Josefin Sans Regular'),
+    url(../font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;    
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: local('Josefin Sans Medium'),
+    url(../font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;    
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: local('Josefin Sans SemiBold'),
+    url(../font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+    font-weight: 600;  
+    font-family: 'Josefin Sans', sans-serif;  
+}
+
+@font-face {
+    font-family: 'Yeseva One';
+    src: local('Yeseva One Regular'),
+    url(../font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;    
+}

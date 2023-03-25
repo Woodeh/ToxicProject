@@ -1,0 +1,44 @@
+.about-us {
+max-width: 1440px;
+margin: 0 auto;
+}
+
+.about-us-pic {
+
+}
+
+.about-us-title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 72px;
+    text-align: center;
+    
+}
+
+.about-us-text {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-us-link { 
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #202020;
+    padding-bottom: 90px;
+}

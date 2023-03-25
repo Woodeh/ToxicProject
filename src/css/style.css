@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -162,3 +168,5 @@ header {
     line-height: 18px;
     border: 2px solid #002D5B;
 }
+
+

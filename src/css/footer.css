@@ -1,0 +1,65 @@
+.footer {
+    background: #74D0E3;
+    width: 1440px;
+    height: 304px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.footer-menu-link {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.footer-menu-link-items {
+    padding-top: 90px;
+}
+
+
+#footer-menu {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.footer-center {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.footer-center-logo {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.footer-contacts-title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.footer-contacts {
+    padding-top: 90px;
+}
+
+.footer-contacts-link {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}

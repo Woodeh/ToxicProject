@@ -156,11 +156,10 @@ input:focus {
     outline: 2px solid rgb(0, 0, 0);
     outline-offset: -2px;
     text-align: center;
-    padding: 17px 109px;
+    padding: 16.5px 109px;
 }
 
 .input-your-phone {
-    border: none;
     border: none;
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
@@ -176,7 +175,7 @@ input:focus {
     font-weight: 500;
     font-size: 18px;
     line-height: 18px;
-    padding: 15.5px 97px;
+    padding: 17.0px 97px;
     border: none;
     outline: 2px solid rgb(0, 0, 0);
     outline-offset: -2px;
@@ -185,4 +184,5 @@ input:focus {
 
 .btn-call:hover{
     background-color: #74D0E3;
+    outline: none;
 }

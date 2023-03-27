@@ -3,7 +3,10 @@
     margin: 0 auto;
 }
 
-.about-us-pic {}
+.about-us-image img {
+    max-width: 100%;
+
+}
 
 .about-us-title {
     font-family: 'Yeseva One';

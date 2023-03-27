@@ -19,4 +19,4 @@ addButtons.forEach(button => {
 
 export function addToCart() {
   console.log('Товар добавлен в корзину');
-};
+}

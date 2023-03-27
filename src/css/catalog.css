@@ -1,19 +1,20 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #F2F2F2;
 }
 
-.wrapper{
+.wrapper {
     margin: 0 auto;
     max-width: 1440px;
     padding-bottom: 90px;
 }
 
-.item-catalog{
+.item-catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,7 +22,7 @@ body{
     padding-bottom: 24px;
 }
 
-.catalog-main-text{
+.catalog-main-text {
     display: flex;
     justify-content: center;
     padding-bottom: 24px;
@@ -32,7 +33,7 @@ body{
     line-height: 72px;
 }
 
-.item-card{
+.item-card {
     gap: 20px;
     outline: 1px solid rgb(0, 0, 0);
     outline-offset: -1px;
@@ -41,21 +42,21 @@ body{
     background-color: transparent;
 }
 
-.item-card:hover  {
+.item-card:hover {
     background-color: #74D0E3;
 }
 
-.card-img:hover{
+.card-img:hover {
     filter: invert(100%);
     color: #F2F2F2;
 }
 
-.item-card:hover *{
+.item-card:hover * {
     color: rgb(0, 0, 0);
     filter: invert(100%);
 }
 
-.item-text{
+.item-text {
     font-family: 'Yeseva One', cursive;
     font-style: normal;
     font-weight: 400;
@@ -68,13 +69,14 @@ body{
     color: black;
 }
 
-.link-se{
+.link-se {
     display: flex;
     justify-content: center;
-    
+
 }
-.link-catalog{
-    padding: 24px; 
+
+.link-catalog {
+    padding: 24px;
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -93,7 +95,7 @@ body{
     align-items: center;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -121,7 +123,7 @@ form{
     text-align: center;
 }
 
-#input-question{
+#input-question {
     padding: 34px 99.5px;
     outline: 2px solid rgb(0, 0, 0);
     outline-offset: -2px;
@@ -138,13 +140,13 @@ form{
     background-color: transparent;
 }
 
-input{
+input {
     max-width: 212px;
     text-align: center;
-    
+
 }
 
-input::placeholder{
+input::placeholder {
     text-align: center;
 }
 
@@ -152,7 +154,7 @@ input:focus {
     outline: none;
 }
 
-#phone{
+#phone {
     outline: 2px solid rgb(0, 0, 0);
     outline-offset: -2px;
     text-align: center;
@@ -169,7 +171,7 @@ input:focus {
     background-color: transparent;
 }
 
-.btn-call{
+.btn-call {
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 500;
@@ -182,7 +184,7 @@ input:focus {
     cursor: pointer;
 }
 
-.btn-call:hover{
+.btn-call:hover {
     background-color: #74D0E3;
     outline: none;
 }

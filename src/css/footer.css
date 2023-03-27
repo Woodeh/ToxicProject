@@ -1,12 +1,13 @@
 .footer {
     background: #74D0E3;
-    width: 1440px;
+    max-width: 1440px;
     height: 304px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     text-align: center;
     margin-top: 90px;
+    
 }
 
 .footer-menu-link {

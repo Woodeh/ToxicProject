@@ -124,10 +124,11 @@ form {
 }
 
 #input-question {
-    padding: 34px 99.5px;
+    padding: 50px;
     outline: 2px solid rgb(0, 0, 0);
     outline-offset: -2px;
     text-align: center;
+    padding: 16.5px 109px;
 }
 
 .input-your-question {
@@ -138,6 +139,9 @@ form {
     font-size: 18px;
     line-height: 18px;
     background-color: transparent;
+    user-select: none;
+    color: #202020;
+
 }
 
 input {
@@ -169,7 +173,10 @@ input:focus {
     font-size: 18px;
     line-height: 18px;
     background-color: transparent;
+    user-select: none;
+    color: #202020;
 }
+
 
 .btn-call {
     font-family: 'Josefin Sans';

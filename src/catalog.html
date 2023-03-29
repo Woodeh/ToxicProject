@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopAlco/catalog</title>
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global-style.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="css/adaptive-media/header-slider.css">
+  <link rel="stylesheet" href="/src/css/catalog-page.css">
+
+</head>
+
+<header>
+  <div class="container">
+    <div class="wrap">
+      <div class="logo"><a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a></div>
+
+      <div class="search">
+        <button class="btn-search"></button>
+        <input type="text" placeholder="">
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="/src/catalog.html" class="link-header-menu">Catalog</a>
+      <a href="#" class="link-header-menu">Delivery</a>
+      <a href="#" class="link-header-menu">About Us</a>
+      <a href="#" class="link-header-menu">Favorites</a>
+      <a href="#" class="link-header-menu">Basket</a>
+    </nav>
+  </div>
+</header>
+
+<body>
+  <!-- Фильтры -->
+  <div class="filters">
+    <label for="type-filter"></label>
+    <select id="type-filter">
+      <!-- <option value="" id="first">Type</option> -->
+      <option value="">All</option>
+      <option value="вино">Wine</option>
+      <option value="виски">Whiskey</option>
+      <option value="ром">Beer</option>
+      <option value="вино">Wine</option>
+      <option value="виски">Whiskey</option>
+      <option value="ром">Beer</option>
+      <option value="вино">Wine</option>
+      <option value="виски">Whiskey</option>
+      <option value="ром">Beer</option>
+    </select>
+
+    <label for="country-filter"></label>
+    <select id="country-filter">
+      <option value="">All</option>
+      <option value="Франция">France</option>
+      <option value="Шотландия">Scotland</option>
+      <option value="Ямайка">Jamaica</option>
+      <option value="Франция">France</option>
+      <option value="Шотландия">Scotland</option>
+      <option value="Ямайка">Jamaica</option>
+      <option value="Франция">France</option>
+      <option value="Шотландия">Scotland</option>
+      <option value="Ямайка">Jamaica</option>
+
+    </select>
+
+    <!-- <label for="price-filter">Цена:</label>
+<input type="number" id="price-filter" placeholder="Цена от"> -->
+
+    <!-- <label for="volume-filter">Объем:</label>
+<input type="number" id="volume-filter" placeholder="Объем от">
+
+<label for="price-filter">Цена:</label>
+<select id="price-filter">
+  <option value="">Все</option>
+  <option value="1">0-40$</option>
+  <option value="2">40-100$</option>
+  <option value="3">100-200$</option>
+  <option value="4">200-500$</option>
+  <option value="5">500-1000$</option>
+</select> -->
+
+    <label for="popularity-filter"></label>
+    <select id="popularity-filter">
+      <option value="">All</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <!-- Карточки товаров -->
+  <div class="products">
+    <div class="product">
+      <img src="">
+
+      <p class="product-type">Тип алкоголя: Вино</p>
+      <p class="product-country">Страна производитель: Франция</p>
+      <p class="product-price">Цена: 1000 руб.</p>
+      <p class="product-volume">Объем: 750 мл.</p>
+      <p class="product-popularity">Популярность: 3/5</p><button></button>
+    </div>
+    <!-- другие карточки товаров -->
+  </div>
+
+  <!-- <div class="navbar">
+    <div class="dropdown-filter">
+
+      <button class="dropbtn">ВСЕ</button>
+
+      <div class="dropdown-content" id="dropdown-filter"> под вопросом (кастомный дроп)
+        <p value="1">Вино</p>
+        <p value="2">Виски</p>
+        <p value="3">Ром</p>
+      </div>
+
+    </div>
+</div> -->
+
+  <section>
+    <div class="Request-call">
+      <p class="Request-call-text-01">
+        Leave us your phone number and we will call you right away
+      </p>
+      <p class="Request-call-text-02">Do you have any questions?</p>
+      <div class="form-Request-call">
+        <form method="get">
+          <div id="input-question">
+            <input class="input-your-question" type="text" placeholder="Your name" />
+          </div>
+          <div id="phone">
+            <input class="input-your-phone" type="tel" name="tel" placeholder="Your phone" />
+          </div>
+          <button class="btn-call" type="submit">Request a call</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <ul class="footer-menu-link-items">
+      <li class="footer-menu-link" id="footer-menu">MENU</li>
+      <li class="footer-menu-link">Catalog</li>
+      <li class="footer-menu-link">On order</li>
+      <li class="footer-menu-link">Delivery</li>
+      <li class="footer-menu-link">About Us</li>
+    </ul>
+
+    <div class="footer-center">
+      <div class="footer-center-logo"><img src="/src/assets/pictures/footer-logo.svg" alt=""></div>
+      <div class="footer-coopyright">@2023 All rights reserved</div>
+      <div class="footer-privacy-policy">Privacy Policy</div>
+    </div>
+
+    <div class="footer-contacts">
+      <ul class="footer-contacts-items">
+        <li class="footer-contacts-title">CONTACTS</li>
+        <li class="footer-contacts-link">email</li>
+        <li class="footer-contacts-link">phone</li>
+        <li class="footer-contacts-link">inst</li>
+        <li class="footer-contacts-link">telegram</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/src/js/catalog-script.js"></script>
+</body>
+
+</html>

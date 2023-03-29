@@ -1,0 +1,129 @@
+@media screen and (max-width: 1024px) {
+    .menu{
+        padding-right: 24px;
+    }
+    .slider {
+        overflow-x: hidden;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    .slider-wrapper {
+        overflow-y: 600px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        max-width: 100px;
+        padding-left: 24px;
+    }
+
+    header {
+        padding-top: 20px;
+    }
+
+    .btn-search {
+        width: 20px;
+        height: 46.73px;
+        background-size: 32px 32px;
+    }
+
+    .search input {
+        height: 46.73px;
+        max-width: 100px;
+    }
+
+    .slider-control-prev,
+    .slider-control-next {
+        display: none;
+    }
+
+    .see-more-button {
+        width: 130px;
+        left: -389px;
+        bottom: 180px;
+    }
+
+    .card-img {
+        width: 140px;
+    }
+
+    .item-text {
+        font-size: 18px;
+    }
+
+    .about-us-title,
+    .title-new-products,
+    .catalog-main-text,
+    .Request-call-text-02 {
+        font-size: 50px;
+    }
+
+    .about-us-text {
+        font-size: 20px;
+        padding: 20px 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 450px;
+        margin-bottom: 30px;
+    }
+
+    .btn-search {
+        background-size: 32px 32px;
+        height: 36px;
+    }
+
+    .search input {
+        background-size: 32px 32px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+    }
+
+    .slider-control-prev,
+    .slider-control-next {}
+
+    .see-more-button {
+        left: -275px;
+        bottom: 150px;
+    }
+
+    .slider-item {}
+
+    .card-img {
+        width: 100px;
+    }
+
+    .item-card {
+        padding: 12px 0px 0px 0px;
+    }
+
+    .about-us-title,
+    .title-new-products,
+    .catalog-main-text,
+    .Request-call-text-02 {
+        font-size: 30px;
+    }
+
+    .about-us-text {
+        font-size: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        padding: 20px 80px;
+    }
+
+    .item-text {
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    .wrapper {
+        padding-bottom: 40px;
+    }
+}

@@ -1,5 +1,12 @@
 @font-face {
     font-family: 'Josefin Sans';
+    src: local('Josefin Sans Light'),
+    url(../font/Josefin_Sans/static/JosefinSans-Light.ttf);
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;    
+}
+@font-face {
+    font-family: 'Josefin Sans';
     src: local('Josefin Sans Regular'),
     url(../font/Josefin_Sans/static/JosefinSans-Regular.ttf);
     font-weight: 400;

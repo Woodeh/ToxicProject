@@ -1,7 +1,22 @@
-header {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1440px;
+    background-color: #DADADA;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+}
+.wrap{
+    display: flex;
+}
+header {
     padding-top: 60px;
     background-color: #DADADA;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -9,19 +24,38 @@ header {
 
 .logo img {
     max-width: 150px;
-    padding-left: 65px;
-
+    padding-left: 63px;
 }
 
+.search{
+    display: flex;
+}
+.btn-search{
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #A8A8A8;
+    background-image: url(/src/assets/pictures/header/Search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px 52px;
+    margin-left: 27px;
+    cursor: pointer;
+    
+}
 .search input {
     background-color: #DADADA;
     border: none;
-    border-radius: 1px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 716px;
+    max-width: 296px;
     height: 52px;
-    border: 2px solid #202020;
-    margin-left: 40px;
+    border-bottom: 2px solid #A8A8A8;
+    text-align: left;
+}
+
+.search input::placeholder{
+    text-align: left;
+    padding-left: 30px;
 }
 
 /* .search button {
@@ -34,12 +68,12 @@ header {
     cursor: pointer;
   } */
 
-.menu {
+/* .menu {
     display: flex;
     padding-left: 160px;
-}
+} */
 
-.menu-button {
+/* .menu-button {
     display: flex;
     color: black;
     align-items: center;
@@ -49,9 +83,9 @@ header {
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
-}
+} */
 
-.menu button,
+/* .menu button,
 .menu .burger {
     border: none;
     background-color: transparent;
@@ -69,8 +103,23 @@ header {
     height: 3px;
     background-color: #333;
     margin: 5px 0;
+} */
+
+.menu{
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: #202020;
+    padding-right: 60px;
+    display: flex;
+    gap: 24px;
 }
 
+.menu a:visited{
+    color: #202020;
+}
 
 @media screen and (max-width: 768px) {
     .menu button {
@@ -135,16 +184,11 @@ header {
 
 .slider-control-prev {
     left: 25px;
-
-
 }
 
 .slider-control-next {
     right: 25px;
-
 }
-
-
 
 .see-more-button {
     width: 312px;
@@ -160,4 +204,5 @@ header {
     font-size: 18px;
     line-height: 18px;
     border: 2px solid #002D5B;
+    cursor: pointer;
 }

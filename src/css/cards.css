@@ -4,6 +4,56 @@
     box-sizing: border-box;
 }
 
+.sliderCard {
+    max-width: 1320px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    width: 312px;
+    margin-right: 20px;
+    height: 524px;
+    user-select: none;
+}
+
+.slide:last-child {
+    margin-right: 0;
+}
+
+.sliderCard2 {
+    max-width: 1320px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider-container2 {
+    display: flex;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide2 {
+    width: 312px;
+    margin-right: 20px;
+    height: 524px;
+    user-select: none;
+}
+
+.slide2:last-child {
+    margin-right: 0;
+}
+
 .hendrick {
     width: 312px;
     height: 312px;

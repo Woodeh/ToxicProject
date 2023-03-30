@@ -37,7 +37,7 @@ header {
     display: flex;
 }
 
-.btn-search {
+.btn-search{
     width: 52px;
     height: 52px;
     background-color: transparent;
@@ -49,7 +49,13 @@ header {
     background-size: 52px 52px;
     margin-left: 27px;
     cursor: pointer;
+    transition: all .5s;
+}
 
+.btn-search:hover{
+    
+    background-image: url(/src/assets/pictures/header/SearchGrey.png);
+    
 }
 
 .search input {
@@ -118,7 +124,7 @@ header {
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 28px;
     line-height: 24px;
     color: #202020;
     padding-right: 60px;
@@ -129,6 +135,41 @@ header {
 .menu a:visited {
     color: #202020;
 }
+
+.menu a {
+    position: relative;
+    }
+.menu a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    margin: 0 0 -11px 0 ;
+    background-color: #A8A8A8;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+}
+.menu a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.menu a:hover{
+    color: #002D5B;
+    transition: all .5s;
+    text-shadow: 0px 0px 2px #002e5b68;
+}
+a:visited{
+    color: #202020;
+}
+
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
     .menu button {

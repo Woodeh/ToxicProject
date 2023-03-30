@@ -41,5 +41,12 @@
     line-height: 24px;
     text-decoration-line: underline;
     color: #202020;
-    padding-bottom: 90px;
+    max-width: 160px;
+    margin: 0 auto;
+}
+
+.about-us-link:hover{
+    color: #002D5B;
+    transition: all 0.5s;
+    text-shadow: 0px 0px 2px #002e5b68;
 }

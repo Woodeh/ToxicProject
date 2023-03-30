@@ -193,3 +193,18 @@ touchEndX2 = event.clientX;
 sliderCard2.style.cursor = 'grab';
 handleGesture2();
 });
+
+// чтобы карточки не перетягивались вместе со слайдером
+const images = document.querySelectorAll('.sliderCard');
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener('dragstart', (event) => {
+    event.preventDefault();
+  });
+};
+
+const images2 = document.querySelectorAll('.sliderCard2');
+for (let i = 0; i < images2.length; i++) {
+  images2[i].addEventListener('dragstart', (event) => {
+    event.preventDefault();
+  });
+}

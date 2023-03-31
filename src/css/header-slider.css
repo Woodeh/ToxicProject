@@ -263,6 +263,32 @@ a:visited{
     font-size: 0;
     width: 52px;
 }
+/* Пагинация */
+.pagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    bottom: 48px;
+    right: 752px;
+    gap: 16px;
+  }
+  
+  .pagination-item {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #202020;
+    margin: 0px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+  
+  .pagination-item.active {
+    background-color: #F2F2F2;
+  }
 
 .see-more-button {
     width: 312px;

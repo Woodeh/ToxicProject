@@ -42,6 +42,10 @@
         display: none;
     }
 
+    .pagination{
+        right: 172px;
+    }
+
     .see-more-button {
         width: 130px;
         left: -389px;
@@ -98,7 +102,9 @@
         bottom: 150px;
     }
 
-    .slider-item {}
+    .pagination{
+        right: 112px;
+    }
 
     .card-img {
         width: 100px;

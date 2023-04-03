@@ -2,7 +2,7 @@ import { addToCart } from "./modules/cards-module/cards.js";
 
 const slider = document.querySelector(".slider");
 const sliderWrapper = slider.querySelector(".slider-wrapper");
-let sliderItems = slider.querySelectorAll(".slider-item");
+const sliderItems = slider.querySelectorAll(".slider-item");
 const sliderControls = slider.querySelectorAll(".slider-control");
 const sliderControlPrev = slider.querySelector(".slider-control-prev");
 const sliderControlNext = slider.querySelector(".slider-control-next");
@@ -16,9 +16,7 @@ let intervalId;
 // функция для обновления состояния пагинации
 function updatePagination(index) {
   paginationItems.forEach((item, i) => {
-    if (index === sliderItems.length && i === 0) {
-      item.classList.add("active");
-    } else if (i === index % paginationItems.length) {
+    if (i === index) {
       item.classList.add("active");
     } else {
       item.classList.remove("active");
@@ -40,33 +38,10 @@ function moveTo(index) {
   updatePagination(currentIndex);
 
   // бесконечная прокрутка вправо
-  if (currentIndex === sliderItems.length - 1) {
-    const clone = sliderItems[0].cloneNode(true);
-    sliderWrapper.appendChild(clone);
-    sliderItems = sliderWrapper.querySelectorAll(".slider-item");
-  } else if (currentIndex === 0) {
-    const clone = sliderItems[sliderItems.length - 1].cloneNode(true);
-    sliderWrapper.prepend(clone);
-    sliderWrapper.style.transform = `translateX(-${
-      slider.offsetWidth
-    }px)`;
-    sliderItems = sliderWrapper.querySelectorAll(".slider-item");
-    currentIndex = 1;
+  if (currentIndex === sliderItems.length) {
     setTimeout(() => {
-      sliderWrapper.style.transition = "transform 0s";
-      sliderWrapper.style.transform = `translateX(0px)`;
-      setTimeout(() => {
-        sliderWrapper.style.transition = "";
-      }, 50);
-    }, 500);
-  }
-  
-  const clonedItem = sliderWrapper.querySelector(".slider-item.clone");
-  if (clonedItem && currentIndex >= sliderItems.length - 1) {
-    clonedItem.remove();
-    sliderItems = sliderWrapper.querySelectorAll(".slider-item");
-    currentIndex = 0;
-    sliderWrapper.style.transform = `translateX(0px)`;
+      moveTo(0);
+    }, 5000);
   }
 }
 

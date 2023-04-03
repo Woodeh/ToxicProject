@@ -18,7 +18,7 @@ addButtons.forEach(button => {
 });
 
 export function addToCart() {
-  alert('Товар добавлен в корзину');
+  console.log('Товар добавлен в корзину');
 }
 
 

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.wrapper>img{
+    max-width: 1440px;
+    width: 100%;
+    height: 363px;
+}
+
+.wrapper>p:first-child{
+    margin-top: 104px;
+    text-align: center;
+    margin-bottom: 104px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 72px;
+    color: #202020;
+}
+
+.wrapper>p:nth-child(4){
+    /* max-width: 1320px; */
+    margin: 90px 0;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 60px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.box{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    padding: 0 94px;
+}
+
+.box img{
+
+}
+.block{
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    padding-right: 24px;
+    /* padding-left: 94px; */
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #202020;
+}
+.box-2{
+    display: flex;
+    gap: 24px;
+}
+
+.inner{
+    padding: 90px 0px;
+}
+
+.text-title{
+    padding-bottom: 36px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #202020;
+
+}
+
+.text-title-2{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+.inner span{
+    font-weight: bold;
+}
+
+.absolut-img{
+    max-width: 1440px;
+    height: 320px;
+    font-size: 0;
+}
+
+.text-title-3{
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0 60px;
+    padding-top: 90px;
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/cards.css">
+  <script src="https://kit.fontawesome.com/d74dd4832f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global-style.css">
+  <link rel="stylesheet" href="/src/css/about.css">
+  <link rel="stylesheet" href="/src/css/header-slider.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="css/adaptive-media/header-slider.css">
+  <title>ShopAlco</title>
+</head>
+
+<body>
+  <!-- хедер, слайдер -->
+  <header>
+    <div class="container">
+      <div class="wrap">
+        <div class="logo"><a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a></div>
+
+        <div class="search">
+          <button class="btn-search"></button>
+          <input type="text" placeholder="">
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="/src/catalog.html" class="link-header-menu">Catalog</a>
+        <a href="/src/pages/card-product.html" class="link-header-menu">CardTest</a>
+        <a href="/src/pages/contact-page.html" class="link-header-menu">Contacts</a>
+        <a href="/src/pages/about-us.html" class="link-header-menu">About Us</a>
+        <a href="#" class="link-header-menu">Favorites</a>
+        <a href="#" class="link-header-menu">Basket</a>
+      </nav>
+    </div>
+
+    <div class="slider">
+      <div class="slider-wrapper">
+        <div class="slider-item">
+          <img src="/src/assets/pictures/Banners.png" alt="">
+          <div class="slider-caption"></div>
+          <button class="see-more-button">See more</button>
+        </div>
+        <div class="slider-item">
+          <img src="/src/assets/pictures/Banners.png" alt="">
+          <div class="slider-caption"></div>
+          <button class="see-more-button">See more</button>
+        </div>
+        <div class="slider-item">
+          <img src="/src/assets/pictures/Banners.png" alt="">
+          <div class="slider-caption"></div>
+          <button class="see-more-button">See more</button>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-control slider-control-prev"><img src="/src/assets/pictures/Arrow-left.svg"></button>
+        <button class="slider-control slider-control-next"><img src="/src/assets/pictures/Arrow-right.svg"></button>
+      </div>
+      <div class="pagination">
+        <button class="pagination-item active" data-index="0"></button>
+        <button class="pagination-item" data-index="1"></button>
+        <button class="pagination-item" data-index="2"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- каталог-->
+  <div class="wrapper">
+    <section>
+      <div class="catalog">
+        <p class="catalog-main-text">Catalog</p>
+        <div class="item-catalog">
+          <div class="item-card">
+            <img class="card-img" src="/src/assets/pictures/catalog/Whiskey.png" alt="Whiskey" />
+            <p class="item-text">Whiskey</p>
+          </div>
+          <div class="item-card">
+            <img class="card-img" src="/src/assets/pictures/catalog/Wine.png" alt="Wine" />
+            <p class="item-text">Wine</p>
+          </div>
+          <div class="item-card">
+            <img class="card-img" src="/src/assets/pictures/catalog/Champagne.png" alt="Champagne" />
+            <p class="item-text">Champagne</p>
+          </div>
+          <div class="item-card">
+            <img class="card-img" src="/src/assets/pictures/catalog/Vodka.png" alt="Vodka" />
+            <p class="item-text">Vodka</p>
+          </div>
+          <div class="item-card">
+            <img class="card-img" src="/src/assets/pictures/catalog/Beer.png" alt="Beer" />
+            <p class="item-text">Beer</p>
+          </div>
+          <div class="item-card">
+            <img class="card-img" src="/src/assets/pictures/catalog/Other.png" alt="Other" />
+            <p class="item-text">Other</p>
+          </div>
+        </div>
+        <div class="link-se">
+          <a class="link-catalog" href="/src/catalog.html">See all</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- о нас -->
+  <div class="about-us">
+    <div class="about-us-title">Experience the Joy of Good Times with Every Sip!</div>
+    <p class="about-us-text">Whether you prefer a smooth whiskey, a crisp wine, or a refreshing beer, we have something
+      for everyone. Our expertly curated selection of alcoholic drinks is sourced from the best brands and distilleries
+      worldwide, ensuring that you always receive the best quality and flavor.</p>
+    <div class="about-us-image"><img src="/src/assets/pictures/about-us-pic.png" alt=""></div>
+    <p class="about-us-text">At our company, we believe that every moment is worth celebrating, and what better way to
+      do so than with a glass of your favorite drink? We are proud to offer a wide variety of high-quality alcoholic
+      beverages that are sure to suit any occasion and taste.</p>
+    <a href="" class="about-us-link">Read about us</a>
+
+
+  </div>
+
+  <!-- новые продукты -->
+  <div class="container-new-products">
+    <p class="title-new-products">New products</p>
+    <div class="cards-new-produts">
+      <div class="sliderCard">
+        <div class="slider-container">
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- звонок -->
+  <section>
+    <div class="Request-call">
+      <p class="Request-call-text-01">
+        Leave us your phone number and we will call you right away
+      </p>
+      <p class="Request-call-text-02">Do you have any questions?</p>
+      <div class="form-Request-call">
+        <form method="get">
+          <div id="input-question">
+            <input class="input-your-question" type="text" placeholder="Your name" />
+          </div>
+          <div id="phone">
+            <input class="input-your-phone" type="tel" name="tel" placeholder="Your phone" />
+          </div>
+          <button class="btn-call" type="submit">Request a call</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- бестселлеры -->
+  <div class="container-new-products">
+    <p class="title-new-products">Bestsellers</p>
+    <div class="cards-new-produts">
+      <div class="sliderCard2">
+        <div class="slider-container2">
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+          <div class="card-new-products slide2">
+            <img src="/src/assets/pictures/catalog/bottle1.jpg" alt="bottle" class="hendrick">
+            <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
+            <i class="fa-regular fa-heart"></i>
+            <div class="card-price-new-product">
+              <span>Hendrick's Orbium</span>
+              <span>$ 44.90</span>
+            </div>
+            <span class="card-new-products-text">Wood, Citrus, Flowers, Herbs, Juniper, Cucumber</span></br>
+            <button type="button" class="add-btn">Add to bag</button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- футер -->
+  <footer>
+    <div class="footer-container">
+      <div class="wrap">
+        <div class="footer-logo">
+          <a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a>
+        </div>
+      </div>
+      <nav class="footer-menu">
+        <a href="https://www.google.com/intl/ru/gmail/about/" class="link-footer-menu">ololo111@gmail.com</a>
+        <a href="#" class="link-footer-menu">+375 29 1234567</a>
+        <a href="https://www.instagram.com/" class="link-footer-menu">Instagram</a>
+        <a href="https://web.telegram.org/k/" class="link-footer-menu">Telegram</a>
+      </nav>
+      <div class="footer-policy">
+        <p>@2023</p>
+        <p>All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js" type="module"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>

@@ -32,9 +32,8 @@ function moveTo(index) {
   } else if (index >= sliderItems.length) {
     index = 0;
   }
-  sliderWrapper.style.transform = `translateX(-${
-    index * slider.offsetWidth
-  }px)`;
+  sliderWrapper.style.transform = `translateX(-${index * slider.offsetWidth
+    }px)`;
   currentIndex = index;
 
   // обновление пагинации
@@ -97,3 +96,13 @@ function stopInterval() {
 }
 
 startInterval();
+
+// Преключение слайдера по нажатию на пагинацию
+paginationItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    stopInterval();
+    moveTo(index);
+    startInterval();
+  });
+});
+

@@ -2,15 +2,15 @@ const addButtons = document.querySelectorAll('.add-btn');
 const favorite = document.querySelectorAll('.fa-heart');
 
 favorite.forEach(like => {
-    like.addEventListener('click', () => {
-        if (like.classList.contains('pink')) {
-          like.classList.remove('pink');
-          console.log('Вы убрали товар из понравившихся');
-        } else {
-          like.classList.add('pink');
-          console.log('Товар добавлен в понравившиеся');
-        }
-      });
+  like.addEventListener('click', () => {
+    if (like.classList.contains('pink')) {
+      like.classList.remove('pink');
+      console.log('Вы убрали товар из понравившихся');
+    } else {
+      like.classList.add('pink');
+      console.log('Товар добавлен в понравившиеся');
+    }
+  });
 });
 
 addButtons.forEach(button => {
@@ -21,6 +21,8 @@ export function addToCart() {
   console.log('Товар добавлен в корзину');
 }
 
+
+//slider for new product------------------------------------------------------------------------------------
 const sliderCard = document.querySelector('.sliderCard');
 const sliderContainer = document.querySelector('.slider-container');
 const slides = document.querySelectorAll('.slide');
@@ -107,7 +109,7 @@ sliderCard.addEventListener('mouseup', (event) => {
   handleGesture();
 });
 
-
+//slider for bestsellers------------------------------------------------------------------------------
 const sliderCard2 = document.querySelector('.sliderCard2');
 const sliderContainer2 = document.querySelector('.slider-container2');
 const slides2 = document.querySelectorAll('.slide2');
@@ -120,8 +122,8 @@ let touchEndX2 = null;
 const slideLimit2 = slideWidth2 * (slides2.length - 4);
 
 while (slideCount2 < 4) {
-sliderContainer2.appendChild(slides2[slideCount2].cloneNode(true));
-slideCount2++;
+  sliderContainer2.appendChild(slides2[slideCount2].cloneNode(true));
+  slideCount2++;
 };
 
 const updatedSlides2 = document.querySelectorAll('.slide2');
@@ -129,69 +131,69 @@ const updatedSlides2 = document.querySelectorAll('.slide2');
 sliderContainer2.style.width = `${slideWidth2 * updatedSlides2.length}px`;
 
 sliderCard2.addEventListener('touchstart', (event) => {
-touchStartX2 = event.touches[0].clientX;
-event.preventDefault();
+  touchStartX2 = event.touches[0].clientX;
+  event.preventDefault();
 });
 
 sliderCard2.addEventListener('touchmove', (event) => {
-event.preventDefault();
+  event.preventDefault();
 });
 
 sliderCard2.addEventListener('touchend', (event) => {
-touchEndX2 = event.changedTouches[0].clientX;
-handleGesture2();
+  touchEndX2 = event.changedTouches[0].clientX;
+  handleGesture2();
 });
 
 function handleGesture2() {
-if (touchStartX2 - touchEndX2 > 50) {
-if (currentPosition2 === -slideLimit2) {
-currentPosition2 = 0;
-} else {
-currentPosition2 -= slideWidth2;
-}
-sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
-sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-}
-if (touchStartX2 - touchEndX2 < -50) {
-if (currentPosition2 === 0) {
-currentPosition2 = -slideLimit2;
-} else {
-currentPosition2 += slideWidth2;
-}
-sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
-sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-}
-touchStartX2 = null;
-touchEndX2 = null;
+  if (touchStartX2 - touchEndX2 > 50) {
+    if (currentPosition2 === -slideLimit2) {
+      currentPosition2 = 0;
+    } else {
+      currentPosition2 -= slideWidth2;
+    }
+    sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
+  }
+  if (touchStartX2 - touchEndX2 < -50) {
+    if (currentPosition2 === 0) {
+      currentPosition2 = -slideLimit2;
+    } else {
+      currentPosition2 += slideWidth2;
+    }
+    sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
+  }
+  touchStartX2 = null;
+  touchEndX2 = null;
 };
 
 sliderCard2.addEventListener('mousedown', (event) => {
-touchStartX2 = event.clientX;
-sliderCard2.style.cursor = 'grabbing';
+  touchStartX2 = event.clientX;
+  sliderCard2.style.cursor = 'grabbing';
 });
 
 sliderCard2.addEventListener('mousemove', (event) => {
-if (touchStartX2 !== null) {
-const touchCurrentX2 = event.clientX;
-const touchDeltaX2 = touchCurrentX2 - touchStartX2;
-const newCurrentPosition2 = currentPosition2 + touchDeltaX2;
-if (newCurrentPosition2 > 0) {
-currentPosition2 = 0;
-} else if (newCurrentPosition2 < -slideLimit2) {
-currentPosition2 = -slideLimit2;
-} else {
-currentPosition2 = newCurrentPosition2;
-}
-sliderContainer2.style.transition = 'none';
-sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-touchStartX2 = touchCurrentX2;
-}
+  if (touchStartX2 !== null) {
+    const touchCurrentX2 = event.clientX;
+    const touchDeltaX2 = touchCurrentX2 - touchStartX2;
+    const newCurrentPosition2 = currentPosition2 + touchDeltaX2;
+    if (newCurrentPosition2 > 0) {
+      currentPosition2 = 0;
+    } else if (newCurrentPosition2 < -slideLimit2) {
+      currentPosition2 = -slideLimit2;
+    } else {
+      currentPosition2 = newCurrentPosition2;
+    }
+    sliderContainer2.style.transition = 'none';
+    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
+    touchStartX2 = touchCurrentX2;
+  }
 });
 
 sliderCard2.addEventListener('mouseup', (event) => {
-touchEndX2 = event.clientX;
-sliderCard2.style.cursor = 'grab';
-handleGesture2();
+  touchEndX2 = event.clientX;
+  sliderCard2.style.cursor = 'grab';
+  handleGesture2();
 });
 
 // чтобы карточки не перетягивались вместе со слайдером
@@ -207,4 +209,167 @@ for (let i = 0; i < images2.length; i++) {
   images2[i].addEventListener('dragstart', (event) => {
     event.preventDefault();
   });
+};
+
+// Корзина сраная
+const body = document.body;
+const cartOverlay = document.createElement("div");
+const cartBtn = document.querySelector(".cart-btn");
+const cartModal = document.querySelector(".cart-modal");
+const closeCartBtn = document.querySelector(".close-cart-btn");
+const clearCartBtn = document.querySelector(".clear-cart-btn");
+const cartTotal = document.querySelector(".cart-total");
+const cartItems = document.querySelector(".cart-items");
+
+
+function disableScroll() {
+  body.classList.add('disable-scroll');
+  cartOverlay.classList.add("cart-overlay");
+  body.appendChild(cartOverlay);
 }
+
+function enableScroll() {
+  body.classList.remove('disable-scroll');
+  cartOverlay.classList.remove("cart-overlay");
+}
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function addToCartBasket(name, price, image) {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  let alreadyInCart = false;
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === name) {
+      cart[i].quantity++;
+      alreadyInCart = true;
+      break;
+    }
+  }
+  if (!alreadyInCart) {
+    cart.push({
+      name: name,
+      price: price,
+      quantity: 1,
+      image: image
+    });
+  }
+  showCart();
+}
+
+function removeFromCart(name) {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === name) {
+      cart[i].quantity--;
+      if (cart[i].quantity === 0) {
+        cart.splice(i, 1);
+      }
+      break;
+    }
+  }
+  showCart();
+}
+
+function clearCart() {
+  cart = [];
+  showCart();
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+
+function showCart() {
+  cartItems.innerHTML = "";
+  let totalPrice = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let item = cart[i];
+    let cartItemImage = document.createElement("img");
+    cartItemImage.src = item.image;
+    let itemPrice = item.price * item.quantity;
+    let cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML =
+      `<img src="${item.image}" alt="" class="hendrick">
+        <div class="items-in-busket"> 
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+        <div class="cart-item-price">${itemPrice} $</div> 
+        </div>
+        <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
+    cartItems.appendChild(cartItem);
+    // cartItem.appendChild(cartItemImage);
+    totalPrice += itemPrice;
+  }
+  cartTotal.textContent = totalPrice + " $";
+
+  let quantityInputs = document.querySelectorAll(".cart-item-quantity input[type='number']");
+quantityInputs.forEach((input) => {
+  input.addEventListener("change", () => {
+    let name = input.dataset.name;
+    let price = parseFloat(input.dataset.price);
+    let quantity = parseInt(input.value);
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].name === name) {
+        cart[i].quantity = quantity;
+        break;
+      }
+    }
+    showCart();
+  });
+});
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+cartBtn.addEventListener("click", () => {
+  cartModal.style.display = "block";
+  showCart();
+  disableScroll();
+});
+
+closeCartBtn.addEventListener("click", () => {
+  cartModal.style.display = "none";
+  enableScroll();
+});
+
+clearCartBtn.addEventListener("click", () => {
+  clearCart();
+});
+
+cartItems.addEventListener("click", (event) => {
+  if (event.target.classList.contains("cart-item-remove")) {
+    let name = event.target.dataset.name;
+    removeFromCart(name);
+  }
+});
+
+let addToCartBtns = document.querySelectorAll(".add-to-cart");
+addToCartBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let name = btn.dataset.name;
+    let price = btn.dataset.price;
+    let image = btn.dataset.image;
+    addToCartBasket(name, price, image);
+  });
+});
+
+// // модалка, открывающая оригинал картинки
+// function showFullImageModal(imageUrl) {
+//     const modal = document.createElement('div');
+//     modal.classList.add('modal');
+
+//     const modalContent = document.createElement('div');
+//     modalContent.classList.add('modal-content');
+
+//     const img = document.createElement('img');
+//     img.src = imageUrl;
+//     modalContent.appendChild(img);
+
+//     modal.appendChild(modalContent);
+//     document.body.appendChild(modal);
+
+//     // закрыть модалку на кнопку Закрыть
+//     modal.addEventListener('click', () => {
+//         modal.remove();
+//     });
+// }
+
+//----------------------------------------------------------------------------------------------------------------------

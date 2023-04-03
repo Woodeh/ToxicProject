@@ -109,92 +109,92 @@ sliderCard.addEventListener('mouseup', (event) => {
   handleGesture();
 });
 
-//slider for bestsellers------------------------------------------------------------------------------
-// const sliderCard2 = document.querySelector('.sliderCard2');
-// const sliderContainer2 = document.querySelector('.slider-container2');
-// const slides2 = document.querySelectorAll('.slide2');
-// const slideWidth2 = slides2[0].offsetWidth + parseInt(getComputedStyle(slides2[0]).marginRight);
+// slider for bestsellers------------------------------------------------------------------------------
+const sliderCard2 = document.querySelector('.sliderCard2');
+const sliderContainer2 = document.querySelector('.slider-container2');
+const slides2 = document.querySelectorAll('.slide2');
+const slideWidth2 = slides2[0].offsetWidth + parseInt(getComputedStyle(slides2[0]).marginRight);
 
-// let currentPosition2 = 0;
-// let slideCount2 = 0;
-// let touchStartX2 = null;
-// let touchEndX2 = null;
-// const slideLimit2 = slideWidth2 * (slides2.length - 4);
+let currentPosition2 = 0;
+let slideCount2 = 0;
+let touchStartX2 = null;
+let touchEndX2 = null;
+const slideLimit2 = slideWidth2 * (slides2.length - 4);
 
-// while (slideCount2 < 4) {
-//   sliderContainer2.appendChild(slides2[slideCount2].cloneNode(true));
-//   slideCount2++;
-// };
+while (slideCount2 < 4) {
+  sliderContainer2.appendChild(slides2[slideCount2].cloneNode(true));
+  slideCount2++;
+};
 
-// const updatedSlides2 = document.querySelectorAll('.slide2');
+const updatedSlides2 = document.querySelectorAll('.slide2');
 
-// sliderContainer2.style.width = `${slideWidth2 * updatedSlides2.length}px`;
+sliderContainer2.style.width = `${slideWidth2 * updatedSlides2.length}px`;
 
-// sliderCard2.addEventListener('touchstart', (event) => {
-//   touchStartX2 = event.touches[0].clientX;
-//   event.preventDefault();
-// });
+sliderCard2.addEventListener('touchstart', (event) => {
+  touchStartX2 = event.touches[0].clientX;
+  event.preventDefault();
+});
 
-// sliderCard2.addEventListener('touchmove', (event) => {
-//   event.preventDefault();
-// });
+sliderCard2.addEventListener('touchmove', (event) => {
+  event.preventDefault();
+});
 
-// sliderCard2.addEventListener('touchend', (event) => {
-//   touchEndX2 = event.changedTouches[0].clientX;
-//   handleGesture2();
-// });
+sliderCard2.addEventListener('touchend', (event) => {
+  touchEndX2 = event.changedTouches[0].clientX;
+  handleGesture2();
+});
 
-// function handleGesture2() {
-//   if (touchStartX2 - touchEndX2 > 50) {
-//     if (currentPosition2 === -slideLimit2) {
-//       currentPosition2 = 0;
-//     } else {
-//       currentPosition2 -= slideWidth2;
-//     }
-//     sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
-//     sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-//   }
-//   if (touchStartX2 - touchEndX2 < -50) {
-//     if (currentPosition2 === 0) {
-//       currentPosition2 = -slideLimit2;
-//     } else {
-//       currentPosition2 += slideWidth2;
-//     }
-//     sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
-//     sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-//   }
-//   touchStartX2 = null;
-//   touchEndX2 = null;
-// };
+function handleGesture2() {
+  if (touchStartX2 - touchEndX2 > 50) {
+    if (currentPosition2 === -slideLimit2) {
+      currentPosition2 = 0;
+    } else {
+      currentPosition2 -= slideWidth2;
+    }
+    sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
+  }
+  if (touchStartX2 - touchEndX2 < -50) {
+    if (currentPosition2 === 0) {
+      currentPosition2 = -slideLimit2;
+    } else {
+      currentPosition2 += slideWidth2;
+    }
+    sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
+  }
+  touchStartX2 = null;
+  touchEndX2 = null;
+};
 
-// sliderCard2.addEventListener('mousedown', (event) => {
-//   touchStartX2 = event.clientX;
-//   sliderCard2.style.cursor = 'grabbing';
-// });
+sliderCard2.addEventListener('mousedown', (event) => {
+  touchStartX2 = event.clientX;
+  sliderCard2.style.cursor = 'grabbing';
+});
 
-// sliderCard2.addEventListener('mousemove', (event) => {
-//   if (touchStartX2 !== null) {
-//     const touchCurrentX2 = event.clientX;
-//     const touchDeltaX2 = touchCurrentX2 - touchStartX2;
-//     const newCurrentPosition2 = currentPosition2 + touchDeltaX2;
-//     if (newCurrentPosition2 > 0) {
-//       currentPosition2 = 0;
-//     } else if (newCurrentPosition2 < -slideLimit2) {
-//       currentPosition2 = -slideLimit2;
-//     } else {
-//       currentPosition2 = newCurrentPosition2;
-//     }
-//     sliderContainer2.style.transition = 'none';
-//     sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-//     touchStartX2 = touchCurrentX2;
-//   }
-// });
+sliderCard2.addEventListener('mousemove', (event) => {
+  if (touchStartX2 !== null) {
+    const touchCurrentX2 = event.clientX;
+    const touchDeltaX2 = touchCurrentX2 - touchStartX2;
+    const newCurrentPosition2 = currentPosition2 + touchDeltaX2;
+    if (newCurrentPosition2 > 0) {
+      currentPosition2 = 0;
+    } else if (newCurrentPosition2 < -slideLimit2) {
+      currentPosition2 = -slideLimit2;
+    } else {
+      currentPosition2 = newCurrentPosition2;
+    }
+    sliderContainer2.style.transition = 'none';
+    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
+    touchStartX2 = touchCurrentX2;
+  }
+});
 
-// sliderCard2.addEventListener('mouseup', (event) => {
-//   touchEndX2 = event.clientX;
-//   sliderCard2.style.cursor = 'grab';
-//   handleGesture2();
-// });
+sliderCard2.addEventListener('mouseup', (event) => {
+  touchEndX2 = event.clientX;
+  sliderCard2.style.cursor = 'grab';
+  handleGesture2();
+});
 
 // чтобы карточки не перетягивались вместе со слайдером
 const images = document.querySelectorAll('.sliderCard');

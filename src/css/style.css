@@ -8,18 +8,35 @@ body {
     overflow-x: hidden;
 }
 
+
+
 /*пока стили к корзине поместил в главный файл стилей----------------------------------------------*/
+
+
+.disable-scroll {
+    position: relative;
+    overflow: hidden;
+}
 
 .cart-modal {
     display: none;
+    position: fixed;
+    width: 720px;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.cart-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    z-index: 9998;
 }
+
 
 .cart-header {
     display: flex;
@@ -43,7 +60,7 @@ body {
     height: 81vh;
     overflow: auto;
     background-color: white;
-    
+    position: relative;
 }
 
 .cart-footer {
@@ -51,26 +68,35 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: rgba(227, 227, 227, 1);
 }
 
 .clear-cart-btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    max-width: 312px;
+    width: 100%;
+    min-height: 52px;
+    background-color: transparent;
+    border: 2px solid black;
     cursor: pointer;
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    box-shadow: inset 0 0 0 0 #74D0E3;
+    transition: box-shadow .2s;
 }
 
 .clear-cart-btn:hover {
-    background-color: #555;
+    box-shadow: inset 0 -300px 0 0 #74D0E3;
+    transition: box-shadow .5s ease-in-out 0s;
+    border: 2px solid #74D0E3;
 }
 
 .cart-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     margin-bottom: 10px;
 }
 
@@ -89,10 +115,12 @@ body {
 
 .cart-item-remove {
     font-size: 40px;
-    color: #f00;
+    color: rgba(32, 32, 32, 1);
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 20px;
 }
 
 .all-product-card {
@@ -101,10 +129,12 @@ body {
 }
 
 
-/* .items-in-busket {
+.items-in-busket {
     display: flex;
     flex-direction: column;
-} */
+    gap: 24px;
+}
+
 
 
 /*-------------------------------------------------------------------------------------------------------------*/

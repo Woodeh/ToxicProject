@@ -20,7 +20,7 @@
 
 .slide {
     width: 312px;
-    margin-right: 20px;
+    margin-right: 40px;
     height: 524px;
     user-select: none;
 }
@@ -45,7 +45,7 @@
 
 .slide2 {
     width: 312px;
-    margin-right: 20px;
+    margin-right: 40px;
     height: 524px;
     user-select: none;
 }
@@ -60,10 +60,11 @@
 }
 
 .card-new-products {
-    min-height: 524px;
+    max-height: 472px;
     max-width: 312px;
     width: 100%;
     position: relative;
+    box-shadow: 0 0px 10px 1px rgba(221, 221, 221, 1);
 }
 
 .title-new-products {
@@ -72,6 +73,7 @@
     align-items: center; */
     text-align: center;
     margin-bottom: 60px;
+    font-family: 'Yeseva One', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 56px;
@@ -80,12 +82,23 @@
 
 .card-price-new-product {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
     margin: 16px 0 16px 0;
+    font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
+}
+
+.card-price-new-product-title{
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .add-btn {
@@ -95,12 +108,12 @@
     background-color: transparent;
     border: 2px solid black;
     cursor: pointer;
-    margin-top: 16px;
+    /* margin-top: 16px; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 18px;
-    box-shadow: inset 0 0 0 0 #74D0E3;
+    box-shadow: inset 0 0 0 0 #002D5B;
     transition: box-shadow .2s;
 }
 
@@ -112,9 +125,10 @@
 }
 
 .add-btn:hover {
-    box-shadow: inset 0 -300px 0 0 #74D0E3;
-    transition: box-shadow .5s ease-in-out 0s;
-    border: 2px solid #74D0E3;
+    color: white;
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: box-shadow .5s ease-in-out 0s, color .7s;
+    border: 2px solid #002D5B;
 }
 
 .sale {
@@ -123,7 +137,7 @@
     top: 22px;
 }
 
-.fa-heart {
+/* .fa-heart {
     position: absolute;
     top: 32px;
     right: 22px
@@ -138,7 +152,7 @@
 
 .fa-heart:hover {
     color: #FF3877;
-}
+} */
 
 .card-new-products-text {
     font-style: normal;

@@ -121,7 +121,7 @@ header {
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 24px;
     color: #202020;
     padding-right: 60px;
@@ -151,7 +151,9 @@ a:hover {
 
 .menu a {
     position: relative;
+    color: #202020;
     }
+    
 .menu a:before {
     content: "";
     position: absolute;

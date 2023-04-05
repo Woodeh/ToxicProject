@@ -183,13 +183,16 @@ a:visited{
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     /* gap: 20px; */
     min-height: 524px;
-    /* max-width: 312px; */
+    max-width: 1320px;
     width: 100%;
     position: relative;
+    margin: 0 auto;
+    align-items: flex-start;
+    text-align: center;
 }
 
 .product {
@@ -198,7 +201,8 @@ a:visited{
 }
 
 .product img {
-    width: 100%;
+    width: 280px;
+    height: 280px;
 }
 
 .product-title {

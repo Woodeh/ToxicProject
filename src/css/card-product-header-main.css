@@ -370,9 +370,13 @@ select>option {
     font-weight: 500;
     text-align: center;
     border: 2px #202020 solid;
+    cursor: pointer;
 }
 
 .product-description-buy-btn:hover{
-    background-color: #74D0E3;
+    color: white;
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: box-shadow .5s ease-in-out 0s, color .7s;
+    border: 2px solid #002D5B;
 }
 

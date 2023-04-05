@@ -211,6 +211,6 @@ input:focus {
     color: white;
     box-shadow: inset 0 -300px 0 0 #002D5B;
     transition: box-shadow .5s ease-in-out 0s, color .7s;
-    border: 2px solid #002D5B;
+    border: 0px solid #002D5B;
 
 }

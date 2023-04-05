@@ -1,24 +1,20 @@
-
-
-
-
 .contacts {
     display: flex;
     max-width: 1440px;
     margin: 0 auto;
     justify-content: center;
-    
+
 }
 
 .contacts-title {
     text-align: center;
     margin-bottom: 90px;
     font-family: 'Yeseva One';
-font-style: normal;
-font-weight: 400;
-font-size: 56px;
-line-height: 72px;
-margin-top: 90px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 72px;
+    margin-top: 90px;
 }
 
 .contacts-group {
@@ -32,20 +28,20 @@ margin-top: 90px;
 
 .group-title {
     font-family: 'Yeseva One';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 42px;
-margin-bottom: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 24px;
 }
 
 .group-text {
     font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 24px;
-margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 12px;
 }
 
 #group-link {
@@ -56,9 +52,9 @@ margin-bottom: 12px;
 #map {
     display: flex;
     margin: 0 auto;
-	width: 100%;
-	height: 330px;
+    width: 100%;
+    height: 330px;
     background: rgb(56, 56, 55);
-    padding-top: 2px; 
+    padding-top: 2px;
     padding-bottom: 2px;
 }

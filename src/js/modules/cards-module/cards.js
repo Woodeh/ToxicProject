@@ -1,32 +1,32 @@
-const addButtons = document.querySelectorAll('.add-btn');
-const favorite = document.querySelectorAll('.fa-heart');
+const addButtons = document.querySelectorAll(".add-btn");
+const favorite = document.querySelectorAll(".fa-heart");
 
-favorite.forEach(like => {
-  like.addEventListener('click', () => {
-    if (like.classList.contains('pink')) {
-      like.classList.remove('pink');
-      console.log('Вы убрали товар из понравившихся');
+favorite.forEach((like) => {
+  like.addEventListener("click", () => {
+    if (like.classList.contains("pink")) {
+      like.classList.remove("pink");
+      console.log("Вы убрали товар из понравившихся");
     } else {
-      like.classList.add('pink');
-      console.log('Товар добавлен в понравившиеся');
+      like.classList.add("pink");
+      console.log("Товар добавлен в понравившиеся");
     }
   });
 });
 
-addButtons.forEach(button => {
-  button.addEventListener('click', addToCart);
+addButtons.forEach((button) => {
+  button.addEventListener("click", addToCart);
 });
 
 export function addToCart() {
-  console.log('Товар добавлен в корзину');
+  console.log("Товар добавлен в корзину");
 }
 
-
 //slider for new product------------------------------------------------------------------------------------
-const sliderCard = document.querySelector('.sliderCard');
-const sliderContainer = document.querySelector('.slider-container');
-const slides = document.querySelectorAll('.slide');
-const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+const sliderCard = document.querySelector(".sliderCard");
+const sliderContainer = document.querySelector(".slider-container");
+const slides = document.querySelectorAll(".slide");
+const slideWidth =
+  slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
 
 let currentPosition = 0;
 let slideCount = 0;
@@ -37,22 +37,22 @@ const slideLimit = slideWidth * (slides.length - 4);
 while (slideCount < 4) {
   sliderContainer.appendChild(slides[slideCount].cloneNode(true));
   slideCount++;
-};
+}
 
-const updatedSlides = document.querySelectorAll('.slide');
+const updatedSlides = document.querySelectorAll(".slide");
 
 sliderContainer.style.width = `${slideWidth * updatedSlides.length}px`;
 
-sliderCard.addEventListener('touchstart', (event) => {
+sliderCard.addEventListener("touchstart", (event) => {
   touchStartX = event.touches[0].clientX;
   event.preventDefault();
 });
 
-sliderCard.addEventListener('touchmove', (event) => {
+sliderCard.addEventListener("touchmove", (event) => {
   event.preventDefault();
 });
 
-sliderCard.addEventListener('touchend', (event) => {
+sliderCard.addEventListener("touchend", (event) => {
   touchEndX = event.changedTouches[0].clientX;
   handleGesture();
 });
@@ -64,7 +64,7 @@ function handleGesture() {
     } else {
       currentPosition -= slideWidth;
     }
-    sliderContainer.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer.style.transition = "transform 0.3s ease-in-out";
     sliderContainer.style.transform = `translateX(${currentPosition}px)`;
   }
   if (touchStartX - touchEndX < -50) {
@@ -73,19 +73,19 @@ function handleGesture() {
     } else {
       currentPosition += slideWidth;
     }
-    sliderContainer.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer.style.transition = "transform 0.3s ease-in-out";
     sliderContainer.style.transform = `translateX(${currentPosition}px)`;
   }
   touchStartX = null;
   touchEndX = null;
-};
+}
 
-sliderCard.addEventListener('mousedown', (event) => {
+sliderCard.addEventListener("mousedown", (event) => {
   touchStartX = event.clientX;
-  sliderCard.style.cursor = 'grabbing';
+  sliderCard.style.cursor = "grabbing";
 });
 
-sliderCard.addEventListener('mousemove', (event) => {
+sliderCard.addEventListener("mousemove", (event) => {
   if (touchStartX !== null) {
     const touchCurrentX = event.clientX;
     const touchDeltaX = touchCurrentX - touchStartX;
@@ -97,23 +97,24 @@ sliderCard.addEventListener('mousemove', (event) => {
     } else {
       currentPosition = newCurrentPosition;
     }
-    sliderContainer.style.transition = 'none';
+    sliderContainer.style.transition = "none";
     sliderContainer.style.transform = `translateX(${currentPosition}px)`;
     touchStartX = touchCurrentX;
   }
 });
 
-sliderCard.addEventListener('mouseup', (event) => {
+sliderCard.addEventListener("mouseup", (event) => {
   touchEndX = event.clientX;
-  sliderCard.style.cursor = 'grab';
+  sliderCard.style.cursor = "grab";
   handleGesture();
 });
 
 // slider for bestsellers------------------------------------------------------------------------------
-const sliderCard2 = document.querySelector('.sliderCard2');
-const sliderContainer2 = document.querySelector('.slider-container2');
-const slides2 = document.querySelectorAll('.slide2');
-const slideWidth2 = slides2[0].offsetWidth + parseInt(getComputedStyle(slides2[0]).marginRight);
+const sliderCard2 = document.querySelector(".sliderCard2");
+const sliderContainer2 = document.querySelector(".slider-container2");
+const slides2 = document.querySelectorAll(".slide2");
+const slideWidth2 =
+  slides2[0].offsetWidth + parseInt(getComputedStyle(slides2[0]).marginRight);
 
 let currentPosition2 = 0;
 let slideCount2 = 0;
@@ -124,22 +125,22 @@ const slideLimit2 = slideWidth2 * (slides2.length - 4);
 while (slideCount2 < 4) {
   sliderContainer2.appendChild(slides2[slideCount2].cloneNode(true));
   slideCount2++;
-};
+}
 
-const updatedSlides2 = document.querySelectorAll('.slide2');
+const updatedSlides2 = document.querySelectorAll(".slide2");
 
 sliderContainer2.style.width = `${slideWidth2 * updatedSlides2.length}px`;
 
-sliderCard2.addEventListener('touchstart', (event) => {
+sliderCard2.addEventListener("touchstart", (event) => {
   touchStartX2 = event.touches[0].clientX;
   event.preventDefault();
 });
 
-sliderCard2.addEventListener('touchmove', (event) => {
+sliderCard2.addEventListener("touchmove", (event) => {
   event.preventDefault();
 });
 
-sliderCard2.addEventListener('touchend', (event) => {
+sliderCard2.addEventListener("touchend", (event) => {
   touchEndX2 = event.changedTouches[0].clientX;
   handleGesture2();
 });
@@ -151,7 +152,7 @@ function handleGesture2() {
     } else {
       currentPosition2 -= slideWidth2;
     }
-    sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer2.style.transition = "transform 0.3s ease-in-out";
     sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
   }
   if (touchStartX2 - touchEndX2 < -50) {
@@ -160,19 +161,19 @@ function handleGesture2() {
     } else {
       currentPosition2 += slideWidth2;
     }
-    sliderContainer2.style.transition = 'transform 0.3s ease-in-out';
+    sliderContainer2.style.transition = "transform 0.3s ease-in-out";
     sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
   }
   touchStartX2 = null;
   touchEndX2 = null;
-};
+}
 
-sliderCard2.addEventListener('mousedown', (event) => {
+sliderCard2.addEventListener("mousedown", (event) => {
   touchStartX2 = event.clientX;
-  sliderCard2.style.cursor = 'grabbing';
+  sliderCard2.style.cursor = "grabbing";
 });
 
-sliderCard2.addEventListener('mousemove', (event) => {
+sliderCard2.addEventListener("mousemove", (event) => {
   if (touchStartX2 !== null) {
     const touchCurrentX2 = event.clientX;
     const touchDeltaX2 = touchCurrentX2 - touchStartX2;
@@ -184,32 +185,32 @@ sliderCard2.addEventListener('mousemove', (event) => {
     } else {
       currentPosition2 = newCurrentPosition2;
     }
-    sliderContainer2.style.transition = 'none';
+    sliderContainer2.style.transition = "none";
     sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
     touchStartX2 = touchCurrentX2;
   }
 });
 
-sliderCard2.addEventListener('mouseup', (event) => {
+sliderCard2.addEventListener("mouseup", (event) => {
   touchEndX2 = event.clientX;
-  sliderCard2.style.cursor = 'grab';
+  sliderCard2.style.cursor = "grab";
   handleGesture2();
 });
 
 // чтобы карточки не перетягивались вместе со слайдером
-const images = document.querySelectorAll('.sliderCard');
+const images = document.querySelectorAll(".sliderCard");
 for (let i = 0; i < images.length; i++) {
-  images[i].addEventListener('dragstart', (event) => {
+  images[i].addEventListener("dragstart", (event) => {
     event.preventDefault();
   });
-};
+}
 
-const images2 = document.querySelectorAll('.sliderCard2');
+const images2 = document.querySelectorAll(".sliderCard2");
 for (let i = 0; i < images2.length; i++) {
-  images2[i].addEventListener('dragstart', (event) => {
+  images2[i].addEventListener("dragstart", (event) => {
     event.preventDefault();
   });
-};
+}
 
 // Корзина сраная
 const body = document.body;
@@ -221,22 +222,21 @@ const clearCartBtn = document.querySelector(".clear-cart-btn");
 const cartTotal = document.querySelector(".cart-total");
 const cartItems = document.querySelector(".cart-items");
 
-
 function disableScroll() {
-  body.classList.add('disable-scroll');
+  body.classList.add("disable-scroll");
   cartOverlay.classList.add("cart-overlay");
   body.appendChild(cartOverlay);
 }
 
 function enableScroll() {
-  body.classList.remove('disable-scroll');
+  body.classList.remove("disable-scroll");
   cartOverlay.classList.remove("cart-overlay");
 }
 
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCartBasket(name, price, image) {
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
   let alreadyInCart = false;
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].name === name) {
@@ -250,14 +250,14 @@ function addToCartBasket(name, price, image) {
       name: name,
       price: price,
       quantity: 1,
-      image: image
+      image: image,
     });
   }
   showCart();
 }
 
 function removeFromCart(name) {
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].name === name) {
       cart[i].quantity--;
@@ -273,9 +273,8 @@ function removeFromCart(name) {
 function clearCart() {
   cart = [];
   showCart();
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
-
 
 function showCart() {
   cartItems.innerHTML = "";
@@ -287,8 +286,7 @@ function showCart() {
     let itemPrice = item.price * item.quantity;
     let cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
-    cartItem.innerHTML =
-      `<img src="${item.image}" alt="" class="hendrick">
+    cartItem.innerHTML = `<img src="${item.image}" alt="" class="hendrick">
         <div class="items-in-busket"> 
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
@@ -301,22 +299,24 @@ function showCart() {
   }
   cartTotal.textContent = totalPrice + " $";
 
-  let quantityInputs = document.querySelectorAll(".cart-item-quantity input[type='number']");
-quantityInputs.forEach((input) => {
-  input.addEventListener("change", () => {
-    let name = input.dataset.name;
-    let price = parseFloat(input.dataset.price);
-    let quantity = parseInt(input.value);
-    for (let i = 0; i < cart.length; i++) {
-      if (cart[i].name === name) {
-        cart[i].quantity = quantity;
-        break;
+  let quantityInputs = document.querySelectorAll(
+    ".cart-item-quantity input[type='number']"
+  );
+  quantityInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      let name = input.dataset.name;
+      let price = parseFloat(input.dataset.price);
+      let quantity = parseInt(input.value);
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === name) {
+          cart[i].quantity = quantity;
+          break;
+        }
       }
-    }
-    showCart();
+      showCart();
+    });
   });
-});
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 cartBtn.addEventListener("click", () => {

@@ -217,7 +217,7 @@ displayProducts(products);
 const params = new URLSearchParams(window.location.search);
 
 // Получаем значение параметра 'type' из текущего URL-адреса страницы
-const category = params.get('type');
+const category = params.get("type");
 
 // Если значение параметра 'type' есть в URL-адресе, то:
 if (category) {

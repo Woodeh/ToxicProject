@@ -109,7 +109,7 @@ function displayProducts(products) {
 
     const productPrice = document.createElement("p");
     productPrice.classList.add("product-price");
-    productPrice.textContent = `$${product.price}`;
+    productPrice.textContent = `$ ${product.price}.00`;
 
     const productType = document.createElement("p");
     productType.classList.add("product-type");

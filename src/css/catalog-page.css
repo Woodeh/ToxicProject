@@ -197,7 +197,8 @@ a:visited{
 
 .product {
     width: 300px;
-    padding: 10px;
+    box-shadow: 0 0px 10px 1px rgba(221, 221, 221, 1);
+    margin-bottom: 90px;
 }
 
 .product img {
@@ -208,12 +209,11 @@ a:visited{
 .product-title {
     margin-top: 10px;
     font-size: 18px;
-    font-weight: bold;
-    font-family: 'Yeseva One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
 }
 
 .product-composition {
@@ -246,7 +246,7 @@ a:visited{
     width: 100%;
     min-height: 52px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 1px solid black;
     cursor: pointer;
     margin-top: 16px;
     font-style: normal;

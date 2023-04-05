@@ -5,7 +5,7 @@
 }
 
 .sliderCard {
-    max-width: 1320px;
+    max-width: 1370px;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
@@ -143,30 +143,9 @@
     top: 22px;
 }
 
-/* .fa-heart {
-    position: absolute;
-    top: 32px;
-    right: 22px
-}
-
-.fa-heart::before {
-    border: 1px solid #FF3877;
-    border-radius: 50%;
-    padding: 9px;
-    cursor: pointer;
-}
-
-.fa-heart:hover {
-    color: #FF3877;
-} */
-
 .card-new-products-text {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
-}
-
-.pink {
-    color: #FF3877;
 }

@@ -124,7 +124,7 @@ header {
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 24px;
     color: #202020;
     padding-right: 60px;
@@ -138,6 +138,7 @@ header {
 
 .menu a {
     position: relative;
+    color: #202020;
     }
 .menu a:before {
     content: "";
@@ -256,6 +257,14 @@ a:visited{
     color: #202020;
     user-select: none;
 
+}
+
+.buy-button:hover {
+    color: white;
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: .5s ease-in-out 0s, color .7s;
+    border: 2px solid #002D5B;
+    outline: none;
 }
 
 .filters {
@@ -536,6 +545,9 @@ input:focus {
 }
 
 .btn-call:hover {
-    background-color: #74D0E3;
+    color: white;
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: box-shadow .5s ease-in-out 0s, color .7s;
+    border: 2px solid #002D5B;
     outline: none;
 }

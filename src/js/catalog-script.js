@@ -6,7 +6,7 @@ const products = [
     volume: 750,
     popularity: 3,
     imgUrl: "/src/assets/pictures/catalog/sheridan.png",
-    title: "Sheridan Liqueur",
+    title: "Sheridan",
     composition:
       "",
   },
@@ -72,7 +72,7 @@ const products = [
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/bottle1.png",
-    title: "Hendrick's",
+    title: "Hendrick's Orbium",
     composition:
       "",
   },
@@ -113,8 +113,7 @@ function displayProducts(products) {
 
     const productType = document.createElement("p");
     productType.classList.add("product-type");
-    // productType.textContent = `Тип алкоголя: ${product.type}`; на случай если захотим вывести в карточку тип алкоголя
-
+    productType.textContent = `${product.type.charAt(0).toUpperCase()}${product.type.slice(1)}`;
     const productCountry = document.createElement("p");
     productCountry.classList.add("product-country");
     // productCountry.textContent = `Страна производитель: ${product.country}`; на случай если захотим вывести страну в карточку
@@ -248,14 +247,14 @@ function filterProducts() {
   const countryFilter = document.querySelector("#country-filter").value;
   // const priceFilter = document.querySelector('#price-filter').value;
   // const volumeFilter = document.querySelector('#volume-filter').value;
-  const popularityFilter = document.querySelector("#popularity-filter").value;
+  // const popularityFilter = document.querySelector("#popularity-filter").value;
 
   let filteredProducts = products;
   filteredProducts = filterByType(filteredProducts, typeFilter);
   filteredProducts = filterByCountry(filteredProducts, countryFilter);
   // filteredProducts = filterByPrice(filteredProducts, priceFilter);
   // filteredProducts = filterByVolume(filteredProducts, volumeFilter);
-  filteredProducts = filterByPopularity(filteredProducts, popularityFilter);
+  // filteredProducts = filterByPopularity(filteredProducts, popularityFilter);
   displayProducts(filteredProducts);
 }
 
@@ -267,9 +266,9 @@ document
   .addEventListener("change", filterProducts);
 // document.querySelector('#price-filter').addEventListener('change', filterProducts);
 // document.querySelector('#volume-filter').addEventListener('change', filterProducts);
-document
-  .querySelector("#popularity-filter")
-  .addEventListener("change", filterProducts);
+// document
+//   .querySelector("#popularity-filter")
+//   .addEventListener("change", filterProducts);
 
 // const typeFilter = document.getElementById("type-filter");
 // typeFilter.addEventListener("mousedown", function() {

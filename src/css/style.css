@@ -99,6 +99,7 @@ body {
     line-height: 18px;
     box-shadow: inset 0 0 0 0 #002D5B;
     transition: box-shadow .2s;
+    color: #202020;
 }
 
 .buy-cart-btn:hover {
@@ -122,6 +123,7 @@ body {
     line-height: 18px;
     box-shadow: inset 0 0 0 0 black;
     transition: box-shadow .2s;
+    color: #202020;
 }
 
 .clear-cart-btn:hover {

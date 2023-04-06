@@ -5,13 +5,22 @@
     text-decoration: none;
 }
 
+html,
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
     background-color: #FAFAFA;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .container {
     max-width: 1440px;
-    background-color: #FAFAFA;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -24,7 +33,6 @@ body {
 
 header {
     padding-top: 60px;
-    background-color: #FAFAFA;
     padding-bottom: 90px
 }
 
@@ -37,7 +45,7 @@ header {
     display: flex;
 }
 
-.btn-search{
+.btn-search {
     width: 52px;
     height: 52px;
     background-color: transparent;
@@ -52,10 +60,10 @@ header {
     transition: all .5s;
 }
 
-.btn-search:hover{
-    
+.btn-search:hover {
+
     background-image: url(/src/assets/pictures/header/SearchGrey.png);
-    
+
 }
 
 .search input {
@@ -72,53 +80,6 @@ header {
     text-align: left;
     padding-left: 30px;
 }
-
-/* .search button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    margin-left: 10px;
-    cursor: pointer;
-  } */
-
-/* .menu {
-    display: flex;
-    padding-left: 160px;
-} */
-
-/* .menu-button {
-    display: flex;
-    color: black;
-    align-items: center;
-    text-align: center;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-} */
-
-/* .menu button,
-.menu .burger {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-.burger {
-    display: none;
-}
-
-.menu .burger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-} */
 
 .menu {
     font-family: 'Josefin Sans', sans-serif;
@@ -139,37 +100,35 @@ header {
 .menu a {
     position: relative;
     color: #202020;
-    }
+}
+
 .menu a:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 1px;
     bottom: 0;
-    margin: 0 0 -11px 0 ;
+    margin: 0 0 -11px 0;
     background-color: #A8A8A8;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.4s ease-in-out 0s;
 }
+
 .menu a:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
-.menu a:hover{
+
+.menu a:hover {
     color: #002D5B;
     transition: all .5s;
     text-shadow: 0px 0px 2px #002e5b68;
 }
-a:visited{
+
+a:visited {
     color: #202020;
 }
-
-
-
-
-
-
 
 
 @media screen and (max-width: 768px) {
@@ -179,45 +138,45 @@ a:visited{
 }
 
 
-
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
-    /* gap: 20px; */
     min-height: 524px;
-    /* max-width: 312px; */
+    max-width: 1320px;
     width: 100%;
     position: relative;
+    margin: 0 auto;
+    align-items: flex-start;
+    text-align: center;
 }
 
 .product {
     width: 300px;
-    padding: 10px;
+    box-shadow: 0 0px 10px 1px rgba(221, 221, 221, 1);
+    margin-bottom: 90px;
+    transition: 1.5s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 .product img {
-    width: 100%;
+    width: 280px;
+    height: 280px;
+    transition: 2.5s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
 }
 
 .product-title {
     margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Yeseva One';
-    font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-.product-composition {
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 300;
     font-size: 18px;
-    line-height: 24px;
 }
 
 .product-price {
@@ -237,26 +196,22 @@ a:visited{
     margin-top: 5px;
 }
 
+.product-type {
+    font-size: 14px;
+}
+
 .buy-button {
-    max-width: 312px;
     width: 100%;
     min-height: 52px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 1px solid black;
     cursor: pointer;
     margin-top: 16px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
     font-family: 'Josefin Sans';
     font-style: normal;
-    font-weight: 500;
     font-size: 18px;
-    line-height: 18px;
     color: #202020;
     user-select: none;
-
 }
 
 .buy-button:hover {
@@ -299,14 +254,7 @@ select {
     text-align: center;
     user-select: none;
     cursor: pointer;
-
 }
-
-
-
-/* #type-filter option[value=""] {
-    display: none;
-  } */
 
 select:focus {
     border: none;
@@ -314,8 +262,6 @@ select:focus {
     border-radius: 0px;
     color: #202020;
     outline: none;
-    /* background-image: url("/src/assets/pictures/catalog/vector-button-rotated.svg"); странное поведение, не могу пока пофиксить */
-
 }
 
 select:focus:hover {
@@ -325,14 +271,12 @@ select:focus:hover {
     color: #202020;
 }
 
-
 select:hover {
     outline: none;
 }
 
 section:focus {
     outline: none;
-
 }
 
 select>option {
@@ -342,24 +286,8 @@ select>option {
     height: 31px;
     width: 220px;
     border: none;
-
-
 }
 
-/* .select>select {
-    width: 100%;
-    color: black;
-    font-size: 14px;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    line-height: 2.5;
-    background: transparent;
-    border: 0;
-    overflow: hidden;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  } */
-
-/* Navbar container */
 .navbar {
     list-style-type: none;
     margin: auto;
@@ -369,7 +297,6 @@ select>option {
     background-color: rgb(62, 62, 62);
 }
 
-/* Links inside the navbar */
 .navbar p {
     float: left;
     font-size: 16px;
@@ -379,13 +306,11 @@ select>option {
     text-decoration: none;
 }
 
-/* The dropdown container */
 .dropdown-filter {
     float: left;
     overflow: hidden;
 }
 
-/* Dropdown button */
 .dropdown-filter .dropbtn {
     font-size: 16px;
     border: none;
@@ -394,18 +319,15 @@ select>option {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar p:hover,
 .dropdown:hover .dropbtn {
     background-color: rgb(40, 40, 40);
 }
 
-/* Dropdown content (hidden by default) */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -415,7 +337,6 @@ select>option {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content p {
     float: none;
     color: aliceblue;
@@ -425,18 +346,14 @@ select>option {
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content p:hover {
     background-color: rgb(62, 62, 62);
     cursor: pointer;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown-filter:hover .dropdown-content {
     display: block;
 }
-
-
 
 .Request-call {
     display: flex;
@@ -460,26 +377,18 @@ form {
 }
 
 .Request-call-text-01 {
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 18px;
-    color: #202020;
     padding-bottom: 12px;
     text-align: center;
 }
 
 .Request-call-text-02 {
     font-family: 'Yeseva One', cursive;
-    font-style: normal;
-    font-weight: 400;
     font-size: 56px;
     line-height: 72px;
-    color: #202020;
     padding-bottom: 40px;
     text-align: center;
-
 }
 
 #input-question {
@@ -493,20 +402,16 @@ form {
 .input-your-question {
     border: none;
     font-family: 'Josefin Sans', sans-serif;
-    font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 18px;
     background-color: transparent;
     user-select: none;
     color: #202020;
-
 }
 
 input {
     max-width: 212px;
     text-align: center;
-
 }
 
 input::placeholder {
@@ -527,10 +432,7 @@ input:focus {
 .input-your-phone {
     border: none;
     font-family: 'Josefin Sans', sans-serif;
-    font-style: normal;
-    font-weight: 500;
     font-size: 18px;
-    line-height: 18px;
     background-color: transparent;
     user-select: none;
     color: #202020;
@@ -538,10 +440,7 @@ input:focus {
 
 .btn-call {
     font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 500;
     font-size: 18px;
-    line-height: 18px;
     padding: 17.0px 97px;
     border: none;
     outline: 2px solid rgb(0, 0, 0);
@@ -554,6 +453,6 @@ input:focus {
     color: white;
     box-shadow: inset 0 -300px 0 0 #002D5B;
     transition: box-shadow .5s ease-in-out 0s, color .7s;
-    border: 2px solid #002D5B;
+    border: 0px solid #002D5B;
     outline: none;
 }

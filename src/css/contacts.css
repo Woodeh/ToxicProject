@@ -42,10 +42,12 @@
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 12px;
+    color: black;
 }
 
 #group-link {
     font-weight: 500;
+    margin-bottom: 24px;
 }
 
 
@@ -57,4 +59,34 @@
     background: rgb(56, 56, 55);
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+.contacts-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contacts-logo1 {
+    background-image:url(/src/assets/pictures/facebook-logo.svg);
+    width: 28px;
+    height: 28px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.contacts-logo1:hover {
+    background-image:url(/src/assets/pictures/iconizer-facebook-logo-red.svg);
+}
+
+.contacts-logo2 {
+    background-image:url(/src/assets/pictures/insta-logo.svg);
+    width: 28px;
+    height: 28px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.contacts-logo2:hover {
+    background-image:url(/src/assets/pictures/iconizer-insta-logo-pink.svg);
 }

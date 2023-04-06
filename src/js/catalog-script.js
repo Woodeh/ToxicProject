@@ -1,91 +1,91 @@
 const products = [
   {
-    type: "вино",
-    country: "Португалия",
-    price: 1000,
+    type: "liqueur",
+    country: "ireland",
+    price: 50,
     volume: 750,
     popularity: 3,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "ABSOLUT VODKA",
+    imgUrl: "/src/assets/pictures/catalog/sheridan.png",
+    title: "Sheridan",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "виски",
-    country: "Шотландия",
-    price: 2000,
+    type: "champagne",
+    country: "france",
+    price: 48,
     volume: 700,
     popularity: 4,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "CHIVAS REGAL",
+    imgUrl: "/src/assets/pictures/catalog/moet.png",
+    title: "Moët & Chandon ",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "ром",
-    country: "Ямайка",
-    price: 1500,
+    type: "tequila",
+    country: "mexico",
+    price: 37,
     volume: 500,
     popularity: 2,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "МОЁT & CHANDON",
+    imgUrl: "/src/assets/pictures/catalog/Tequila 1.png",
+    title: "Olmeca",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "пиво",
-    country: "Россия",
-    price: 5,
+    type: "gin",
+    country: "united kingdom",
+    price: 48,
     volume: 750,
     popularity: 5,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "HENDRICKS ORBIUM",
+    imgUrl: "/src/assets/pictures/catalog/Gin 1.png",
+    title: "Bombay Sapphire",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "вино",
-    country: "Италия",
-    price: 500,
+    type: "beer",
+    country: "mexico",
+    price: 50,
     volume: 750,
     popularity: 5,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "TEST NAME",
+    imgUrl: "/src/assets/pictures/catalog/beer 1.png",
+    title: "Corona Extra",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "вино",
-    country: "Италия",
-    price: 800,
+    type: "vodka",
+    country: "sweden",
+    price: 80,
     volume: 750,
     popularity: 5,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "TEST NAME",
+    imgUrl: "/src/assets/pictures/catalog/absolute.png",
+    title: "Absolute",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "вино",
-    country: "Италия",
-    price: 500,
+    type: "gin",
+    country: "scotland",
+    price: 50,
     volume: 750,
     popularity: 5,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "TEST NAME",
+    imgUrl: "/src/assets/pictures/catalog/bottle1.png",
+    title: "Hendrick's Orbium",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
   {
-    type: "вино",
-    country: "Италия",
-    price: 800,
+    type: "whiskey",
+    country: "scotland",
+    price: 80,
     volume: 750,
     popularity: 5,
-    imgUrl: "/src/assets/pictures/catalog/bottle1.jpg",
-    title: "TEST NAME",
+    imgUrl: "/src/assets/pictures/catalog/chivas.png",
+    title: "Chivas Regal",
     composition:
-      "Clean and elegant, with touches of black peppercorns and vanilla bean.",
+      "",
   },
 ];
 
@@ -109,12 +109,11 @@ function displayProducts(products) {
 
     const productPrice = document.createElement("p");
     productPrice.classList.add("product-price");
-    productPrice.textContent = `$${product.price}`;
+    productPrice.textContent = `$ ${product.price}.00`;
 
     const productType = document.createElement("p");
     productType.classList.add("product-type");
-    // productType.textContent = `Тип алкоголя: ${product.type}`; на случай если захотим вывести в карточку тип алкоголя
-
+    productType.textContent = `${product.type.charAt(0).toUpperCase()}${product.type.slice(1)}`;
     const productCountry = document.createElement("p");
     productCountry.classList.add("product-country");
     // productCountry.textContent = `Страна производитель: ${product.country}`; на случай если захотим вывести страну в карточку
@@ -133,6 +132,10 @@ function displayProducts(products) {
 
     const productBuyButton = document.createElement("button");
     productBuyButton.classList.add("buy-button");
+    productBuyButton.classList.add("add-to-cart")
+    productBuyButton.setAttribute("data-name", `${product.title}`);
+    productBuyButton.setAttribute("data-price", `${product.price}`);
+    productBuyButton.setAttribute("data-image", `${product.imgUrl}`);
     productBuyButton.textContent = `Add to bag`;
 
     productCard.appendChild(productImg);
@@ -244,14 +247,14 @@ function filterProducts() {
   const countryFilter = document.querySelector("#country-filter").value;
   // const priceFilter = document.querySelector('#price-filter').value;
   // const volumeFilter = document.querySelector('#volume-filter').value;
-  const popularityFilter = document.querySelector("#popularity-filter").value;
+  // const popularityFilter = document.querySelector("#popularity-filter").value;
 
   let filteredProducts = products;
   filteredProducts = filterByType(filteredProducts, typeFilter);
   filteredProducts = filterByCountry(filteredProducts, countryFilter);
   // filteredProducts = filterByPrice(filteredProducts, priceFilter);
   // filteredProducts = filterByVolume(filteredProducts, volumeFilter);
-  filteredProducts = filterByPopularity(filteredProducts, popularityFilter);
+  // filteredProducts = filterByPopularity(filteredProducts, popularityFilter);
   displayProducts(filteredProducts);
 }
 
@@ -263,12 +266,151 @@ document
   .addEventListener("change", filterProducts);
 // document.querySelector('#price-filter').addEventListener('change', filterProducts);
 // document.querySelector('#volume-filter').addEventListener('change', filterProducts);
-document
-  .querySelector("#popularity-filter")
-  .addEventListener("change", filterProducts);
+// document
+//   .querySelector("#popularity-filter")
+//   .addEventListener("change", filterProducts);
 
 // const typeFilter = document.getElementById("type-filter");
 // typeFilter.addEventListener("mousedown", function() {
 //     // Удаляем первый элемент (Type) из списка options
 //     typeFilter.removeChild(typeFilter.options[0]);
 //   }, false);
+
+
+
+//коризна для каталога
+const body = document.body;
+const cartOverlay = document.createElement("div");
+const cartBtn = document.querySelector(".cart-btn");
+const cartModal = document.querySelector(".cart-modal");
+const closeCartBtn = document.querySelector(".close-cart-btn");
+const clearCartBtn = document.querySelector(".clear-cart-btn");
+const cartTotal = document.querySelector(".cart-total");
+const cartItems = document.querySelector(".cart-items");
+
+function disableScroll() {
+  body.classList.add("disable-scroll");
+  cartOverlay.classList.add("cart-overlay");
+  body.appendChild(cartOverlay);
+}
+
+function enableScroll() {
+  body.classList.remove("disable-scroll");
+  cartOverlay.classList.remove("cart-overlay");
+}
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCartBasket(name, price, image) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  let alreadyInCart = false;
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === name) {
+      cart[i].quantity++;
+      alreadyInCart = true;
+      break;
+    }
+  }
+  if (!alreadyInCart) {
+    cart.push({
+      name: name,
+      price: price,
+      quantity: 1,
+      image: image,
+    });
+  }
+  showCart();
+}
+
+function removeFromCart(name) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === name) {
+      cart.splice(i, 1);
+      break;
+    }
+  }
+  showCart();
+}
+
+
+function clearCart() {
+  cart = [];
+  showCart();
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function showCart() {
+    cartItems.innerHTML = "";
+    let totalPrice = 0;
+    for (let i = 0; i < cart.length; i++) {
+      let item = cart[i];
+      let cartItemImage = document.createElement("img");
+      cartItemImage.src = item.image;
+      let itemPrice = item.price * item.quantity;
+      let cartItem = document.createElement("div");
+      cartItem.classList.add("cart-item");
+      cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
+          <div class="items-in-busket"> 
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+          <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
+          </div>
+          <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
+      cartItems.appendChild(cartItem);
+      // cartItem.appendChild(cartItemImage);
+      totalPrice += itemPrice;
+    }
+  cartTotal.textContent =" $" +  totalPrice.toFixed(2);
+
+  let quantityInputs = document.querySelectorAll(
+    ".cart-item-quantity input[type='number']"
+  );
+  quantityInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      let name = input.dataset.name;
+      let price = parseFloat(input.dataset.price);
+      let quantity = parseInt(input.value);
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === name) {
+          cart[i].quantity = quantity;
+          break;
+        }
+      }
+      showCart();
+    });
+  });
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+cartBtn.addEventListener("click", () => {
+  cartModal.style.display = "block";
+  showCart();
+  disableScroll();
+});
+
+closeCartBtn.addEventListener("click", () => {
+  cartModal.style.display = "none";
+  enableScroll();
+});
+
+clearCartBtn.addEventListener("click", () => {
+  clearCart();
+});
+
+cartItems.addEventListener("click", (event) => {
+  if (event.target.classList.contains("cart-item-remove")) {
+    let name = event.target.dataset.name;
+    removeFromCart(name);
+  }
+});
+
+let addToCartBtns = document.querySelectorAll(".add-to-cart");
+addToCartBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let name = btn.dataset.name;
+    let price = btn.dataset.price;
+    let image = btn.dataset.image;
+    addToCartBasket(name, price, image);
+  });
+});

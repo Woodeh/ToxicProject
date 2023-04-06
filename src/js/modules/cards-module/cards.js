@@ -28,7 +28,7 @@ const slides = document.querySelectorAll(".slide");
 const slideWidth =
   slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
 
-let currentPosition = 0;
+let currentPosition = 3;
 let slideCount = 0;
 let touchStartX = null;
 let touchEndX = null;
@@ -260,15 +260,13 @@ function removeFromCart(name) {
   localStorage.setItem("cart", JSON.stringify(cart));
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].name === name) {
-      cart[i].quantity--;
-      if (cart[i].quantity === 0) {
-        cart.splice(i, 1);
-      }
+      cart.splice(i, 1);
       break;
     }
   }
   showCart();
 }
+
 
 function clearCart() {
   cart = [];
@@ -277,27 +275,27 @@ function clearCart() {
 }
 
 function showCart() {
-  cartItems.innerHTML = "";
-  let totalPrice = 0;
-  for (let i = 0; i < cart.length; i++) {
-    let item = cart[i];
-    let cartItemImage = document.createElement("img");
-    cartItemImage.src = item.image;
-    let itemPrice = item.price * item.quantity;
-    let cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item");
-    cartItem.innerHTML = `<img src="${item.image}" alt="" class="hendrick">
-        <div class="items-in-busket"> 
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
-        <div class="cart-item-price">${itemPrice} $</div> 
-        </div>
-        <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
-    cartItems.appendChild(cartItem);
-    // cartItem.appendChild(cartItemImage);
-    totalPrice += itemPrice;
-  }
-  cartTotal.textContent = totalPrice + " $";
+    cartItems.innerHTML = "";
+    let totalPrice = 0;
+    for (let i = 0; i < cart.length; i++) {
+      let item = cart[i];
+      let cartItemImage = document.createElement("img");
+      cartItemImage.src = item.image;
+      let itemPrice = item.price * item.quantity;
+      let cartItem = document.createElement("div");
+      cartItem.classList.add("cart-item");
+      cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
+          <div class="items-in-busket"> 
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+          <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
+          </div>
+          <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
+      cartItems.appendChild(cartItem);
+      // cartItem.appendChild(cartItemImage);
+      totalPrice += itemPrice;
+    }
+  cartTotal.textContent =" $" +  totalPrice.toFixed(2);
 
   let quantityInputs = document.querySelectorAll(
     ".cart-item-quantity input[type='number']"

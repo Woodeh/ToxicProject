@@ -21,7 +21,7 @@ body {
 .cart-modal {
     display: none;
     position: fixed;
-    width: 720px;
+    width: 520px;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -64,15 +64,29 @@ body {
 }
 
 .cart-footer {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     padding: 20px;
     background-color: rgba(227, 227, 227, 1);
 }
 
-.clear-cart-btn {
-    max-width: 312px;
+.cart-footer-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-footer > div > h3, .cart-total{
+    font-size: 30px;
+}
+
+.buy-cart-btn {
+    max-width: 150px;
     width: 100%;
     min-height: 52px;
     background-color: transparent;
@@ -83,14 +97,40 @@ body {
     font-weight: 500;
     font-size: 18px;
     line-height: 18px;
-    box-shadow: inset 0 0 0 0 #74D0E3;
+    box-shadow: inset 0 0 0 0 #002D5B;
     transition: box-shadow .2s;
+    color: #202020;
+}
+
+.buy-cart-btn:hover {
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: box-shadow .5s ease-in-out 0s;
+    border: 2px solid #002D5B;
+    color: white;
+}
+
+.clear-cart-btn {
+    max-width: 150px;
+    width: 100%;
+    min-height: 52px;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    box-shadow: inset 0 0 0 0 black;
+    transition: box-shadow .2s;
+    color: #202020;
 }
 
 .clear-cart-btn:hover {
-    box-shadow: inset 0 -300px 0 0 #74D0E3;
+    box-shadow: inset 0 -300px 0 0 black;
     transition: box-shadow .5s ease-in-out 0s;
-    border: 2px solid #74D0E3;
+    border: 2px solid black;
+    color: white;
 }
 
 .cart-item {
@@ -121,6 +161,7 @@ body {
     height: 12px;
     position: absolute;
     right: 20px;
+    padding-top: 5px;
 }
 
 .all-product-card {
@@ -128,9 +169,20 @@ body {
     flex-direction: row;
 }
 
+.basket-image {
+    width: 150px;
+    height: 150px;
+}
+
 
 .items-in-busket {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    justify-content: center;
+}
+
+
+.cart-header > h2 {
+    font-size: 30px;
 }

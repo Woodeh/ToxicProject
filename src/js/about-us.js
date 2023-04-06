@@ -1,8 +1,3 @@
-const map = document.getElementById("map");
-map.style.margin = "0 auto";
-
-
-
 const body = document.body;
 const cartOverlay = document.createElement("div");
 const cartBtn = document.querySelector(".cart-btn");
@@ -74,7 +69,7 @@ function showCart() {
       let itemPrice = item.price * item.quantity;
       let cartItem = document.createElement("div");
       cartItem.classList.add("cart-item");
-      cartItem.innerHTML = `<img src="${item.image}" alt="bottle" class="basket-image">
+      cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
           <div class="items-in-busket"> 
           <div class="cart-item-name">${item.name}</div>
           <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>

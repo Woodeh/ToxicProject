@@ -110,6 +110,12 @@ form {
     gap: 16px;
 }
 
+.form-search{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
 .Request-call-text-01 {
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;

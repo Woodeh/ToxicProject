@@ -27,8 +27,10 @@
         <div class="logo"><a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a></div>
 
         <div class="search">
-          <button class="btn-search"></button>
-          <input type="text" placeholder="">
+          <form action="/src/catalog.html" class="form-search">
+            <button class="btn-search" type="submit"></button>
+            <input id="search" class="input-text" type="text" name="search" placeholder="">
+          </form>
         </div>
       </div>
       <nav class="menu">
@@ -463,7 +465,7 @@
       </p>
       <p class="Request-call-text-02">Do you have any questions?</p>
       <div class="form-Request-call">
-        <form method="get">
+        <form class="form-Request-call" method="get">
           <div id="input-question">
             <input class="input-your-question" type="text" placeholder="Your name" />
           </div>
@@ -499,6 +501,7 @@
 
     <script src="js/script.js" type="module"></script>
     <script src="/src/js/script.js"></script>
+    <script src="/src/js/modules/search-module/search-main.js"></script>
 </body>
 
 </html>

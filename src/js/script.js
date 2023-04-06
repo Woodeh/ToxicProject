@@ -77,7 +77,7 @@ function startInterval() {
   intervalId = setInterval(() => {
     const nextIndex = currentIndex + 1;
     moveTo(nextIndex);
-  }, 5000);
+  }, 15000);
 }
 
 function stopInterval() {

@@ -364,12 +364,6 @@ select>option {
     align-items: center;
 }
 
-.form-search{
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-}
-
 form {
     display: flex;
     flex-direction: column;

@@ -57,6 +57,9 @@ body {
     padding: 0 94px;
 }
 
+.box img{
+
+}
 .block{
     max-width: 760px;
     display: flex;

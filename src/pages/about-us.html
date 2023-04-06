@@ -37,7 +37,23 @@
         <a href="/src/catalog.html" class="link-header-menu">Catalog</a>
         <a href="/src/pages/contact-page.html" class="link-header-menu">Contacts</a>
         <a href="/src/pages/about-us.html" class="link-header-menu">About Us</a>
-        <a href="#" class="link-header-menu">Basket</a>
+        <a href="#" class="link-header-menu cart-btn">Basket</a>
+        <div class="cart-modal">
+          <div class="cart-header">
+            <h2>Basket</h2>
+            <button class="close-cart-btn">Back</button>
+          </div>
+          <div class="cart-items"></div>
+          <div class="cart-footer">
+            <div>
+            <h3>Total: </h3>
+            <span class="cart-total">0 $</span>
+            </div>
+            <div class="cart-footer-button">
+            <button class="buy-cart-btn">Buy</button>
+            <button class="clear-cart-btn">Clear basket</button>
+            </div>
+          </div>
       </nav>
     </div>
   </header>
@@ -133,6 +149,7 @@
       </div>
     </div>
   </footer>
+  <script src="/src/js/about-us.js"></script>
   <script src="js/script.js" type="module"></script>
   <script src="/src/js/script.js"></script>
 </body>

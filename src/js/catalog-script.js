@@ -213,30 +213,30 @@ function onFilterChange() {
   displayProducts(filteredProducts);
 }
 
-// // Запускаем отображение карточек товаров на странице при загрузке
-// displayProducts(products);
+// Запускаем отображение карточек товаров на странице при загрузке
+displayProducts(products);
 
-// // Создаем объект URLSearchParams, чтобы получить параметры из текущего URL-адреса страницы
-// const params = new URLSearchParams(window.location.search);
+// Создаем объект URLSearchParams, чтобы получить параметры из текущего URL-адреса страницы
+const params = new URLSearchParams(window.location.search);
 
-// // Получаем значение параметра 'type' из текущего URL-адреса страницы
-// const category = params.get("type");
+// Получаем значение параметра 'type' из текущего URL-адреса страницы
+const category = params.get("type");
 
-// // Если значение параметра 'type' есть в URL-адресе, то:
-// if (category) {
-//   console.log(category);
+// Если значение параметра 'type' есть в URL-адресе, то:
+if (category) {
+  console.log(category);
 
-//   // Устанавливаем значение параметра 'type' в качестве значения для элемента формы с идентификатором 'type-filter'
-//   document.querySelector("#type-filter").value = category;
+  // Устанавливаем значение параметра 'type' в качестве значения для элемента формы с идентификатором 'type-filter'
+  document.querySelector("#type-filter").value = category;
 
-//   // Вызываем функцию filterProducts() для фильтрации товаров в соответствии с выбранным значением параметра 'type'
-//   filterProducts();
-// }
-// // Иначе (если значение параметра 'type' отсутствует в URL-адресе), то:
-// else {
-//   // Запускаем функцию displayProducts() для отображения карточек товаров на странице при загрузке
-//   displayProducts(products);
-// }
+  // Вызываем функцию filterProducts() для фильтрации товаров в соответствии с выбранным значением параметра 'type'
+  filterProducts();
+}
+// Иначе (если значение параметра 'type' отсутствует в URL-адресе), то:
+else {
+  // Запускаем функцию displayProducts() для отображения карточек товаров на странице при загрузке
+  displayProducts(products);
+}
 
 // Назначаем обработчик событий на изменение фильтров
 const filters = document.querySelectorAll(".filter");

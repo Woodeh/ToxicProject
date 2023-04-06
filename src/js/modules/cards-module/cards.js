@@ -28,7 +28,7 @@ const slides = document.querySelectorAll(".slide");
 const slideWidth =
   slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
 
-let currentPosition = 0;
+let currentPosition = 3;
 let slideCount = 0;
 let touchStartX = null;
 let touchEndX = null;
@@ -42,22 +42,6 @@ while (slideCount < 4) {
 const updatedSlides = document.querySelectorAll(".slide");
 
 sliderContainer.style.width = `${slideWidth * updatedSlides.length}px`;
-
-function centerSlider() {
-  // const sliderContainerWidth = sliderContainer.offsetWidth;
-  const slideLimit = slideWidth * (updatedSlides.length - 4);
-  const centerPosition = -(slideLimit / 2.6);
-
-  sliderContainer.style.transition = "none";
-  if (currentPosition !== centerPosition) {
-    currentPosition = centerPosition;
-    sliderContainer.style.transform = `translateX(${currentPosition}px)`;
-  }
-}
-
-centerSlider();
-
-window.addEventListener("resize", centerSlider);
 
 sliderCard.addEventListener("touchstart", (event) => {
   touchStartX = event.touches[0].clientX;
@@ -125,8 +109,6 @@ sliderCard.addEventListener("mouseup", (event) => {
   handleGesture();
 });
 
-
-
 // slider for bestsellers------------------------------------------------------------------------------
 const sliderCard2 = document.querySelector(".sliderCard2");
 const sliderContainer2 = document.querySelector(".slider-container2");
@@ -148,22 +130,6 @@ while (slideCount2 < 4) {
 const updatedSlides2 = document.querySelectorAll(".slide2");
 
 sliderContainer2.style.width = `${slideWidth2 * updatedSlides2.length}px`;
-
-function centerSlider2() {
-  // const sliderContainerWidth = sliderContainer.offsetWidth;
-  const slideLimit2 = slideWidth2 * (updatedSlides2.length - 4);
-  const centerPosition2 = -(slideLimit2 / 2.6);
-
-  sliderContainer2.style.transition = "none";
-  if (currentPosition2 !== centerPosition2) {
-    currentPosition2 = centerPosition2;
-    sliderContainer2.style.transform = `translateX(${currentPosition2}px)`;
-  }
-}
-
-centerSlider2();
-
-window.addEventListener("resize", centerSlider2);
 
 sliderCard2.addEventListener("touchstart", (event) => {
   touchStartX2 = event.touches[0].clientX;

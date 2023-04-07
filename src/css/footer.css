@@ -36,25 +36,6 @@ footer {
     gap: 56px;
 }
 
-/* .footer-menu a:visited{
-    color: #202020;
-} */
-
-/* a {
-    outline: none;
-    border: none;
-    bottom: 1px;
-    border-radius: 5px 5px 5px 5px;
-    transition: 0.5s all ease;
-    transform: translate(-0%, -0%);
-    cursor: pointer;
-    color: aquamarine;
-}
-
-a:hover {
-    text-shadow: 2px 2px 2px black;
-    color: #ff0000;
-} */
 
 .footer-menu a {
     position: relative;

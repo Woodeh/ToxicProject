@@ -7,7 +7,6 @@
 
 .container{
     max-width: 1440px;
-    /* background-color: #DADADA; */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -21,8 +20,6 @@
 header {
     padding-top: 60px;
     background-color: #f2f2f2;
-    /* background-color: #DADADA; */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .logo img {
@@ -72,53 +69,6 @@ header {
     text-align: left;
     padding-left: 30px;
 }
-
-/* .search button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    margin-left: 10px;
-    cursor: pointer;
-  } */
-
-/* .menu {
-    display: flex;
-    padding-left: 160px;
-} */
-
-/* .menu-button {
-    display: flex;
-    color: black;
-    align-items: center;
-    text-align: center;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-} */
-
-/* .menu button,
-.menu .burger {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-.burger {
-    display: none;
-}
-
-.menu .burger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-} */
 
 .menu{
     font-family: 'Josefin Sans', sans-serif;
@@ -187,7 +137,6 @@ header {
 
 .product-img{
     max-width: 648px;
-    /* border: 2px #A8A8A8 solid; */
 }
 
 .product-description{
@@ -294,9 +243,6 @@ select {
     background-color: #f2f2f2;
 }
 
-/* #type-filter option[value=""] {
-    display: none;
-  } */
 
 select:focus {
     border: none;
@@ -304,8 +250,6 @@ select:focus {
     border-radius: 0px;
     color: #202020;
     outline: none;
-    /* background-image: url("/src/assets/pictures/catalog/vector-button-rotated.svg"); странное поведение, не могу пока пофиксить */
-
 }
 
 select:focus:hover {
@@ -336,7 +280,6 @@ select>option {
 .product-description-counter{
     max-width: 80px;
     max-height: 52px;
-    /* padding: 17px; */
     display: flex;
     gap: 12px;
     border: 2px #202020 solid;

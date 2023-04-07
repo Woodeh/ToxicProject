@@ -1,6 +1,6 @@
 
 .footer-container{
-    max-width: 1440px;
+    max-width: 1331px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -17,11 +17,11 @@ footer {
     margin-top: 60px;
     padding: 30px 0 30px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 .footer-logo img {
     max-width: 150px;
-    padding-left: 63px;
     margin-right: 60px;
 }
 
@@ -71,7 +71,6 @@ a:visited{
 }
 
 .footer-policy{
-    padding-right: 63px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

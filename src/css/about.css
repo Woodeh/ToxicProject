@@ -1,11 +1,15 @@
 .about-us {
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about-us-image img {
-    max-width: 100%;
+.about-us-image img{
 
+
+border: 2px solid black;
+box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
 
 .about-us-title {

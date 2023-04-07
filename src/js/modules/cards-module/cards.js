@@ -383,25 +383,9 @@ addToCartBtns.forEach((btn) => {
   });
 });
 
-// // модалка, открывающая оригинал картинки
-// function showFullImageModal(imageUrl) {
-//     const modal = document.createElement('div');
-//     modal.classList.add('modal');
-
-//     const modalContent = document.createElement('div');
-//     modalContent.classList.add('modal-content');
-
-//     const img = document.createElement('img');
-//     img.src = imageUrl;
-//     modalContent.appendChild(img);
-
-//     modal.appendChild(modalContent);
-//     document.body.appendChild(modal);
-
-//     // закрыть модалку на кнопку Закрыть
-//     modal.addEventListener('click', () => {
-//         modal.remove();
-//     });
-// }
-
-//----------------------------------------------------------------------------------------------------------------------
+cartOverlay.addEventListener("click", (event) => {
+  if (event.target === cartOverlay) {
+    cartModal.style.display = "none";
+    enableScroll();
+  }
+});

@@ -1,20 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.container{
+.container {
     max-width: 1440px;
     /* background-color: #DADADA; */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
-.wrap{
+
+.wrap {
     display: flex;
 }
 
@@ -30,11 +30,11 @@ header {
     padding-left: 63px;
 }
 
-.search{
+.search {
     display: flex;
 }
 
-.btn-search{
+.btn-search {
     width: 52px;
     height: 52px;
     background-color: transparent;
@@ -49,13 +49,13 @@ header {
     transition: all .5s;
 }
 
-.btn-search:hover{
-    
+.btn-search:hover {
+
     background-image: url(/src/assets/pictures/header/SearchGrey.png);
-    
+
 }
 
-.search input:focus{
+.search input:focus {
     color: Grey;
 }
 
@@ -68,7 +68,7 @@ header {
     text-align: left;
 }
 
-.search input::placeholder{
+.search input::placeholder {
     text-align: left;
     padding-left: 30px;
 }
@@ -120,7 +120,7 @@ header {
     margin: 5px 0;
 } */
 
-.menu{
+.menu {
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -135,7 +135,7 @@ header {
 .menu a {
     position: relative;
     color: #202020;
-    }
+}
 
 .menu a:before {
     content: "";
@@ -143,23 +143,25 @@ header {
     width: 100%;
     height: 1px;
     bottom: 0;
-    margin: 0 0 -11px 0 ;
+    margin: 0 0 -11px 0;
     background-color: #A8A8A8;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.4s ease-in-out 0s;
 }
+
 .menu a:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
-.menu a:hover{
+
+.menu a:hover {
     color: #002D5B;
     transition: all .5s;
     text-shadow: 0px 0px 2px #002e5b68;
 }
 
-.menu a:visited{
+.menu a:visited {
     color: #202020;
 }
 
@@ -169,52 +171,71 @@ header {
     }
 }
 
-.product{
+.product {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.card-product{
+.card-product {
     max-width: 1320px;
     display: flex;
-    padding-top: 90px;
-    padding-bottom: 90px;
-    flex-direction: row;
+    margin: 90px 0;
+    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     gap: 48px;
 }
 
+/* 
 .product-img{
     max-width: 648px;
-    /* border: 2px #A8A8A8 solid; */
+    border: 2px #A8A8A8 solid;
+} */
+
+.wrapper-big-product {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.product-description{
-    margin-top: 103px;
+.card-product-medium {
+    display: none;
+}
+
+.product-description {
+    /* margin-top: 103px; */
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     gap: 48px;
     max-width: 624px;
 }
 
-.product-description-title{
+.product-description-title {
     display: flex;
     gap: 36px;
     font-family: "Yeseva One", sans-serif;
     font-size: 56px;
     font-weight: 400;
     line-height: 72px;
-    
 }
 
-.product-description-info, .product-description-purchase{
+.product-description-info,
+.product-description-purchase {
     display: flex;
     gap: 48px;
     align-items: center;
 }
 
-.product-description-about{
+.product-description-purchase-medium {
+    display: none;
+}
+
+.product-description-about {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -222,7 +243,7 @@ header {
     align-items: center;
 }
 
-.product-description-about-choice{
+.product-description-about-choice {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -230,26 +251,27 @@ header {
     align-items: center;
 }
 
-.product-description-about-info-title, .product-description-text{
+.product-description-about-info-title,
+.product-description-text {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 300;
 }
 
-.product-description-about-info{
+.product-description-about-info {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     line-height: 18px;
     font-weight: 500;
 }
 
-.alcochol-amount-filter{
+/* .alcochol-amount-filter {
     display: flex;
     flex-wrap: nowrap;
-}
-
-.filter-options{
+} */
+/* 
+.filter-options {
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 500;
@@ -265,8 +287,8 @@ header {
     justify-content: center;
     gap: 45px;
     padding-bottom: 86px;
-}
-
+} */
+/* 
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -292,22 +314,22 @@ select {
     user-select: none;
     cursor: pointer;
     background-color: #f2f2f2;
-}
+} */
 
 /* #type-filter option[value=""] {
     display: none;
   } */
-
+/* 
 select:focus {
     border: none;
     border-bottom: 1px solid #A8A8A8;
     border-radius: 0px;
     color: #202020;
-    outline: none;
+    outline: none; */
     /* background-image: url("/src/assets/pictures/catalog/vector-button-rotated.svg"); странное поведение, не могу пока пофиксить */
 
-}
-
+/* } */
+/* 
 select:focus:hover {
     outline: none;
     border-bottom: 1px solid #A8A8A8;
@@ -317,8 +339,8 @@ select:focus:hover {
 
 select:hover {
     outline: none;
-}
-
+} */
+/* 
 section:focus {
     outline: none;
 
@@ -331,9 +353,10 @@ select>option {
     height: 31px;
     width: 220px;
     border: none;
-}
+} */
 
-.product-description-counter{
+
+.product-description-counter {
     max-width: 80px;
     max-height: 52px;
     /* padding: 17px; */
@@ -347,19 +370,21 @@ select>option {
     padding: 17px
 }
 
-.product-description-counter-minus, .product-description-counter-plus{
+.product-description-counter-minus,
+.product-description-counter-plus {
     background-color: #f2f2f2;
     border: none;
+    cursor: pointer;
 }
 
-.product-description-price{
+.product-description-price {
     font-family: 'Yeseva One', sans-serif;
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
 }
 
-.product-description-buy-btn{
+.product-description-buy-btn {
     background-color: #f2f2f2;
     max-width: 312px;
     padding: 19px 140px 20px 140px;
@@ -373,10 +398,9 @@ select>option {
     cursor: pointer;
 }
 
-.product-description-buy-btn:hover{
+.product-description-buy-btn:hover {
     color: white;
     box-shadow: inset 0 -300px 0 0 #002D5B;
     transition: box-shadow .5s ease-in-out 0s, color .7s;
     border: 2px solid #002D5B;
 }
-

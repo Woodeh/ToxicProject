@@ -47,9 +47,8 @@ function moveTo(index) {
   } else if (currentIndex === 0) {
     const clone = sliderItems[sliderItems.length - 1].cloneNode(true);
     sliderWrapper.prepend(clone);
-    sliderWrapper.style.transform = `translateX(-${
-      slider.offsetWidth
-    }px)`;
+    sliderWrapper.style.transform = `translateX(-${slider.offsetWidth
+      }px)`;
     sliderItems = sliderWrapper.querySelectorAll(".slider-item");
     currentIndex = 1;
     setTimeout(() => {
@@ -60,7 +59,7 @@ function moveTo(index) {
       }, 50);
     }, 500);
   }
-  
+
   const clonedItem = sliderWrapper.querySelector(".slider-item.clone");
   if (clonedItem && currentIndex >= sliderItems.length - 1) {
     clonedItem.remove();
@@ -104,5 +103,17 @@ paginationItems.forEach((item, index) => {
     moveTo(index);
     startInterval();
   });
+});
+
+
+//каунтер на big-card-product
+const number = document.querySelector('.number');
+const minus = document.querySelector('.product-description-counter-minus');
+const plus = document.querySelector('.product-description-counter-plus');
+minus.addEventListener('click', () => {
+  number.innerHTML--;
+});
+plus.addEventListener('click', () => {
+  number.innerHTML++;
 });
 

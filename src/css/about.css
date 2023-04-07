@@ -1,11 +1,13 @@
 .about-us {
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
-.about-us-image img {
-    max-width: 100%;
-
+.about-us-image img{
+width: 100%;
+margin: 0 auto;
+border: 2px solid black;
+box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
 }
 
 .about-us-title {

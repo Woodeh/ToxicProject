@@ -133,3 +133,10 @@ addToCartBtns.forEach((btn) => {
     addToCartBasket(name, price, image);
   });
 });
+
+cartOverlay.addEventListener("click", (event) => {
+  if (event.target === cartOverlay) {
+    cartModal.style.display = "none";
+    enableScroll();
+  }
+});

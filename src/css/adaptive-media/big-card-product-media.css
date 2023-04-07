@@ -40,6 +40,9 @@
       width: 360px;
    }
 
+   .card-product-big-corona{
+      padding: 20px;
+  }
 
    .product-description-about-choice {
       display: none;

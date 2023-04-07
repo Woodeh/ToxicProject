@@ -141,6 +141,10 @@ header {
     border: 2px #A8A8A8 solid;
  }
 
+.card-product-big-corona{
+    padding: 50px;
+}
+
 .wrapper-big-product {
     max-width: 1440px;
     margin: 0 auto;

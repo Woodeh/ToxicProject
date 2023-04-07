@@ -137,10 +137,10 @@ header {
 }
 
 
-.product-img img {
+.product-img img{
     max-width: 648px;
     border: 2px #A8A8A8 solid;
-}
+ }
 
 .wrapper-big-product {
     max-width: 1440px;
@@ -150,7 +150,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 90px;
-    margin-bottom: 90px;
+margin-bottom: 90px;
 }
 
 .card-product-medium {

@@ -10,10 +10,7 @@
   <link rel="stylesheet" href="/src/css/font.css">
   <link rel="stylesheet" href="/src/css/style.css">
   <link rel="stylesheet" href="/src/css/catalog.css">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="/src/css/global-style.css">
-  <link rel="stylesheet" href="/src/css/about.css">
-  <!-- <link rel="stylesheet" href="/src/css/header-slider.css"> -->
   <link rel="stylesheet" href="/src/css/footer.css">
   <link rel="stylesheet" href="/src/css/card-product-header-main.css">
   <link rel="stylesheet" href="/src/css/adaptive-media/header-slider.css">
@@ -26,14 +23,14 @@
     <div class="container">
       <div class="wrap">
         <div class="logo"><a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a></div>
-  
-      <div class="search">
-        <button class="btn-search"></button>
-        <input type="text" placeholder="">
+
+        <div class="search">
+          <button class="btn-search"></button>
+          <input type="text" placeholder="">
+        </div>
       </div>
-    </div>
       <nav class="menu">
-        <a href="/src/catalog.html" class="link-header-menu">Catalog</a>
+        <a href="/src/pages/catalog.html" class="link-header-menu">Catalog</a>
         <a href="/src/pages/contact-page.html" class="link-header-menu">Contacts</a>
         <a href="/src/pages/about-us.html" class="link-header-menu">About Us</a>
         <a href="#" class="link-header-menu">Basket</a>
@@ -44,60 +41,60 @@
   <!-- карточка продукта -->
   <section class="product">
     <div class="card-product">
-        <div class="product-img">
-            <img src="/src/assets/pictures/card-product/for-absolut-description.png" alt="absolut">
+      <div class="product-img">
+        <img src="/src/assets/pictures/card-product/for-absolut-description.png" alt="absolut">
+      </div>
+      <div class="product-description">
+        <div class="product-description-title">
+          <h1>Absolut vodka</h1>
+          <img src="/src/assets/pictures/card-product/Favorite.svg" alt="heart">
+          <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale">
         </div>
-        <div class="product-description">
-            <div class="product-description-title">
-                <h1>Absolut vodka</h1>
-                <img src="/src/assets/pictures/card-product/Favorite.svg" alt="heart">
-                <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale">
+        <div class="product-description-info">
+          <div class="product-description-about">
+            <p class="product-description-about-info-title">Type</p>
+            <p class="product-description-about-info">Vodka</p>
+          </div>
+          <div class="product-description-about">
+            <p class="product-description-about-info-title">Region</p>
+            <p class="product-description-about-info">Portugal</p>
+          </div>
+          <div class="product-description-about">
+            <p class="product-description-about-info-title">Brand</p>
+            <p class="product-description-about-info">Absolut</p>
+          </div>
+          <div class="product-description-about-choice">
+            <p class="product-description-about-info-title">Size</p>
+            <div class="alcochol-amount-filter">
+              <label for="amount-filter">
+                <select id="amount-filter">
+                  <option value="0,5L">Absolut 0,5L</option>
+                  <option value="1L" seclected>Absolut 1L</option>
+                  <option value="1,5L">Absolut 1,5L</option>
+                  <option value="1,75L">Absolut 1,75L</option>
+                </select>
+              </label>
+              <p class="filter-options">+ 4 options</p>
             </div>
-            <div class="product-description-info">
-                <div class="product-description-about">
-                    <p class="product-description-about-info-title">Type</p>
-                    <p class="product-description-about-info">Vodka</p>
-                </div>
-                <div class="product-description-about">
-                    <p class="product-description-about-info-title">Region</p>
-                    <p class="product-description-about-info">Portugal</p>
-                </div>
-                <div class="product-description-about">
-                    <p class="product-description-about-info-title">Brand</p>
-                    <p class="product-description-about-info">Absolut</p>
-                </div>
-                <div class="product-description-about-choice">
-                    <p class="product-description-about-info-title">Size</p>
-                    <div class="alcochol-amount-filter">
-                        <label for="amount-filter">
-                            <select id="amount-filter">
-                            <option value="0,5L">Absolut 0,5L</option>
-                            <option value="1L" seclected>Absolut 1L</option>
-                            <option value="1,5L">Absolut 1,5L</option>
-                            <option value="1,75L">Absolut 1,75L</option>
-                            </select>
-                        </label>
-                        <p class="filter-options">+ 4 options</p>
-                    </div>
-                </div>
-            </div>
-            <div class="product-description-text">
-                <p>Absolut Vodka is a classic tasting vodka that is distilled from winter wheat. 
-                    The recipe for its production is more than 30 years old, and the design 
-                    of the bottle is based on a medicine bottle from the 18th century. It is clean 
-                    and elegant, with touches of black peppercorns (a bit reminiscent of rye) 
-                    and vanilla bean.</p>
-            </div>
-            <div class="product-description-purchase">
-                <div class="product-description-counter">
-                    <button class="product-description-counter-minus">-</button>
-                    <p>1</p>
-                    <button class="product-description-counter-plus">+</button>
-                </div>
-                <p class="product-description-price">$44.90</p>
-                <button class="product-description-buy-btn">Buy</button>
-            </div>
+          </div>
         </div>
+        <div class="product-description-text">
+          <p>Absolut Vodka is a classic tasting vodka that is distilled from winter wheat.
+            The recipe for its production is more than 30 years old, and the design
+            of the bottle is based on a medicine bottle from the 18th century. It is clean
+            and elegant, with touches of black peppercorns (a bit reminiscent of rye)
+            and vanilla bean.</p>
+        </div>
+        <div class="product-description-purchase">
+          <div class="product-description-counter">
+            <button class="product-description-counter-minus">-</button>
+            <p>1</p>
+            <button class="product-description-counter-plus">+</button>
+          </div>
+          <p class="product-description-price">$44.90</p>
+          <button class="product-description-buy-btn">Buy</button>
+        </div>
+      </div>
     </div>
   </section>
   <!-- звонок -->

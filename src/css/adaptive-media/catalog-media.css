@@ -1,0 +1,9 @@
+@media screen and (max-width: 840px) {
+   .Request-call-text-02{
+      font-size: 48px;
+    line-height: 68px;
+   }
+
+}
+
+@media screen and (max-width: 360px) {}

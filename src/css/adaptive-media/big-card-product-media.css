@@ -5,6 +5,7 @@
 
    .wrapper-big-product{
       margin: 0 40px;
+      gap: 70px;
    }
 
    .card-product {

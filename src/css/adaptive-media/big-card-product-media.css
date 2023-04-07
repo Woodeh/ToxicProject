@@ -22,11 +22,21 @@
    .product-description-title {
       font-size: 48px;
       line-height: 68px;
+      justify-content: center;
+      align-items: center;
    }
 
    .product-description-info {
       gap: 24.5px;
+      justify-content: center;
+      align-items: center;
    }
+
+.product-description-text{
+   justify-content: center;
+      align-items: center;
+      text-align: center;
+}
 
    .card-product-big {
       display: none;

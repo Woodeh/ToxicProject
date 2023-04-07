@@ -38,13 +38,18 @@
       text-align: center;
 }
 
-   .card-product-big {
+   /* .card-product-big {
       display: none;
-   }
+   } */
 
-   .card-product-medium {
+   /* .card-product-medium {
       display: block;
+   } */
+
+   .product-img img{
+      max-width: 360px;
    }
+   
 
    .product-description-about-choice {
       display: none;

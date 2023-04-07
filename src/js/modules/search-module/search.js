@@ -1,5 +1,5 @@
-const params = new URLSearchParams(window.location.search);
-const searchQuery = params.get("search");
+// const params = new URLSearchParams(window.location.search);
+// const searchQuery = params.get("search"); - конфликт из-за этих строчек. нужно исправить
 
 const filteredProducts = searchQuery ? products.filter((product) => {
   return ['title', 'composition', 'type', 'country'].some((field) => {

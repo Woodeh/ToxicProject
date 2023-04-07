@@ -130,7 +130,6 @@ header {
     max-width: 1320px;
     display: flex;
     margin: 90px 0;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     gap: 48px;
@@ -138,7 +137,7 @@ header {
 
 
 .product-img img{
-    max-width: 648px;
+    width: 648px;
     border: 2px #A8A8A8 solid;
  }
 

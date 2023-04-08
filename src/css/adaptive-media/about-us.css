@@ -1,0 +1,142 @@
+@media screen and (max-width: 840px) {
+    header {
+        padding-top: 28px;
+    }
+    .search input {
+        max-width: 296px;
+        padding-left: 10px;
+        /* height: 52px; */
+    }
+    .btn-search{
+        /* height: 52px; */
+    }
+    .logo img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 82px;
+        height: 52px;
+    }
+    .burger-menu{
+        overflow: visible;
+    }
+    .menu a{
+        display: none;
+    }
+    .block {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .block p:first-child{
+        padding-top: 64px;
+    }
+    .block p:last-child{
+        padding-bottom: 64px;
+    }
+    .footer-container{
+        flex-wrap: wrap;
+    }
+    .wrapper>p:first-child{
+        font-size: 48px;
+        margin: 66px 0;
+    }
+    .wrapper>p:nth-child(4){
+        margin: 72px 0;
+        font-size: 18px;
+    }
+    .wrapper img{
+        /* width: 360px; */
+        /* height: 751.5px; */
+    }
+    .block{
+        font-size: 18px;
+        line-height: 24px;
+        gap: 16px;
+        max-width: 360px;
+    }
+    .box{
+        padding: 0 48px;
+    }
+    .box img{
+        display: none;
+
+    }
+    .img-2 {
+        background-image: url(/src/assets/pictures/about-us/Pic-840.png);
+        width: 360px;
+        height: 528px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: -42px;
+    }
+    .inner{
+        max-width: 312px;
+        padding-top: 0px;
+        padding-bottom: 0px ;
+    }
+    .box-2{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 72px;
+    }
+    .absolut-img{
+        height: auto;
+        padding-top: 74px;
+        padding-bottom: 70px;
+    }
+    .text-title-3{
+        padding-top: 0;
+
+    }
+    .wrapper{
+        padding-bottom: 0;
+    }
+    footer{
+        margin: 0;
+    }
+    .Request-call{
+        padding-bottom: 72px;
+    }
+    .footer-container{
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+    .footer-menu {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 332px;
+        gap: 12px 26px;
+    }
+    .footer-policy p{
+        text-align: center;
+        width: 150px;
+    }
+    .footer-policy{
+        padding-right: 48px;
+    }
+    .footer-logo img {
+        max-width: 150px;
+        padding-left: 48px;
+        margin-right: 0px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .footer-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    input {
+        max-width: 118px;
+    }
+    .search input{
+        max-width: 140px;
+    }
+    .btn-search{
+        margin-left: 32px;
+    }
+}

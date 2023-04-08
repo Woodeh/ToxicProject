@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/src/css/card-product-header-main.css">
   <link rel="stylesheet" href="/src/css/adaptive-media/header-slider.css">
   <link rel="stylesheet" href="/src/css/about-us.css">
+  <link rel="stylesheet" href="/src/css/adaptive-media/about-us.css">
   <title>About us</title>
 </head>
 
@@ -26,7 +27,7 @@
         <div class="logo"><a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a></div>
 
         <div class="search">
-          <form action="/src/catalog.html" class="form-search">
+          <form action="/src/pages/catalog.html" class="form-search">
             <button class="btn-search" type="submit"></button>
             <input id="search" class="input-text" type="text" name="search" placeholder="">
           </form>
@@ -53,6 +54,22 @@
               <button class="clear-cart-btn">Clear basket</button>
             </div>
           </div>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <nav class="burger-menu">
+        <input type="checkbox" id="burger-toggle" />
+        <label for="burger-toggle" class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="burger-menu-links">
+          <li><a href="/src/pages/catalog.html">Catalog</a></li>
+          <li><a href="/src/pages/contact-page.html">Contacts</a></li>
+          <li><a href="/src/pages/about-us.html">About Us</a></li>
+          <li><a href="/src/index.html#">Basket</a></li>
+        </ul>
       </nav>
     </div>
   </header>

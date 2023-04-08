@@ -1,11 +1,11 @@
 // const params = new URLSearchParams(window.location.search);
 // const searchQuery = params.get("search"); - конфликт из-за этих строчек. нужно исправить
 
-const filteredProducts = searchQuery ? products.filter((product) => {
-  return ['title', 'composition', 'type', 'country'].some((field) => {
-    return product[field].toLowerCase().includes(searchQuery.toLowerCase());
-  });
-}) : products;
+// const filteredProducts = searchQuery ? products.filter((product) => {
+//   return ['title', 'composition', 'type', 'country'].some((field) => {
+//     return product[field].toLowerCase().includes(searchQuery.toLowerCase());
+//   });
+// }) : products;
 
 
 displayProducts(filteredProducts);

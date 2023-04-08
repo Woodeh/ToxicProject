@@ -10,11 +10,15 @@
   <link rel="stylesheet" href="/src/css/font.css">
   <link rel="stylesheet" href="/src/css/style.css">
   <link rel="stylesheet" href="/src/css/catalog.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="/src/css/global-style.css">
+  <link rel="stylesheet" href="/src/css/about.css">
+  <!-- <link rel="stylesheet" href="/src/css/header-slider.css"> -->
   <link rel="stylesheet" href="/src/css/footer.css">
   <link rel="stylesheet" href="/src/css/card-product-header-main.css">
   <link rel="stylesheet" href="/src/css/adaptive-media/header-slider.css">
   <link rel="stylesheet" href="/src/css/about-us.css">
+  <link rel="stylesheet" href="/src/css/adaptive-media/about-us.css">
   <title>About us</title>
 </head>
 
@@ -24,16 +28,16 @@
     <div class="container">
       <div class="wrap">
         <div class="logo"><a href="/src/index.html"><img src="/src/assets/pictures/Logo.svg" alt="Логотип"></a></div>
-
-        <div class="search">
-          <form action="/src/catalog.html" class="form-search">
-            <button class="btn-search" type="submit"></button>
-            <input id="search" class="input-text" type="text" name="search" placeholder="">
-          </form>
-        </div>
+  
+      <div class="search">
+        <form action="/src/catalog.html" class="form-search">
+          <button class="btn-search" type="submit"></button>
+          <input id="search" class="input-text" type="text" name="search" placeholder="">
+        </form>
       </div>
+    </div>
       <nav class="menu">
-        <a href="/src/pages/catalog.html" class="link-header-menu">Catalog</a>
+        <a href="/src/catalog.html" class="link-header-menu">Catalog</a>
         <a href="/src/pages/contact-page.html" class="link-header-menu">Contacts</a>
         <a href="/src/pages/about-us.html" class="link-header-menu">About Us</a>
         <a href="#" class="link-header-menu cart-btn">Basket</a>
@@ -45,72 +49,83 @@
           <div class="cart-items"></div>
           <div class="cart-footer">
             <div>
-              <h3>Total: </h3>
-              <span class="cart-total">0 $</span>
+            <h3>Total: </h3>
+            <span class="cart-total">0 $</span>
             </div>
             <div class="cart-footer-button">
-              <button class="buy-cart-btn">Buy</button>
-              <button class="clear-cart-btn">Clear basket</button>
+            <button class="buy-cart-btn">Buy</button>
+            <button class="clear-cart-btn">Clear basket</button>
             </div>
           </div>
       </nav>
     </div>
+    <div class="wrapper">
+      <nav class="burger-menu">
+        <input type="checkbox" id="burger-toggle" />
+        <label for="burger-toggle" class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="burger-menu-links">
+          <li><a href="/src/catalog.html">Catalog</a></li>
+          <li><a href="/src/pages/contact-page.html">Contacts</a></li>
+          <li><a href="/src/pages/about-us.html">About Us</a></li>
+          <li><a href="/src/catalog.html#">Basket</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
   <section class="main">
     <div class="wrapper">
-      <p>About us</p>
-      <img src="/src/assets/pictures/about-us/Pic.svg" alt="main-pic"><br>
-      <p>Alkoshop is a place where you can definitely choose from a selection of quality alcohol.
-        We are a team of enthusiasts for whom the search for the most interesting bottles from
-        around the world is not only a job, but also a passion.</p>
-      <div class="box">
-        <div class="block">
-          <p>We bring you exclusively original and branded alcohol, which you can conveniently buy through our e-shop or
-            in several
-            brick-and-mortar stores in several corners of Slovakia. We
-            strive to make the customer experience with us as pleasant
-            as the enjoyment of sips of a quality distilled beverage.</p>
-          <p>We bring you exclusively original and branded alcohol, which you can conveniently buy through our e-shop or
-            in several
-            brick-and-mortar stores in several corners of Slovakia. We
-            strive to make the customer experience with us as pleasant
-            as the enjoyment of sips of a quality distilled beverage.</p>
-        </div>
-        <img src="/src/assets/pictures/about-us/Pic-2.svg" alt="Pic-2">
+        <p>About us</p>
+        <img src="/src/assets/pictures/about-us/Pic.svg" alt="main-pic"><br>
+        <p>Alkoshop is a place where you can definitely choose from a selection of quality alcohol.
+            We are a team of enthusiasts for whom the search for the most interesting bottles from
+            around the world is not only a job, but also a passion.</p>
+        <div class="box">
+            <div class="block">
+                <p>We bring you exclusively original and branded alcohol, which you can conveniently buy through our e-shop or in several 
+                    brick-and-mortar stores in several corners of Slovakia. We 
+                    strive to make the customer experience with us as pleasant 
+                    as the enjoyment of sips of a quality distilled beverage.</p>
+                <p>We bring you exclusively original and branded alcohol, which you can conveniently buy through our e-shop or in several 
+                    brick-and-mortar stores in several corners of Slovakia. We 
+                    strive to make the customer experience with us as pleasant 
+                    as the enjoyment of sips of a quality distilled beverage.</p>
+            </div>
+                <div class="img-2"><img src="/src/assets/pictures/about-us/Pic-2.svg" alt="Pic-2"></div>
 
-      </div>
-      <div class="box-2">
-        <div class="inner">
-          <p class="text-title">About Us</p>
-          <p class="text-title-2">We have been on the market since <span>1993</span>.<br>
-            We won the SHOP OF THE YEAR award 6 times</span>
+                </div>
+        <div class="box-2">
+            <div class="inner">
+                <p class="text-title">About Us</p>
+                <p class="text-title-2">We have been on the market since <span>1993</span>.<br>
+                    We won the SHOP OF THE YEAR award 6 times</span>
+            </div>
+            <div class="inner">
+                <p class="text-title">We offer</p>
+                <p class="text-title-2">More than <span>4000</span> types of alcohol.<br>
+                    We sell more than <span>950 brands</span> of alcohol</p>
+            </div>
+            <div class="inner">
+                <p class="text-title">Our area</p>
+                <p class="text-title-2">Our warehouse size is <span>1200 m2.<br></span>.
+                    We have 4 <span>regular stores</span> (and we plan to open more)</p>
+            </div>
+            <div class="inner">
+                <p class="text-title">Reference</p>
+                <p class="text-title-2">We have more than <span>90% customer</span><br> satisfaction who recommend buying
+                     from our store</p>
+            </div>
         </div>
-        <div class="inner">
-          <p class="text-title">We offer</p>
-          <p class="text-title-2">More than <span>4000</span> types of alcohol.<br>
-            We sell more than <span>950 brands</span> of alcohol</p>
-        </div>
-        <div class="inner">
-          <p class="text-title">Our area</p>
-          <p class="text-title-2">Our warehouse size is <span>1200 m2.<br></span>.
-            We have 4 <span>regular stores</span> (and we plan to open more)</p>
-        </div>
-        <div class="inner">
-          <p class="text-title">Reference</p>
-          <p class="text-title-2">We have more than <span>90% customer</span><br> satisfaction who recommend buying
-            from our store</p>
-        </div>
-      </div>
-      <img class="absolut-img" src="/src/assets/pictures/about-us/Pic-3.svg" alt="Pic-3">
-      <p class="text-title-3">We believe that a stable and reliable company matures over the years,
-        just like quality whiskey. We believe that quality alcohol can write the craziest and most exciting stories in
-        our lives.
-        That is also why, motivated by desire, we look for the most interesting flavors in the world and bring you a
-        unique experience in liquid form.</p>
+        <img class="absolut-img" src="/src/assets/pictures/about-us/Pic-3.svg" alt="Pic-3">
+        <p class="text-title-3">We believe that a stable and reliable company matures over the years,
+             just like quality whiskey. We believe that quality alcohol can write the craziest and most exciting stories in our lives. 
+             That is also why, motivated by desire, we look for the most interesting flavors in the world and bring you a unique experience in liquid form.</p>
     </div>
   </section>
-
+  
   <!-- звонок -->
   <section>
     <div class="Request-call">

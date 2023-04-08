@@ -8,7 +8,7 @@
 // }) : products;
 
 
-displayProducts(filteredProducts);
+// displayProducts(filteredProducts);
 
 const searchForm = document.querySelector('.form-search');
 const searchInput = document.querySelector('#search');

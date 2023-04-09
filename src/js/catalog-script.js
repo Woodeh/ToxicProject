@@ -7,8 +7,8 @@ const products = [
     popularity: 3,
     imgUrl: "/src/assets/pictures/catalog/sheridan.png",
     title: "Sheridan",
-    composition:
-      "",
+    composition:"",
+    link: "/src/assets/pictures/catalog/chivas.png"
   },
   {
     type: "champagne",
@@ -20,6 +20,7 @@ const products = [
     title: "Moët & Chandon ",
     composition:
       "",
+      link: "/src/assets/pictures/catalog/chivas.png"
   },
   {
     type: "tequila",
@@ -31,6 +32,7 @@ const products = [
     title: "Olmeca",
     composition:
       "",
+      link: "/src/assets/pictures/catalog/chivas.png"
   },
   {
     type: "gin",
@@ -42,6 +44,7 @@ const products = [
     title: "Bombay Sapphire",
     composition:
       "",
+      link: "/src/assets/pictures/catalog/chivas.png"
   },
   {
     type: "beer",
@@ -53,17 +56,19 @@ const products = [
     title: "Corona Extra",
     composition:
       "",
+      link: "/src/assets/pictures/catalog/chivas.png"
   },
   {
     type: "vodka",
     country: "sweden",
-    price: 80,
+    price: 44,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/absolute.png",
     title: "Absolute",
     composition:
       "",
+      link: "/src/pages/big-card-product/big-card-product-absolut-vodka.html"
   },
   {
     type: "gin",
@@ -75,6 +80,7 @@ const products = [
     title: "Hendrick's Orbium",
     composition:
       "",
+      link: "/src/assets/pictures/catalog/chivas.png"
   },
   {
     type: "whiskey",
@@ -86,6 +92,7 @@ const products = [
     title: "Chivas Regal",
     composition:
       "",
+      link: "/src/assets/pictures/catalog/chivas.png"
   },
 ];
 
@@ -122,6 +129,14 @@ function displayProducts(products) {
     productVolume.classList.add("product-volume");
     productVolume.textContent = `Объем: ${product.volume} мл.`;
 
+    const productLink = document.createElement("a");
+    productLink.href = product.link;
+    productLink.classList.add("product-link");
+    productLink.textContent = "See more";
+    
+    
+
+
     const productPopularity = document.createElement("p");
     productPopularity.classList.add("product-popularity");
     // productPopularity.textContent = `Популярность: ${product.popularity}/5`;
@@ -147,8 +162,10 @@ function displayProducts(products) {
     // productCard.appendChild(productVolume);
     productCard.appendChild(productPopularity);
     productCard.appendChild(productComposition);
+    productCard.appendChild(productLink);
     productCard.appendChild(productBuyButton);
     productsContainer.appendChild(productCard);
+    
   });
 }
 

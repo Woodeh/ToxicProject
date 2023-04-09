@@ -1,17 +1,4 @@
 const addButtons = document.querySelectorAll(".add-btn");
-const favorite = document.querySelectorAll(".fa-heart");
-
-favorite.forEach((like) => {
-  like.addEventListener("click", () => {
-    if (like.classList.contains("pink")) {
-      like.classList.remove("pink");
-      console.log("Вы убрали товар из понравившихся");
-    } else {
-      like.classList.add("pink");
-      console.log("Товар добавлен в понравившиеся");
-    }
-  });
-});
 
 addButtons.forEach((button) => {
   button.addEventListener("click", addToCart);
@@ -124,8 +111,6 @@ sliderCard.addEventListener("mouseup", (event) => {
   sliderCard.style.cursor = "grab";
   handleGesture();
 });
-
-
 
 // slider for bestsellers------------------------------------------------------------------------------
 const sliderCard2 = document.querySelector(".sliderCard2");
@@ -301,7 +286,6 @@ function removeFromCart(name) {
   showCart();
 }
 
-
 function clearCart() {
   cart = [];
   showCart();
@@ -309,27 +293,29 @@ function clearCart() {
 }
 
 function showCart() {
-    cartItems.innerHTML = "";
-    let totalPrice = 0;
-    for (let i = 0; i < cart.length; i++) {
-      let item = cart[i];
-      let cartItemImage = document.createElement("img");
-      cartItemImage.src = item.image;
-      let itemPrice = item.price * item.quantity;
-      let cartItem = document.createElement("div");
-      cartItem.classList.add("cart-item");
-      cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
+  cartItems.innerHTML = "";
+  let totalPrice = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let item = cart[i];
+    let cartItemImage = document.createElement("img");
+    cartItemImage.src = item.image;
+    let itemPrice = item.price * item.quantity;
+    let cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
           <div class="items-in-busket"> 
           <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+          <div class="cart-item-quantity"><input type="number" min="1" value="${
+            item.quantity
+          }" data-name="${item.name}" data-price="${item.price}"></div>
           <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
           </div>
           <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
-      cartItems.appendChild(cartItem);
-      // cartItem.appendChild(cartItemImage);
-      totalPrice += itemPrice;
-    }
-  cartTotal.textContent =" $" +  totalPrice.toFixed(2);
+    cartItems.appendChild(cartItem);
+    // cartItem.appendChild(cartItemImage);
+    totalPrice += itemPrice;
+  }
+  cartTotal.textContent = " $" + totalPrice.toFixed(2);
 
   let quantityInputs = document.querySelectorAll(
     ".cart-item-quantity input[type='number']"
@@ -383,25 +369,9 @@ addToCartBtns.forEach((btn) => {
   });
 });
 
-// // модалка, открывающая оригинал картинки
-// function showFullImageModal(imageUrl) {
-//     const modal = document.createElement('div');
-//     modal.classList.add('modal');
-
-//     const modalContent = document.createElement('div');
-//     modalContent.classList.add('modal-content');
-
-//     const img = document.createElement('img');
-//     img.src = imageUrl;
-//     modalContent.appendChild(img);
-
-//     modal.appendChild(modalContent);
-//     document.body.appendChild(modal);
-
-//     // закрыть модалку на кнопку Закрыть
-//     modal.addEventListener('click', () => {
-//         modal.remove();
-//     });
-// }
-
-//----------------------------------------------------------------------------------------------------------------------
+cartOverlay.addEventListener("click", (event) => {
+  if (event.target === cartOverlay) {
+    cartModal.style.display = "none";
+    enableScroll();
+  }
+});

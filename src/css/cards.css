@@ -72,9 +72,6 @@
 }
 
 .title-new-products {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
     margin-bottom: 60px;
     font-family: 'Yeseva One', cursive;
@@ -112,7 +109,6 @@
     background-color: transparent;
     border: 1px solid black;
     cursor: pointer;
-    /* margin-top: 16px; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

@@ -216,26 +216,24 @@ function onFilterChange() {
 // Запускаем отображение карточек товаров на странице при загрузке
 displayProducts(products);
 
-// Создаем объект URLSearchParams, чтобы получить параметры из текущего URL-адреса страницы
 const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+const search = params.get("search");
 
-// Получаем значение параметра 'type' из текущего URL-адреса страницы
-const category = params.get("type");
+let filteredProducts = products;
 
-// Если значение параметра 'type' есть в URL-адресе, то:
-if (category) {
-  console.log(category);
-
-  // Устанавливаем значение параметра 'type' в качестве значения для элемента формы с идентификатором 'type-filter'
-  document.querySelector("#type-filter").value = category;
-
-  // Вызываем функцию filterProducts() для фильтрации товаров в соответствии с выбранным значением параметра 'type'
-  filterProducts();
+if (type) {
+  filteredProducts = filteredProducts.filter((product) => {
+    return product.type.toLowerCase() === type.toLowerCase();
+  });
 }
-// Иначе (если значение параметра 'type' отсутствует в URL-адресе), то:
-else {
-  // Запускаем функцию displayProducts() для отображения карточек товаров на странице при загрузке
-  displayProducts(products);
+
+if (search) {
+  filteredProducts = filteredProducts.filter((product) => {
+    return ['title', 'composition', 'type', 'country'].some((field) => {
+      return product[field].toLowerCase().includes(search.toLowerCase());
+    });
+  });
 }
 
 // Назначаем обработчик событий на изменение фильтров
@@ -413,4 +411,11 @@ addToCartBtns.forEach((btn) => {
     let image = btn.dataset.image;
     addToCartBasket(name, price, image);
   });
+});
+
+cartOverlay.addEventListener("click", (event) => {
+  if (event.target === cartOverlay) {
+    cartModal.style.display = "none";
+    enableScroll();
+  }
 });

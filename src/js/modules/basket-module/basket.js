@@ -1,7 +1,3 @@
-const map = document.getElementById("map");
-map.style.margin = "0 auto";
-
-
 
 const body = document.body;
 const cartOverlay = document.createElement("div");

@@ -159,6 +159,18 @@ a:visited {
     transition: 1.5s ease;
 }
 
+.product-link {
+    color: black;
+    font-weight: 500;
+    transition: 0.5s ease;
+
+}
+
+.product-link:hover {
+    color: #53535368;
+    
+}
+
 .product:hover {
     transform: scale(1.05);
 }

@@ -2,13 +2,13 @@ const products = [
   {
     type: "liqueur",
     country: "ireland",
-    price: 50,
+    price: 14,
     volume: 750,
     popularity: 3,
     imgUrl: "/src/assets/pictures/catalog/sheridan.png",
     title: "Sheridan",
     composition:"",
-    link: "/src/assets/pictures/catalog/chivas.png"
+    link: "/src/pages/big-card-product/big-card-product-sheridan-liqueur.html"
   },
   {
     type: "champagne",
@@ -20,43 +20,43 @@ const products = [
     title: "Moët & Chandon ",
     composition:
       "",
-      link: "/src/assets/pictures/catalog/chivas.png"
+      link: "/src/pages/big-card-product/big-card-product-champagne-moet.html"
   },
   {
     type: "tequila",
     country: "mexico",
-    price: 37,
+    price: 24,
     volume: 500,
     popularity: 2,
     imgUrl: "/src/assets/pictures/catalog/Tequila 1.png",
     title: "Olmeca",
     composition:
       "",
-      link: "/src/assets/pictures/catalog/chivas.png"
+      link: "/src/pages/big-card-product/big-card-product-olmeca-tequila.html"
   },
   {
     type: "gin",
     country: "united kingdom",
-    price: 48,
+    price: 28,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/Gin 1.png",
     title: "Bombay Sapphire",
     composition:
       "",
-      link: "/src/assets/pictures/catalog/chivas.png"
+      link: "/src/pages/big-card-product/big-card-product-bombay-gin.html"
   },
   {
     type: "beer",
     country: "mexico",
-    price: 50,
+    price: 4,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/beer 1.png",
     title: "Corona Extra",
     composition:
       "",
-      link: "/src/assets/pictures/catalog/chivas.png"
+      link: "/src/pages/big-card-product/big-card-product-beer-corona.html"
   },
   {
     type: "vodka",
@@ -80,19 +80,19 @@ const products = [
     title: "Hendrick's Orbium",
     composition:
       "",
-      link: "/src/assets/pictures/catalog/chivas.png"
+      link: "/src/pages/big-card-product/big-card-product-hendricks-gin.html"
   },
   {
     type: "whiskey",
     country: "scotland",
-    price: 80,
+    price: 36.00,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/chivas.png",
     title: "Chivas Regal",
     composition:
       "",
-      link: "/src/assets/pictures/catalog/chivas.png"
+      link: "/src/pages/big-card-product/big-card-product-chivas-whisky.html"
   },
 ];
 
@@ -132,7 +132,7 @@ function displayProducts(products) {
     const productLink = document.createElement("a");
     productLink.href = product.link;
     productLink.classList.add("product-link");
-    productLink.textContent = "See more";
+    productLink.textContent = "More info";
     
     
 

@@ -90,11 +90,12 @@ a:visited{
 }
 
 .footer-policy{
-    padding-right: 63px;
+    /* padding-right: 63px; */
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 500;

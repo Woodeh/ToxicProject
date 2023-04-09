@@ -47,9 +47,8 @@ function moveTo(index) {
   } else if (currentIndex === 0) {
     const clone = sliderItems[sliderItems.length - 1].cloneNode(true);
     sliderWrapper.prepend(clone);
-    sliderWrapper.style.transform = `translateX(-${
-      slider.offsetWidth
-    }px)`;
+    sliderWrapper.style.transform = `translateX(-${slider.offsetWidth
+      }px)`;
     sliderItems = sliderWrapper.querySelectorAll(".slider-item");
     currentIndex = 1;
     setTimeout(() => {
@@ -60,7 +59,7 @@ function moveTo(index) {
       }, 50);
     }, 500);
   }
-  
+
   const clonedItem = sliderWrapper.querySelector(".slider-item.clone");
   if (clonedItem && currentIndex >= sliderItems.length - 1) {
     clonedItem.remove();

@@ -1,0 +1,289 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.wrap {
+   display: flex;
+}
+
+header {
+   padding-top: 60px;
+   background-color: #f2f2f2;
+}
+
+.logo img {
+   max-width: 150px;
+   padding-left: 63px;
+}
+
+.search {
+   display: flex;
+}
+
+.btn-search {
+   width: 52px;
+   height: 52px;
+   background-color: transparent;
+   border: none;
+   border-bottom: 2px solid #A8A8A8;
+   background-image: url(/src/assets/pictures/header/Search.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 52px 52px;
+   margin-left: 27px;
+   cursor: pointer;
+   transition: all .5s;
+}
+
+.btn-search:hover {
+   background-image: url(/src/assets/pictures/header/SearchGrey.png);
+}
+
+.search input:focus {
+   color: Grey;
+}
+
+.search input {
+   background-color: #f2f2f2;
+   border: none;
+   max-width: 296px;
+   height: 52px;
+   border-bottom: 2px solid #A8A8A8;
+   text-align: left;
+}
+
+.search input::placeholder {
+   text-align: left;
+   padding-left: 30px;
+}
+
+.menu {
+   font-family: 'Josefin Sans', sans-serif;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 18px;
+   line-height: 24px;
+   color: #202020;
+   padding-right: 60px;
+   display: flex;
+   gap: 24px;
+}
+
+.menu a {
+   position: relative;
+   color: #202020;
+}
+
+.menu a:before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   bottom: 0;
+   margin: 0 0 -11px 0;
+   background-color: #A8A8A8;
+   visibility: hidden;
+   transform: scaleX(0);
+   transition: all 0.4s ease-in-out 0s;
+}
+
+.menu a:hover:before {
+   visibility: visible;
+   transform: scaleX(1);
+}
+
+.menu a:hover {
+   color: #002D5B;
+   transition: all .5s;
+   text-shadow: 0px 0px 2px #002e5b68;
+}
+
+.menu a:visited {
+   color: #202020;
+}
+
+@media screen and (max-width: 768px) {
+   .menu button {
+       display: none;
+   }
+}
+
+.product {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.card-product {
+   max-width: 1320px;
+   display: flex;
+   margin: 90px 0;
+   justify-content: center;
+   align-items: center;
+   gap: 48px;
+}
+
+
+.product-img img{
+   width: 648px;
+   border: 2px #A8A8A8 solid;
+}
+
+.card-product-big-corona, .card-product-big-hennessy{
+   padding: 50px;
+}
+
+.wrapper-big-product {
+   max-width: 1440px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 90px;
+margin-bottom: 90px;
+}
+
+.card-product-medium {
+   display: none;
+}
+
+.product-description {
+   display: flex;
+   flex-direction: column;
+   gap: 48px;
+   max-width: 624px;
+}
+
+.product-description-title {
+   display: flex;
+   gap: 36px;
+   font-family: "Yeseva One", sans-serif;
+   font-size: 56px;
+   font-weight: 400;
+   line-height: 72px;
+}
+
+.product-description-info,
+.product-description-purchase {
+   display: flex;
+   gap: 48px;
+   align-items: center;
+}
+
+.product-description-purchase-medium {
+   display: none;
+}
+
+.product-description-about {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   justify-content: center;
+   align-items: center;
+}
+
+.product-description-about-choice {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   justify-content: center;
+   align-items: center;
+}
+
+.product-description-about-info-title,
+.product-description-text {
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 18px;
+   line-height: 24px;
+   font-weight: 300;
+}
+
+.product-description-about-info {
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 18px;
+   line-height: 18px;
+   font-weight: 500;
+}
+
+.product-description-counter {
+   max-width: 80px;
+   max-height: 52px;
+   display: flex;
+   gap: 12px;
+   border: 2px #202020 solid;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 18px;
+   line-height: 18px;
+   font-weight: 500;
+   padding: 17px
+}
+
+.product-description-counter-minus,
+.product-description-counter-plus {
+   background-color: #f2f2f2;
+   border: none;
+   cursor: pointer;
+}
+
+.product-description-price {
+   font-family: 'Yeseva One', sans-serif;
+   font-size: 24px;
+   line-height: 28px;
+   font-weight: 400;
+}
+
+.product-description-buy-btn {
+   /* background-color: #f2f2f2;
+   max-width: 312px;
+   padding: 19px 140px 20px 140px;
+   max-height: 52px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 18px;
+   line-height: 18px;
+   font-weight: 500;
+   text-align: center;
+   border: 2px #202020 solid;
+   cursor: pointer; */
+   font-family: 'Josefin Sans';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 18px;
+   padding: 17.0px 97px;
+   border: none;
+   outline: 2px solid rgb(0, 0, 0);
+   outline-offset: -2px;
+   cursor: pointer;
+
+   /* padding: 0 5px; */
+  box-shadow: inset 0 0 0 0 #002D5B;
+   transition: box-shadow .2s;
+}
+
+.product-description-buy-btn:hover {
+   /* color: white;
+   box-shadow: inset 0 -300px 0 0 #002D5B;
+   transition: box-shadow .5s ease-in-out 0s, color .7s;
+   border: 2px solid #002D5B; */
+    /* background-color: #74D0E3; */
+    outline: none;
+    /* transition: all .5s; */
+    color: white;
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: box-shadow .5s ease-in-out 0s, color .7s;
+    border: 0px solid #002D5B;
+
+}

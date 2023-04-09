@@ -1,0 +1,44 @@
+@media screen and (max-width: 840px) {
+   .Request-call-text-02 {
+      font-size: 48px;
+      line-height: 68px;
+   }
+
+}
+
+@media screen and (max-width: 360px) {
+   .Request-call-text-01 {
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 219px;
+   }
+
+   .Request-call-text-02 {
+      font-size: 36px;
+      line-height: 48px;
+   }
+
+   .input-your-question,
+   .input-your-phone,
+   .btn-call {
+      font-size: 14px;
+      line-height: 22px;
+
+   }
+
+   .btn-call button {
+      max-width: 312px;
+   }
+
+   #input-question,
+   #phone {
+      max-width: 312px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+   }
+
+  
+
+}

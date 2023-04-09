@@ -1,0 +1,140 @@
+@media screen and (max-width: 840px) {
+   .menu {
+      display: none;
+   }
+
+   .wrapper-big-product {
+      margin: 0 40px;
+      gap: 70px;
+   }
+
+   .card-product {
+      margin: 72px 0;
+      gap: 24px;
+   }
+
+   .product-description {
+      gap: 19px;
+   }
+
+   .product-description-title {
+      font-size: 48px;
+      line-height: 68px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .product-description-info {
+      gap: 24.5px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .product-description-text {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+
+   .product-img img {
+      width: 360px;
+   }
+
+   .card-product-big-corona,
+   .card-product-big-hennessy {
+      padding: 20px;
+   }
+
+   .product-description-about-choice {
+      display: none;
+   }
+
+   .product-description-purchase {
+      display: none;
+   }
+
+   .product-description-purchase-medium {
+      display: flex;
+      gap: 35px;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .product-description-price {
+      font-size: 20px;
+   }
+}
+
+@media screen and (max-width: 360px) {
+
+   /* .wrapper-big-product, .product-description-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+   } */
+
+   .card-product {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+   }
+
+   .product-img img {
+      width: 312px;
+   }
+
+   .product-description-title h1 {
+      font-size: 36px;
+      line-height: 48px;
+   }
+
+   .product-description-about-info-title {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   .product-description-about-info {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .product-description-counter {
+      font-size: 14px;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 11px 14px;
+      gap: 12px;
+   }
+
+   .product-description-buy-btn {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 11px 63px;
+   }
+
+   .product-description-text p {
+      font-size: 16px;
+      line-height: 22px;
+      max-width: 312px;
+   }
+
+   .product-description-price {
+      font-size: 16px;
+      line-height: 24px;
+   }
+.product-description-about-choice-medium {
+   display: none;
+}
+
+.product-description-purchase-medium{
+   gap: 15px;
+}
+
+
+}

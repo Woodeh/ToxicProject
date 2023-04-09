@@ -1,0 +1,30 @@
+@media screen and (max-width: 840px) {
+
+   .left-footer-menu,
+   .right-footer-menu,
+   .footer-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+}
+
+@media screen and (max-width: 360px) {
+
+   .left-footer-menu,
+   .right-footer-menu {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   .footer-policy {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+
+   .footer-container {
+      gap: 34px;
+   }
+}

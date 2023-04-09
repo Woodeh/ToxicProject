@@ -6,7 +6,7 @@
 }
 
 .container{
-    max-width: 1331px;
+    max-width: 1330px;
     background-color: #DADADA;
     margin: 0 auto;
     display: flex;
@@ -79,7 +79,6 @@ header {
     font-size: 18px;
     line-height: 24px;
     color: #202020;
-    padding-right: 60px;
     display: flex;
     gap: 24px;
 }
@@ -198,8 +197,8 @@ a:visited{
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    bottom: 48px;
-    right: 752px;
+    bottom: 50px;
+    right: 20%;
     gap: 16px;
   }
   

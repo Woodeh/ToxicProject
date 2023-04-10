@@ -2,13 +2,13 @@ const products = [
   {
     type: "liqueur",
     country: "ireland",
-    price: 14,
+    price: 50,
     volume: 750,
     popularity: 3,
     imgUrl: "/src/assets/pictures/catalog/sheridan.png",
     title: "Sheridan",
-    composition:"",
-    link: "/src/pages/big-card-product/big-card-product-sheridan-liqueur.html"
+    composition:
+      "",
   },
   {
     type: "champagne",
@@ -20,55 +20,50 @@ const products = [
     title: "Moët & Chandon ",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-champagne-moet.html"
   },
   {
     type: "tequila",
     country: "mexico",
-    price: 24,
+    price: 37,
     volume: 500,
     popularity: 2,
     imgUrl: "/src/assets/pictures/catalog/Tequila 1.png",
     title: "Olmeca",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-olmeca-tequila.html"
   },
   {
     type: "gin",
     country: "united kingdom",
-    price: 28,
+    price: 48,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/Gin 1.png",
     title: "Bombay Sapphire",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-bombay-gin.html"
   },
   {
     type: "beer",
     country: "mexico",
-    price: 4,
+    price: 50,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/beer 1.png",
     title: "Corona Extra",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-beer-corona.html"
   },
   {
     type: "vodka",
     country: "sweden",
-    price: 44,
+    price: 80,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/absolute.png",
     title: "Absolute",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-absolut-vodka.html"
   },
   {
     type: "gin",
@@ -80,19 +75,17 @@ const products = [
     title: "Hendrick's Orbium",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-hendricks-gin.html"
   },
   {
     type: "whiskey",
     country: "scotland",
-    price: 36.00,
+    price: 80,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/chivas.png",
     title: "Chivas Regal",
     composition:
       "",
-      link: "/src/pages/big-card-product/big-card-product-chivas-whisky.html"
   },
 ];
 
@@ -129,14 +122,6 @@ function displayProducts(products) {
     productVolume.classList.add("product-volume");
     productVolume.textContent = `Объем: ${product.volume} мл.`;
 
-    const productLink = document.createElement("a");
-    productLink.href = product.link;
-    productLink.classList.add("product-link");
-    productLink.textContent = "More info";
-    
-    
-
-
     const productPopularity = document.createElement("p");
     productPopularity.classList.add("product-popularity");
     // productPopularity.textContent = `Популярность: ${product.popularity}/5`;
@@ -162,10 +147,8 @@ function displayProducts(products) {
     // productCard.appendChild(productVolume);
     productCard.appendChild(productPopularity);
     productCard.appendChild(productComposition);
-    productCard.appendChild(productLink);
     productCard.appendChild(productBuyButton);
     productsContainer.appendChild(productCard);
-    
   });
 }
 
@@ -279,6 +262,16 @@ document
 document
   .querySelector("#country-filter")
   .addEventListener("change", filterProducts);
+
+  document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("add-to-cart")) {
+      // Get the product details from the dataset attributes of the clicked button
+      let name = event.target.dataset.name;
+      let price = event.target.dataset.price;
+      let image = event.target.dataset.image;
+      addToCartBasket(name, price, image);
+    }
+  });
 // document.querySelector('#price-filter').addEventListener('change', filterProducts);
 // document.querySelector('#volume-filter').addEventListener('change', filterProducts);
 // document
@@ -290,8 +283,14 @@ document
 //     // Удаляем первый элемент (Type) из списка options
 //     typeFilter.removeChild(typeFilter.options[0]);
 //   }, false);
-
-
+displayProducts(filteredProducts);
+let btn = document.querySelector('.add-to-cart');
+    btn.addEventListener('click', () =>{
+      btn.dataset.name
+      btn.dataset.price
+      btn.dataset.image
+      addToCartBasket(name, price, image);
+    });
 
 //коризна для каталога
 const body = document.body;

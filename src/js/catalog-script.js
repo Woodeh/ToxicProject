@@ -270,15 +270,21 @@ document
   .querySelector("#country-filter")
   .addEventListener("change", filterProducts);
 
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("add-to-cart")) {
-    // Get the product details from the dataset attributes of the clicked button
-    let name = event.target.dataset.name;
-    let price = event.target.dataset.price;
-    let image = event.target.dataset.image;
-    addToCartBasket(name, price, image);
-  }
-});
+
+//кусок кода, из-за которого обхекты в корзину добавляются х2-------------------------------
+
+// document.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("add-to-cart")) {
+//     // Get the product details from the dataset attributes of the clicked button
+//     let name = event.target.dataset.name;
+//     let price = event.target.dataset.price;
+//     let image = event.target.dataset.image;
+//     addToCartBasket(name, price, image);
+//   }
+// });
+ 
+//----------------------------------------------------------------------------------------
+
 // document.querySelector('#price-filter').addEventListener('change', filterProducts);
 // document.querySelector('#volume-filter').addEventListener('change', filterProducts);
 // document

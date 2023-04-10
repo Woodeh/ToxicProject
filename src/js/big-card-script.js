@@ -44,13 +44,13 @@ function showNotification() {
   notification.style.top = '50%';
   notification.style.fontSize = '16px';
   notification.style.fontFamily = 'Josefin Sans';
-  notification.style.boxShadow = '0px 3px 3px black';
+  notification.style.boxShadow = '0px 2px 2px black';
   notification.style.left = '50%';
   notification.style.transform = 'translateX(-50%)';
   notification.style.padding = '10px';
-  notification.style.backgroundColor = 'white';
+  notification.style.backgroundColor = '#F2F2F2';
   notification.style.border = '1px solid #002D5B';
-  notification.style.borderRadius = '5px';
+  notification.style.borderRadius = '2px';
   notification.style.zIndex = '999';
   
   document.body.appendChild(notification);

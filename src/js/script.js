@@ -97,3 +97,5 @@ paginationItems.forEach((item, index) => {
     startInterval();
   });
 });
+
+

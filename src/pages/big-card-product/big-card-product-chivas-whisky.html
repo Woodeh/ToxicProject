@@ -40,7 +40,24 @@
         <a href="/src/pages/catalog.html" class="link-header-menu">Catalog</a>
         <a href="/src/pages/contact-page.html" class="link-header-menu">Contacts</a>
         <a href="/src/pages/about-us.html" class="link-header-menu">About Us</a>
-        <a href="#" class="link-header-menu">Basket</a>
+        <a href="#" class="link-header-menu cart-btn">Basket</a>
+        <div class="cart-modal">
+          <div class="cart-header">
+            <h2>Basket</h2>
+            <button class="close-cart-btn">Back</button>
+          </div>
+          <div class="cart-items"></div>
+          <div class="cart-footer">
+            <div>
+              <h3>Total: </h3>
+              <span class="cart-total">0 $</span>
+            </div>
+            <div class="cart-footer-button">
+              <button class="buy-cart-btn">Buy</button>
+              <button class="clear-cart-btn">Clear basket</button>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -88,7 +105,8 @@
               <button class="product-description-counter-plus">+</button>
             </div>
             <p class="product-description-price">$ 36.00</p>
-            <button class="product-description-buy-btn">Buy</button>
+            <button class="product-description-buy-btn add-btn add-to-cart" data-name="Chivas Regal" data-price="36.00"
+            data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
           </div>
         </div>
       </div>

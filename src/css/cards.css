@@ -149,3 +149,25 @@
     font-size: 18px;
     line-height: 24px;
 }
+
+#cartBtn {
+border-radius: 50%;
+position: absolute;
+bottom: 15px;
+width: 20px;
+height: 19px;
+border: none; outline: none;
+text-align: center;
+background-color: transparent;
+color: rgb(177, 16, 16);
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+    position: absolute;
+    right: -20px;
+}

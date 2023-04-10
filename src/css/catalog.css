@@ -160,9 +160,12 @@ form {
 
 }
 
+
+
 input {
-    max-width: 212px;
+    max-width: 150px;
     text-align: center;
+    color: black;
 
 }
 

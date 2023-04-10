@@ -132,6 +132,7 @@ body {
 
 .cart-item-name {
     font-weight: bold;
+    text-align: center;
 }
 
 .cart-item-price {
@@ -285,3 +286,40 @@ body {
   }
   
   
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 123px;
+    right: 60px;
+    z-index: 99;
+    border: 1px solid;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+
+  #myBtn svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  #myBtn circle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 0.5s;
+  }
+  
+  #myBtn:hover circle {
+    stroke-dashoffset: 0;
+  }
+  
+  #myBtn path {
+    transition: fill 0.3s;
+  }
+  
+ 

@@ -241,10 +241,36 @@ const clearCartBtn = document.querySelector(".clear-cart-btn");
 const cartTotal = document.querySelector(".cart-total");
 const cartItems = document.querySelector(".cart-items");
 
+
+
 function disableScroll() {
   body.classList.add("disable-scroll");
   cartOverlay.classList.add("cart-overlay");
   body.appendChild(cartOverlay);
+}
+
+function showNotification() {
+  const notification = document.createElement('div');
+  notification.textContent = 'Your item is added to cart!';
+  notification.style.position = 'fixed';
+  notification.style.top = '50%';
+  notification.style.fontSize = '16px';
+  notification.style.fontFamily = 'Josefin Sans';
+  notification.style.boxShadow = '0px 2px 2px black';
+  notification.style.left = '50%';
+  notification.style.transform = 'translateX(-50%)';
+  notification.style.padding = '10px';
+  notification.style.backgroundColor = '#F2F2F2';
+  notification.style.border = '1px solid #002D5B';
+  notification.style.borderRadius = '2px';
+  notification.style.zIndex = '999';
+  
+  document.body.appendChild(notification);
+
+  // через сколько окно скроется
+  setTimeout(function() {
+    notification.remove();
+  }, 2000);
 }
 
 function enableScroll() {
@@ -273,6 +299,7 @@ function addToCartBasket(name, price, image) {
     });
   }
   showCart();
+  showNotification();
 }
 
 function removeFromCart(name) {
@@ -292,9 +319,23 @@ function clearCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+
 function showCart() {
+  let totalQuantity = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalQuantity += cart[i].quantity;
+  }
+  document.getElementById("cartBadge").innerText = totalQuantity;
+  if (totalQuantity === 0) {
+    // cartBadge.style.display = "none";
+    // cartBtn.style.display = "none" // если значение равно нулю
+  } else {
+    // cartBadge.style.display = "block"; // если значение не равно нулю
+  }
+
   cartItems.innerHTML = "";
   let totalPrice = 0;
+
   for (let i = 0; i < cart.length; i++) {
     let item = cart[i];
     let cartItemImage = document.createElement("img");
@@ -303,16 +344,15 @@ function showCart() {
     let cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
     cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
-          <div class="items-in-busket"> 
-          <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-quantity"><input type="number" min="1" value="${
-            item.quantity
-          }" data-name="${item.name}" data-price="${item.price}"></div>
-          <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
-          </div>
-          <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
+      <div class="items-in-busket"> 
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-quantity"><input type="number" min="1" value="${
+          item.quantity
+        }" data-name="${item.name}" data-price="${item.price}"></div>
+        <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
+      </div>
+      <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
     cartItems.appendChild(cartItem);
-    // cartItem.appendChild(cartItemImage);
     totalPrice += itemPrice;
   }
   cartTotal.textContent = " $" + totalPrice.toFixed(2);
@@ -337,6 +377,7 @@ function showCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+
 cartBtn.addEventListener("click", () => {
   cartModal.style.display = "block";
   showCart();
@@ -350,6 +391,7 @@ closeCartBtn.addEventListener("click", () => {
 
 clearCartBtn.addEventListener("click", () => {
   clearCart();
+  location.reload();
 });
 
 cartItems.addEventListener("click", (event) => {
@@ -366,6 +408,7 @@ addToCartBtns.forEach((btn) => {
     let price = btn.dataset.price;
     let image = btn.dataset.image;
     addToCartBasket(name, price, image);
+    showCart();
   });
 });
 
@@ -373,5 +416,20 @@ cartOverlay.addEventListener("click", (event) => {
   if (event.target === cartOverlay) {
     cartModal.style.display = "none";
     enableScroll();
+  }
+});
+
+//вот этот код добавил
+document.addEventListener("DOMContentLoaded", () => {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQuantity = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalQuantity += cart[i].quantity;
+  }
+  document.getElementById("cartBadge").innerText = totalQuantity;
+  if (totalQuantity === 0) {
+    cartBadge.style.display = "none"; // если значение равно нулю
+  } else {
+    cartBadge.style.display = "block"; // если значение не равно нулю
   }
 });

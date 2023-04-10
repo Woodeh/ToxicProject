@@ -239,6 +239,7 @@ a:visited {
     justify-content: center;
     gap: 45px;
     padding-bottom: 86px;
+    margin-left: -42px;
 }
 
 select {
@@ -266,6 +267,7 @@ select {
     text-align: center;
     user-select: none;
     cursor: pointer;
+    padding-right: 14px;
 }
 
 select:focus {
@@ -421,8 +423,9 @@ form {
 }
 
 input {
-    max-width: 212px;
+    max-width: 150px;
     text-align: center;
+    color: black;
 }
 
 input::placeholder {

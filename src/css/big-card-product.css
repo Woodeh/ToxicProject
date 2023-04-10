@@ -119,6 +119,10 @@ header {
    }
 }
 
+.number {
+   width: 20px;
+}
+
 .product {
    display: flex;
    flex-direction: column;
@@ -219,7 +223,7 @@ margin-bottom: 90px;
 }
 
 .product-description-counter {
-   max-width: 80px;
+   max-width: 90px;
    max-height: 52px;
    display: flex;
    gap: 12px;
@@ -228,7 +232,8 @@ margin-bottom: 90px;
    font-size: 18px;
    line-height: 18px;
    font-weight: 500;
-   padding: 17px
+   padding: 17px;
+   text-align: center;
 }
 
 .product-description-counter-minus,
@@ -236,6 +241,7 @@ margin-bottom: 90px;
    background-color: #f2f2f2;
    border: none;
    cursor: pointer;
+   color: black;
 }
 
 .product-description-price {

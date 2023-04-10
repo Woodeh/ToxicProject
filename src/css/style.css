@@ -132,6 +132,7 @@ body {
 
 .cart-item-name {
     font-weight: bold;
+    text-align: center;
 }
 
 .cart-item-price {

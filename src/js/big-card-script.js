@@ -37,6 +37,30 @@ function disableScroll() {
   body.appendChild(cartOverlay);
 }
 
+function showNotification() {
+  const notification = document.createElement('div');
+  notification.textContent = 'Your item is added to cart!';
+  notification.style.position = 'fixed';
+  notification.style.top = '50%';
+  notification.style.fontSize = '16px';
+  notification.style.fontFamily = 'Josefin Sans';
+  notification.style.boxShadow = '0px 3px 3px black';
+  notification.style.left = '50%';
+  notification.style.transform = 'translateX(-50%)';
+  notification.style.padding = '10px';
+  notification.style.backgroundColor = 'white';
+  notification.style.border = '1px solid #002D5B';
+  notification.style.borderRadius = '5px';
+  notification.style.zIndex = '999';
+  
+  document.body.appendChild(notification);
+
+  // через сколько окно скроется
+  setTimeout(function() {
+    notification.remove();
+  }, 2000);
+}
+
 function enableScroll() {
   body.classList.remove("disable-scroll");
   cartOverlay.classList.remove("cart-overlay");
@@ -63,6 +87,7 @@ function addToCartBasket(name, price, image) {
     });
   }
   showCart();
+  showNotification();
 }
 
 function removeFromCart(name) {

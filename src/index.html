@@ -37,7 +37,10 @@
         <!-- <a href="/src/pages/card-product.html" class="link-header-menu">CardTest</a> -->
         <a href="/src/pages/contact-page.html" class="link-header-menu">Contacts</a>
         <a href="/src/pages/about-us.html" class="link-header-menu">About Us</a>
-        <a href="#" class="link-header-menu cart-btn">Basket</a>
+        <a href="#" class="link-header-menu cart-btn">Basket
+          <button id="cartBtn"><span id="cartBadge"></span></button>
+        </a>
+        
         <div class="cart-modal">
           <div class="cart-header">
             <h2>Basket</h2>
@@ -63,17 +66,17 @@
         <div class="slider-item">
           <img src="/src/assets/pictures/Banners1.png" alt="">
           <div class="slider-caption"></div>
-          <button class="see-more-button">See more</button>
+          <a href="/src/pages/catalog.html"><button class="see-more-button">See more</button></a>
         </div>
         <div class="slider-item">
           <img src="/src/assets/pictures/Banners2.png" alt="">
           <div class="slider-caption"></div>
-          <button class="see-more-button">See more</button>
+          <a href="/src/pages/catalog.html"><button class="see-more-button">See more</button></a>
         </div>
         <div class="slider-item">
           <img src="/src/assets/pictures/Banners3.png" alt="">
           <div class="slider-caption"></div>
-          <button class="see-more-button">See more</button>
+          <a href="/src/pages/catalog.html"><button class="see-more-button">See more</button></a>
         </div>
       </div>
       <div class="slider-controls">
@@ -154,7 +157,7 @@
             <img src="assets/pictures/catalog/bottle1.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
               <span class="card-price-new-product-title">Hendrick's Orbium</span>
-              <span>$ 44.90</span>
+              <span>$ 50.00</span>
             </div>
             <button type="button" class="add-btn add-to-cart" data-name="Hendrick's Orbium" data-price="44.90"
               data-image="/src/assets/pictures/catalog/bottle1.png">Add to bag</button>
@@ -163,20 +166,20 @@
             <img src="/src/assets/pictures/catalog/chivas.png" alt="bottle" class="card-image">
             <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
             <div class="card-price-new-product">
-              <span class="card-price-new-product-title">Chivas Regal 12 year old Whisky</span>
-              <span>$ 36.30</span>
+              <span class="card-price-new-product-title">Chivas Regal</span>
+              <span>$ 36.00</span>
             </div>
-            <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal 12 year old Whisky"
+            <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal"
               data-price="36.30" data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
             
           </div>
           <div class="card-new-products slide">
             <img src="/src/assets/pictures/catalog/moet.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
-              <span class="card-price-new-product-title">Moët & Chandon Champagne</span>
+              <span class="card-price-new-product-title">Moët & Chandon</span>
               <span>$ 48.00</span>
             </div>
-            <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon Champagne" data-price="48.00"
+            <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon" data-price="48.00"
               data-image="/src/assets/pictures/catalog/moet.png">Add to bag</button>
           </div>
 
@@ -187,7 +190,7 @@
 
             <div class="card-price-new-product">
               <span class="card-price-new-product-title">Absolut Vodka</span>
-              <span>$ 44.90</span>
+              <span>$ 44.00</span>
             </div>
             <button type="button" class="add-btn add-to-cart" data-name="Absolut Vodka" data-price="44.90"
               data-image="/src/assets/pictures/catalog/absolute.png">Add to
@@ -197,7 +200,7 @@
             <img src="assets/pictures/catalog/bottle1.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
               <span class="card-price-new-product-title">Hendrick's Orbium</span>
-              <span>$ 44.90</span>
+              <span>$ 50.00</span>
             </div>
             <button type="button" class="add-btn add-to-cart" data-name="Hendrick's Orbium" data-price="44.90"
               data-image="/src/assets/pictures/catalog/bottle1.png">Add to bag</button>
@@ -207,19 +210,19 @@
             <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
 
             <div class="card-price-new-product">
-              <span class="card-price-new-product-title">Chivas Regal 12 year old Whisky</span>
-              <span>$ 36.30</span>
+              <span class="card-price-new-product-title">Chivas Regal</span>
+              <span>$ 36.00</span>
             </div>
-            <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal 12 year old Whisky"
+            <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal"
               data-price="36.30" data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
           </div>
           <div class="card-new-products slide">
             <img src="/src/assets/pictures/catalog/moet.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
-              <span class="card-price-new-product-title">Moët & Chandon Champagne</span>
+              <span class="card-price-new-product-title">Moët & Chandon</span>
               <span>$ 48.00</span>
             </div>
-            <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon Champagne" data-price="48.00"
+            <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon" data-price="48.00"
               data-image="/src/assets/pictures/catalog/moet.png">Add to bag</button>
           </div>
 
@@ -227,7 +230,7 @@
             <img src="/src/assets/pictures/catalog/absolute.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
               <span class="card-price-new-product-title">Absolut Vodka</span>
-              <span>$ 44.90</span>
+              <span>$ 44.00</span>
             </div>
             <button type="button" class="add-btn add-to-cart" data-name="Absolut Vodka" data-price="44.90"
               data-image="/src/assets/pictures/catalog/absolute.png">Add to
@@ -239,7 +242,7 @@
 
             <div class="card-price-new-product">
               <span class="card-price-new-product-title">Hendrick's Orbium</span>
-              <span>$ 44.90</span>
+              <span>$ 50.00</span>
             </div>
             <button type="button" class="add-btn add-to-cart" data-name="Hendrick's Orbium" data-price="44.90"
               data-image="/src/assets/pictures/catalog/bottle1.png">Add to bag</button>
@@ -247,10 +250,10 @@
           <div class="card-new-products slide">
             <img src="/src/assets/pictures/catalog/chivas.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
-              <span class="card-price-new-product-title">Chivas Regal 12 year old Whisky</span>
-              <span>$ 36.30</span>
+              <span class="card-price-new-product-title">Chivas Regal</span>
+              <span>$ 36.00</span>
             </div>
-            <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal 12 year old Whisky"
+            <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal"
               data-price="36.30" data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
           </div>
           <div class="card-new-products slide">
@@ -258,10 +261,10 @@
             <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
 
             <div class="card-price-new-product">
-              <span class="card-price-new-product-title">Moët & Chandon Champagne</span>
+              <span class="card-price-new-product-title">Moët & Chandon</span>
               <span>$ 48.00</span>
             </div>
-            <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon Champagne" data-price="48.00"
+            <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon" data-price="48.00"
               data-image="/src/assets/pictures/catalog/moet.png">Add to bag</button>
           </div>
 
@@ -269,7 +272,7 @@
             <img src="/src/assets/pictures/catalog/absolute.png" alt="bottle" class="card-image">
             <div class="card-price-new-product">
               <span class="card-price-new-product-title">Absolut Vodka</span>
-              <span>$ 44.90</span>
+              <span>$ 44.00</span>
             </div>
             <button type="button" class="add-btn add-to-cart" data-name="Absolut Vodka" data-price="44.90"
               data-image="/src/assets/pictures/catalog/absolute.png">Add to
@@ -306,7 +309,7 @@
 
               <div class="card-price-new-product">
                 <span class="card-price-new-product-title">Hendrick's Orbium</span>
-                <span>$ 44.90</span>
+                <span>$ 50.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Hendrick's Orbium" data-price="44.90"
                 data-image="/src/assets/pictures/catalog/bottle1.png">Add to bag</button>
@@ -314,10 +317,10 @@
             <div class="card-new-products slide2">
               <img src="/src/assets/pictures/catalog/chivas.png" alt="bottle" class="card-image">
               <div class="card-price-new-product">
-                <span class="card-price-new-product-title">Chivas Regal 12 year old Whisky</span>
-                <span>$ 36.30</span>
+                <span class="card-price-new-product-title">Chivas Regal</span>
+                <span>$ 36.00</span>
               </div>
-              <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal 12 year old Whisky"
+              <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal"
                 data-price="36.30" data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
             </div>
             <div class="card-new-products slide2">
@@ -325,10 +328,10 @@
               <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
 
               <div class="card-price-new-product">
-                <span class="card-price-new-product-title">Moët & Chandon Champagne</span>
+                <span class="card-price-new-product-title">Moët & Chandon</span>
                 <span>$ 48.00</span>
               </div>
-              <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon Champagne" data-price="48.00"
+              <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon" data-price="48.00"
                 data-image="/src/assets/pictures/catalog/moet.png">Add to bag</button>
             </div>
 
@@ -336,7 +339,7 @@
               <img src="/src/assets/pictures/catalog/absolute.png" alt="bottle" class="card-image">
               <div class="card-price-new-product">
                 <span class="card-price-new-product-title">Absolut Vodka</span>
-                <span>$ 44.90</span>
+                <span>$ 44.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Absolut Vodka" data-price="44.90"
                 data-image="/src/assets/pictures/catalog/absolute.png">Add to
@@ -348,7 +351,7 @@
 
               <div class="card-price-new-product">
                 <span class="card-price-new-product-title">Hendrick's Orbium</span>
-                <span>$ 44.90</span>
+                <span>$ 50.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Hendrick's Orbium" data-price="44.90"
                 data-image="/src/assets/pictures/catalog/bottle1.png">Add to bag</button>
@@ -356,8 +359,8 @@
             <div class="card-new-products slide2">
               <img src="/src/assets/pictures/catalog/chivas.png" alt="bottle" class="card-image">
               <div class="card-price-new-product">
-                <span class="card-price-new-product-title">Chivas Regal 12 year old Whisky</span>
-                <span>$ 36.30</span>
+                <span class="card-price-new-product-title">Chivas Regal</span>
+                <span>$ 36.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal 12 year old Whisky"
                 data-price="36.30" data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
@@ -367,10 +370,10 @@
               <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
 
               <div class="card-price-new-product">
-                <span class="card-price-new-product-title">Moët & Chandon Champagne</span>
+                <span class="card-price-new-product-title">Moët & Chandon</span>
                 <span>$ 48.00</span>
               </div>
-              <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon Champagne" data-price="48.00"
+              <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon" data-price="48.00"
                 data-image="/src/assets/pictures/catalog/moet.png">Add to bag</button>
             </div>
 
@@ -378,7 +381,7 @@
               <img src="/src/assets/pictures/catalog/absolute.png" alt="bottle" class="card-image">
               <div class="card-price-new-product">
                 <span class="card-price-new-product-title">Absolut Vodka</span>
-                <span>$ 44.90</span>
+                <span>$ 44.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Absolut Vodka" data-price="44.90"
                 data-image="/src/assets/pictures/catalog/absolute.png">Add to
@@ -390,7 +393,7 @@
 
               <div class="card-price-new-product">
                 <span class="card-price-new-product-title">Hendrick's Orbium</span>
-                <span>$ 44.90</span>
+                <span>$ 50.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Hendrick's Orbium" data-price="44.90"
                 data-image="/src/assets/pictures/catalog/bottle1.png">Add to bag</button>
@@ -398,10 +401,10 @@
             <div class="card-new-products slide2">
               <img src="/src/assets/pictures/catalog/chivas.png" alt="bottle" class="card-image">
               <div class="card-price-new-product">
-                <span class="card-price-new-product-title">Chivas Regal 12 year old Whisky</span>
-                <span>$ 36.30</span>
+                <span class="card-price-new-product-title">Chivas Regal</span>
+                <span>$ 36.00</span>
               </div>
-              <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal 12 year old Whisky"
+              <button type="button" class="add-btn add-to-cart" data-name="Chivas Regal"
                 data-price="36.30" data-image="/src/assets/pictures/catalog/chivas.png">Add to bag</button>
             </div>
             <div class="card-new-products slide2">
@@ -409,10 +412,10 @@
               <img src="/src/assets/pictures/catalog/Salle.svg" alt="sale" class="sale">
 
               <div class="card-price-new-product">
-                <span class="card-price-new-product-title">Moët & Chandon Champagne</span>
+                <span class="card-price-new-product-title">Moët & Chandon</span>
                 <span>$ 48.00</span>
               </div>
-              <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon Champagne" data-price="48.00"
+              <button type="button" class="add-btn add-to-cart" data-name="Moët & Chandon" data-price="48.00"
                 data-image="/src/assets/pictures/catalog/moet.png">Add to bag</button>
             </div>
 
@@ -420,7 +423,7 @@
               <img src="/src/assets/pictures/catalog/absolute.png" alt="bottle" class="card-image">
               <div class="card-price-new-product">
                 <span class="card-price-new-product-title">Absolut Vodka</span>
-                <span>$ 44.90</span>
+                <span>$ 44.00</span>
               </div>
               <button type="button" class="add-btn add-to-cart" data-name="Absolut Vodka" data-price="44.90"
                 data-image="/src/assets/pictures/catalog/absolute.png">Add to

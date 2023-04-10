@@ -243,20 +243,11 @@ margin-bottom: 90px;
    font-size: 24px;
    line-height: 28px;
    font-weight: 400;
+   width: 130px;
+   text-align: center;
 }
 
 .product-description-buy-btn {
-   /* background-color: #f2f2f2;
-   max-width: 312px;
-   padding: 19px 140px 20px 140px;
-   max-height: 52px;
-   font-family: 'Josefin Sans', sans-serif;
-   font-size: 18px;
-   line-height: 18px;
-   font-weight: 500;
-   text-align: center;
-   border: 2px #202020 solid;
-   cursor: pointer; */
    font-family: 'Josefin Sans';
    font-style: normal;
    font-weight: 500;

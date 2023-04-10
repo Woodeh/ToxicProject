@@ -35,8 +35,7 @@ function moveTo(index) {
   sliderWrapper.style.transform = `translateX(-${index * slider.offsetWidth
     }px)`;
   currentIndex = index;
-
-  // обновление пагинации
+  
   updatePagination(currentIndex);
 
   // бесконечная прокрутка вправо
@@ -81,7 +80,7 @@ function startInterval() {
   intervalId = setInterval(() => {
     const nextIndex = currentIndex + 1;
     moveTo(nextIndex);
-  }, 15000);
+  }, 8000);
 }
 
 function stopInterval() {

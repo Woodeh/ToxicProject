@@ -89,7 +89,7 @@ body {
     color: #202020;
 }
 
-.link-catalog:hover{
+.link-catalog:hover {
     color: #002D5B;
     transition: all 0.5s;
     text-shadow: 0px 0px 2px #002e5b68;
@@ -110,7 +110,7 @@ form {
     gap: 16px;
 }
 
-.form-search{
+.form-search {
     display: flex;
     flex-direction: row;
     gap: 0;
@@ -208,7 +208,7 @@ input:focus {
     outline: 2px solid rgb(0, 0, 0);
     outline-offset: -2px;
     cursor: pointer;
-	box-shadow: inset 0 0 0 0 #002D5B;
+    box-shadow: inset 0 0 0 0 #002D5B;
     transition: box-shadow .2s;
 }
 

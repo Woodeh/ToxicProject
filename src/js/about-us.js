@@ -52,7 +52,6 @@ function removeFromCart(name) {
   showCart();
 }
 
-
 function clearCart() {
   cart = [];
   showCart();
@@ -60,27 +59,29 @@ function clearCart() {
 }
 
 function showCart() {
-    cartItems.innerHTML = "";
-    let totalPrice = 0;
-    for (let i = 0; i < cart.length; i++) {
-      let item = cart[i];
-      let cartItemImage = document.createElement("img");
-      cartItemImage.src = item.image;
-      let itemPrice = item.price * item.quantity;
-      let cartItem = document.createElement("div");
-      cartItem.classList.add("cart-item");
-      cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
+  cartItems.innerHTML = "";
+  let totalPrice = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let item = cart[i];
+    let cartItemImage = document.createElement("img");
+    cartItemImage.src = item.image;
+    let itemPrice = item.price * item.quantity;
+    let cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
           <div class="items-in-busket"> 
           <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+          <div class="cart-item-quantity"><input type="number" min="1" value="${
+            item.quantity
+          }" data-name="${item.name}" data-price="${item.price}"></div>
           <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
           </div>
           <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
-      cartItems.appendChild(cartItem);
-      // cartItem.appendChild(cartItemImage);
-      totalPrice += itemPrice;
-    }
-  cartTotal.textContent =" $" +  totalPrice.toFixed(2);
+    cartItems.appendChild(cartItem);
+    // cartItem.appendChild(cartItemImage);
+    totalPrice += itemPrice;
+  }
+  cartTotal.textContent = " $" + totalPrice.toFixed(2);
 
   let quantityInputs = document.querySelectorAll(
     ".cart-item-quantity input[type='number']"

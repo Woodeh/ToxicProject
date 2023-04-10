@@ -1,11 +1,11 @@
-const priceEl = document.querySelector('.product-description-price');
-const numberEl = document.querySelector('.number');
-const minusBtn = document.querySelector('.product-description-counter-minus');
-const plusBtn = document.querySelector('.product-description-counter-plus');
-const pricePerItem = 48.00;
+const priceEl = document.querySelector(".product-description-price");
+const numberEl = document.querySelector(".number");
+const minusBtn = document.querySelector(".product-description-counter-minus");
+const plusBtn = document.querySelector(".product-description-counter-plus");
+const pricePerItem = 48.0;
 let itemCount = 1;
 
-minusBtn.addEventListener('click', () => {
+minusBtn.addEventListener("click", () => {
   if (itemCount > 1) {
     itemCount--;
     numberEl.textContent = itemCount;
@@ -13,7 +13,7 @@ minusBtn.addEventListener('click', () => {
   }
 });
 
-plusBtn.addEventListener('click', () => {
+plusBtn.addEventListener("click", () => {
   if (itemCount < 9) {
     itemCount++;
     numberEl.textContent = itemCount;
@@ -38,25 +38,25 @@ function disableScroll() {
 }
 
 function showNotification() {
-  const notification = document.createElement('div');
-  notification.textContent = 'Your item is added to cart!';
-  notification.style.position = 'fixed';
-  notification.style.top = '50%';
-  notification.style.fontSize = '16px';
-  notification.style.fontFamily = 'Josefin Sans';
-  notification.style.boxShadow = '0px 2px 2px black';
-  notification.style.left = '50%';
-  notification.style.transform = 'translateX(-50%)';
-  notification.style.padding = '10px';
-  notification.style.backgroundColor = '#F2F2F2';
-  notification.style.border = '1px solid #002D5B';
-  notification.style.borderRadius = '2px';
-  notification.style.zIndex = '999';
-  
+  const notification = document.createElement("div");
+  notification.textContent = "Your item is added to cart!";
+  notification.style.position = "fixed";
+  notification.style.top = "50%";
+  notification.style.fontSize = "16px";
+  notification.style.fontFamily = "Josefin Sans";
+  notification.style.boxShadow = "0px 2px 2px black";
+  notification.style.left = "50%";
+  notification.style.transform = "translateX(-50%)";
+  notification.style.padding = "10px";
+  notification.style.backgroundColor = "#F2F2F2";
+  notification.style.border = "1px solid #002D5B";
+  notification.style.borderRadius = "2px";
+  notification.style.zIndex = "999";
+
   document.body.appendChild(notification);
 
   // через сколько окно скроется
-  setTimeout(function() {
+  setTimeout(function () {
     notification.remove();
   }, 2000);
 }
@@ -101,7 +101,6 @@ function removeFromCart(name) {
   showCart();
 }
 
-
 function clearCart() {
   cart = [];
   showCart();
@@ -109,27 +108,31 @@ function clearCart() {
 }
 
 function showCart() {
-    cartItems.innerHTML = "";
-    let totalPrice = 0;
-    for (let i = 0; i < cart.length; i++) {
-      let item = cart[i];
-      let cartItemImage = document.createElement("img");
-      cartItemImage.src = item.image;
-      let itemPrice = item.price * item.quantity;
-      let cartItem = document.createElement("div");
-      cartItem.classList.add("cart-item");
-      cartItem.innerHTML = `<img src="${item.image}" alt="bottle" class="basket-image">
+  cartItems.innerHTML = "";
+  let totalPrice = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let item = cart[i];
+    let cartItemImage = document.createElement("img");
+    cartItemImage.src = item.image;
+    let itemPrice = item.price * item.quantity;
+    let cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `<img src="${
+      item.image
+    }" alt="bottle" class="basket-image">
           <div class="items-in-busket"> 
           <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+          <div class="cart-item-quantity"><input type="number" min="1" value="${
+            item.quantity
+          }" data-name="${item.name}" data-price="${item.price}"></div>
           <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
           </div>
           <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
-      cartItems.appendChild(cartItem);
-      // cartItem.appendChild(cartItemImage);
-      totalPrice += itemPrice;
-    }
-  cartTotal.textContent =" $" +  totalPrice.toFixed(2);
+    cartItems.appendChild(cartItem);
+    // cartItem.appendChild(cartItemImage);
+    totalPrice += itemPrice;
+  }
+  cartTotal.textContent = " $" + totalPrice.toFixed(2);
 
   let quantityInputs = document.querySelectorAll(
     ".cart-item-quantity input[type='number']"
@@ -189,4 +192,3 @@ cartOverlay.addEventListener("click", (event) => {
     enableScroll();
   }
 });
-

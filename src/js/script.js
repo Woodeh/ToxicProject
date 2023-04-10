@@ -32,30 +32,32 @@ function moveTo(index) {
   } else if (index >= sliderItems.length) {
     index = 0;
   }
-  sliderWrapper.style.transform = `translateX(-${index * slider.offsetWidth
-    }px)`;
+  sliderWrapper.style.transform = `translateX(-${
+    index * slider.offsetWidth
+  }px)`;
   currentIndex = index;
-  
+
   updatePagination(currentIndex);
 
   // бесконечная прокрутка вправо
-if (currentIndex === sliderItems.length - 1) {
-  const clone1 = sliderItems[0].cloneNode(true);
-  const clone2 = sliderItems[1].cloneNode(true);
-  const clone3 = sliderItems[2].cloneNode(true);
-  sliderWrapper.appendChild(clone1);
-  sliderWrapper.appendChild(clone2);
-  sliderWrapper.appendChild(clone3);
-  sliderItems = sliderWrapper.querySelectorAll(".slider-item");
-}
-  
+  if (currentIndex === sliderItems.length - 1) {
+    const clone1 = sliderItems[0].cloneNode(true);
+    const clone2 = sliderItems[1].cloneNode(true);
+    const clone3 = sliderItems[2].cloneNode(true);
+    sliderWrapper.appendChild(clone1);
+    sliderWrapper.appendChild(clone2);
+    sliderWrapper.appendChild(clone3);
+    sliderItems = sliderWrapper.querySelectorAll(".slider-item");
+  }
 
   const clonedItem = sliderWrapper.querySelector(".slider-item.clone");
   if (clonedItem && currentIndex >= sliderItems.length - 1) {
     clonedItem.remove();
     sliderItems = sliderWrapper.querySelectorAll(".slider-item");
     currentIndex = 0;
-    sliderWrapper.style.transform = `translateX(${index * -slider.offsetWidth}px)`;
+    sliderWrapper.style.transform = `translateX(${
+      index * -slider.offsetWidth
+    }px)`;
   }
 }
 
@@ -97,5 +99,3 @@ paginationItems.forEach((item, index) => {
     startInterval();
   });
 });
-
-

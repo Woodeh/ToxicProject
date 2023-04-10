@@ -168,7 +168,7 @@ a:visited {
 
 .product-link:hover {
     color: #53535368;
-    
+
 }
 
 .product:hover {
@@ -377,7 +377,7 @@ select>option {
     align-items: center;
 }
 
-.form-search{
+.form-search {
     display: flex;
     flex-direction: row;
     gap: 0;

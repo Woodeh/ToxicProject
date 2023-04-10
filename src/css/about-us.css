@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,21 +13,22 @@ body {
     line-height: 32px;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1440px;
     margin: 0 auto;
 }
-.wrapper>img{
+
+.wrapper>img {
     max-width: 1440px;
     width: 100%;
     height: 363px;
 }
 
-.wrapper>p:first-child{
+.wrapper>p:first-child {
     margin-top: 104px;
     text-align: center;
     margin-bottom: 104px;
-    
+
     font-style: normal;
     font-weight: 400;
     font-size: 56px;
@@ -35,7 +36,7 @@ body {
     color: #202020;
 }
 
-.wrapper>p:nth-child(4){
+.wrapper>p:nth-child(4) {
     margin: 90px 0;
     font-family: 'Yeseva One';
     font-style: normal;
@@ -48,14 +49,14 @@ body {
     text-transform: uppercase;
 }
 
-.box{
+.box {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 94px;
 }
 
-.block{
+.block {
     max-width: 760px;
     display: flex;
     flex-direction: column;
@@ -70,16 +71,17 @@ body {
     text-align: center;
     color: #202020;
 }
-.box-2{
+
+.box-2 {
     display: flex;
     gap: 24px;
 }
 
-.inner{
+.inner {
     padding: 90px 0px;
 }
 
-.text-title{
+.text-title {
     padding-bottom: 36px;
     font-style: normal;
     font-weight: 400;
@@ -90,7 +92,7 @@ body {
 
 }
 
-.text-title-2{
+.text-title-2 {
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 300;
@@ -98,17 +100,18 @@ body {
     line-height: 24px;
     text-align: center;
 }
-.inner span{
+
+.inner span {
     font-weight: bold;
 }
 
-.absolut-img{
+.absolut-img {
     max-width: 1440px;
     height: 320px;
     font-size: 0;
 }
 
-.text-title-3{
+.text-title-3 {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;

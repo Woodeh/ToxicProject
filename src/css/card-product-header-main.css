@@ -71,7 +71,7 @@ header {
 }
 
 
-.menu{
+.menu {
 
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
@@ -140,12 +140,13 @@ header {
 }
 
 
-.product-img img{
+.product-img img {
     width: 648px;
     border: 2px #A8A8A8 solid;
- }
+}
 
-.card-product-big-corona, .card-product-big-hennessy{
+.card-product-big-corona,
+.card-product-big-hennessy {
     padding: 50px;
 
 }
@@ -158,7 +159,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 90px;
-margin-bottom: 90px;
+    margin-bottom: 90px;
 }
 
 .card-product-medium {
@@ -224,12 +225,12 @@ margin-bottom: 90px;
 }
 
 
-.alcochol-amount-filter{
+.alcochol-amount-filter {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.filter-options{
+.filter-options {
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 500;
@@ -308,7 +309,7 @@ select>option {
     border: none;
 }
 
-.product-description-counter{
+.product-description-counter {
     max-width: 80px;
     max-height: 52px;
     display: flex;
@@ -359,7 +360,7 @@ select>option {
     cursor: pointer;
 
     /* padding: 0 5px; */
-	box-shadow: inset 0 0 0 0 #002D5B;
+    box-shadow: inset 0 0 0 0 #002D5B;
     transition: box-shadow .2s;
 }
 
@@ -368,12 +369,12 @@ select>option {
     box-shadow: inset 0 -300px 0 0 #002D5B;
     transition: box-shadow .5s ease-in-out 0s, color .7s;
     border: 2px solid #002D5B; */
-     /* background-color: #74D0E3; */
-     outline: none;
-     /* transition: all .5s; */
-     color: white;
-     box-shadow: inset 0 -300px 0 0 #002D5B;
-     transition: box-shadow .5s ease-in-out 0s, color .7s;
-     border: 0px solid #002D5B;
- 
+    /* background-color: #74D0E3; */
+    outline: none;
+    /* transition: all .5s; */
+    color: white;
+    box-shadow: inset 0 -300px 0 0 #002D5B;
+    transition: box-shadow .5s ease-in-out 0s, color .7s;
+    border: 0px solid #002D5B;
+
 }

@@ -68,7 +68,7 @@
 }
 
 .contacts-logo1 {
-    background-image:url(/src/assets/pictures/facebook-logo.svg);
+    background-image: url(/src/assets/pictures/facebook-logo.svg);
     width: 28px;
     height: 28px;
     transition: 1s ease;
@@ -76,11 +76,11 @@
 }
 
 .contacts-logo1:hover {
-    background-image:url(/src/assets/pictures/iconizer-facebook-logo-red.svg);
+    background-image: url(/src/assets/pictures/iconizer-facebook-logo-red.svg);
 }
 
 .contacts-logo2 {
-    background-image:url(/src/assets/pictures/insta-logo.svg);
+    background-image: url(/src/assets/pictures/insta-logo.svg);
     width: 28px;
     height: 28px;
     transition: 1s ease;
@@ -88,7 +88,7 @@
 }
 
 .contacts-logo2:hover {
-    background-image:url(/src/assets/pictures/iconizer-insta-logo-pink.svg);
+    background-image: url(/src/assets/pictures/iconizer-insta-logo-pink.svg);
 }
 
 #phone-link {
@@ -96,5 +96,5 @@
 }
 
 #phone-link:hover {
-    color:#02315E;
+    color: #02315E;
 }

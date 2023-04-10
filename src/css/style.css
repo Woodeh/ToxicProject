@@ -1,325 +1,324 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 
 .disable-scroll {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .cart-modal {
-    display: none;
-    position: fixed;
-    width: 520px;
-    top: 0;
-    right: 0;
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  width: 520px;
+  top: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 .cart-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
 }
 
 
 .cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
 }
 
 .close-cart-btn {
-    font-size: 24px;
-    color: #333;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .cart-items {
-    padding: 20px;
-    height: 81vh;
-    overflow: auto;
-    background-color: white;
-    position: relative;
+  padding: 20px;
+  height: 81vh;
+  overflow: auto;
+  background-color: white;
+  position: relative;
 }
 
 .cart-footer {
-    padding: 20px;
-    background-color: rgba(227, 227, 227, 1);
+  padding: 20px;
+  background-color: rgba(227, 227, 227, 1);
 }
 
 .cart-footer-button {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.cart-footer > div {
-    display: flex;
-    justify-content: space-between;
+.cart-footer>div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.cart-footer > div > h3, .cart-total{
-    font-size: 30px;
+.cart-footer>div>h3,
+.cart-total {
+  font-size: 30px;
 }
 
 .buy-cart-btn {
-    max-width: 150px;
-    width: 100%;
-    min-height: 52px;
-    background-color: transparent;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-top: 16px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    box-shadow: inset 0 0 0 0 #002D5B;
-    transition: box-shadow .2s;
-    color: #202020;
+  max-width: 150px;
+  width: 100%;
+  min-height: 52px;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  box-shadow: inset 0 0 0 0 #002D5B;
+  transition: box-shadow .2s;
+  color: #202020;
 }
 
 .buy-cart-btn:hover {
-    box-shadow: inset 0 -300px 0 0 #002D5B;
-    transition: box-shadow .5s ease-in-out 0s;
-    border: 2px solid #002D5B;
-    color: white;
+  box-shadow: inset 0 -300px 0 0 #002D5B;
+  transition: box-shadow .5s ease-in-out 0s;
+  border: 2px solid #002D5B;
+  color: white;
 }
 
 .clear-cart-btn {
-    max-width: 150px;
-    width: 100%;
-    min-height: 52px;
-    background-color: transparent;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-top: 16px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    box-shadow: inset 0 0 0 0 black;
-    transition: box-shadow .2s;
-    color: #202020;
+  max-width: 150px;
+  width: 100%;
+  min-height: 52px;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  box-shadow: inset 0 0 0 0 black;
+  transition: box-shadow .2s;
+  color: #202020;
 }
 
 .clear-cart-btn:hover {
-    box-shadow: inset 0 -300px 0 0 black;
-    transition: box-shadow .5s ease-in-out 0s;
-    border: 2px solid black;
-    color: white;
+  box-shadow: inset 0 -300px 0 0 black;
+  transition: box-shadow .5s ease-in-out 0s;
+  border: 2px solid black;
+  color: white;
 }
 
 .cart-item {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .cart-item-name {
-    font-weight: bold;
-    text-align: center;
+  font-weight: bold;
+  text-align: center;
 }
 
 .cart-item-price {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .cart-item-quantity {
-    font-size: 20px;
-    color: black;
+  font-size: 20px;
+  color: black;
 }
 
 .cart-item-remove {
-    font-size: 40px;
-    color: rgba(32, 32, 32, 1);
-    cursor: pointer;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    right: 20px;
-    padding-top: 5px;
+  font-size: 40px;
+  color: rgba(32, 32, 32, 1);
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 20px;
+  padding-top: 5px;
 }
 
 .all-product-card {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .basket-image {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 
 .items-in-busket {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
 }
 
 
-.cart-header > h2 {
-    font-size: 30px;
+.cart-header>h2 {
+  font-size: 30px;
 }
 
 
 /* About-us */
 
 .about-us {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .about-us-image img {
-    border: 2px solid black;
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-  }
-  
-  .about-us-title,
-  .about-us-text,
-  .about-us-link {
-    font-family: 'Yeseva One', sans-serif;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us-image img {
+  border: 2px solid black;
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.about-us-title,
+.about-us-text,
+.about-us-link {
+  font-family: 'Yeseva One', sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us-title {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 72px;
+  margin-top: 90px;
+}
+
+.about-us-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-us-link {
+  display: flex;
+  justify-content: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #202020;
+  max-width: 160px;
+  margin-bottom: 114px;
+  transition: all 0.5s;
+}
+
+.about-us-link:hover {
+  color: #002D5B;
+  text-shadow: 0px 0px 2px #002e5b68;
+}
+
+@media screen and (max-width: 768px) {
   .about-us-title {
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 72px;
-    margin-top: 90px;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 50px;
   }
-  
+
+
   .about-us-text {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  .about-us-link {
-    display: flex;
-    justify-content: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 24px;
-    text-decoration-line: underline;
-    color: #202020;
-    max-width: 160px;
-    margin-bottom: 114px;
-    transition: all 0.5s;
-  }
-  
-  .about-us-link:hover {
-    color: #002D5B;
-    text-shadow: 0px 0px 2px #002e5b68;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  @media screen and (max-width: 768px) {
-    .about-us-title {
-      font-size: 36px;
-      line-height: 48px;
-      margin-top: 50px;
-    }
-  
-  
-    .about-us-text {
-      font-size: 18px;
-      line-height: 24px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  
-  
-    .about-us-link {
-      font-size: 16px;
-      line-height: 16px;
-      margin-bottom: 50px;
-      max-width: 120px;
-    }
-  }
-  
-  
-  @media screen and (max-width: 576px) {
-    .about-us-title {
-      font-size: 30px;
-      line-height: 40px;
-      margin-top: 50px;
-    }
-  
-  
-    .about-us-text {
-      font-size: 16px;
-      line-height: 22px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-  
-  
-    .about-us-link {
-      font-size: 14px;
-      line-height: 14px;
-      margin-bottom: 30px;
-      max-width: 100px;
-    }
-  }
-  
-  
 
-  #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 123px;
-    right: 60px;
-    z-index: 99;
-    border: 1px solid;
-    border-radius: 50%;
-    outline: none;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
+  .about-us-link {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 50px;
+    max-width: 120px;
   }
-  
+}
 
-  #myBtn svg {
-    display: block;
-    width: 40px;
-    height: 40px;
+
+@media screen and (max-width: 576px) {
+  .about-us-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 50px;
   }
-  
-  #myBtn circle {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-    transition: stroke-dashoffset 0.5s;
+
+
+  .about-us-text {
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-  
-  #myBtn:hover circle {
-    stroke-dashoffset: 0;
+
+
+  .about-us-link {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 30px;
+    max-width: 100px;
   }
-  
-  #myBtn path {
-    transition: fill 0.3s;
-  }
-  
- 
+}
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 123px;
+  right: 60px;
+  z-index: 99;
+  border: 1px solid;
+  border-radius: 50%;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+#myBtn svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+#myBtn circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.5s;
+}
+
+#myBtn:hover circle {
+  stroke-dashoffset: 0;
+}
+
+#myBtn path {
+  transition: fill 0.3s;
+}

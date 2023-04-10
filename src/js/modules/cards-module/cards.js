@@ -241,6 +241,8 @@ const clearCartBtn = document.querySelector(".clear-cart-btn");
 const cartTotal = document.querySelector(".cart-total");
 const cartItems = document.querySelector(".cart-items");
 
+
+
 function disableScroll() {
   body.classList.add("disable-scroll");
   cartOverlay.classList.add("cart-overlay");
@@ -317,17 +319,22 @@ function clearCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+
 function showCart() {
-  cartItems.innerHTML = "";
-  let totalPrice = 0;
-//кружок рядом с корзиной
   let totalQuantity = 0;
   for (let i = 0; i < cart.length; i++) {
     totalQuantity += cart[i].quantity;
   }
   document.getElementById("cartBadge").innerText = totalQuantity;
+  if (totalQuantity === 0) {
+    // cartBadge.style.display = "none";
+    // cartBtn.style.display = "none" // если значение равно нулю
+  } else {
+    // cartBadge.style.display = "block"; // если значение не равно нулю
+  }
 
-
+  cartItems.innerHTML = "";
+  let totalPrice = 0;
 
   for (let i = 0; i < cart.length; i++) {
     let item = cart[i];
@@ -337,16 +344,15 @@ function showCart() {
     let cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
     cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
-          <div class="items-in-busket"> 
-          <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-quantity"><input type="number" min="1" value="${
-            item.quantity
-          }" data-name="${item.name}" data-price="${item.price}"></div>
-          <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
-          </div>
-          <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
+      <div class="items-in-busket"> 
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-quantity"><input type="number" min="1" value="${
+          item.quantity
+        }" data-name="${item.name}" data-price="${item.price}"></div>
+        <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
+      </div>
+      <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
     cartItems.appendChild(cartItem);
-    // cartItem.appendChild(cartItemImage);
     totalPrice += itemPrice;
   }
   cartTotal.textContent = " $" + totalPrice.toFixed(2);
@@ -370,7 +376,6 @@ function showCart() {
   });
   localStorage.setItem("cart", JSON.stringify(cart));
 }
-
 
 
 cartBtn.addEventListener("click", () => {
@@ -410,5 +415,20 @@ cartOverlay.addEventListener("click", (event) => {
   if (event.target === cartOverlay) {
     cartModal.style.display = "none";
     enableScroll();
+  }
+});
+
+//вот этот код добавил
+document.addEventListener("DOMContentLoaded", () => {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQuantity = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalQuantity += cart[i].quantity;
+  }
+  document.getElementById("cartBadge").innerText = totalQuantity;
+  if (totalQuantity === 0) {
+    cartBadge.style.display = "none"; // если значение равно нулю
+  } else {
+    cartBadge.style.display = "block"; // если значение не равно нулю
   }
 });

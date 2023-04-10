@@ -7,8 +7,8 @@ const products = [
     popularity: 3,
     imgUrl: "/src/assets/pictures/catalog/sheridan.png",
     title: "Sheridan",
-    composition:"",
-    link: "/src/pages/big-card-product/big-card-product-sheridan-liqueur.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-sheridan-liqueur.html",
   },
   {
     type: "champagne",
@@ -18,9 +18,8 @@ const products = [
     popularity: 4,
     imgUrl: "/src/assets/pictures/catalog/moet.png",
     title: "Moët & Chandon ",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-champagne-moet.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-champagne-moet.html",
   },
   {
     type: "tequila",
@@ -30,9 +29,8 @@ const products = [
     popularity: 2,
     imgUrl: "/src/assets/pictures/catalog/Tequila 1.png",
     title: "Olmeca",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-olmeca-tequila.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-olmeca-tequila.html",
   },
   {
     type: "gin",
@@ -42,9 +40,8 @@ const products = [
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/Gin 1.png",
     title: "Bombay Sapphire",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-bombay-gin.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-bombay-gin.html",
   },
   {
     type: "beer",
@@ -54,9 +51,8 @@ const products = [
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/beer 1.png",
     title: "Corona Extra",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-beer-corona.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-beer-corona.html",
   },
   {
     type: "vodka",
@@ -66,9 +62,8 @@ const products = [
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/absolute.png",
     title: "Absolute",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-absolut-vodka.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-absolut-vodka.html",
   },
   {
     type: "gin",
@@ -78,21 +73,19 @@ const products = [
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/bottle1.png",
     title: "Hendrick's Orbium",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-hendricks-gin.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-hendricks-gin.html",
   },
   {
     type: "whiskey",
     country: "scotland",
-    price: 36.00,
+    price: 36.0,
     volume: 750,
     popularity: 5,
     imgUrl: "/src/assets/pictures/catalog/chivas.png",
     title: "Chivas Regal",
-    composition:
-      "",
-      link: "/src/pages/big-card-product/big-card-product-chivas-whisky.html"
+    composition: "",
+    link: "/src/pages/big-card-product/big-card-product-chivas-whisky.html",
   },
 ];
 
@@ -108,7 +101,7 @@ function displayProducts(products) {
     productImg.src = product.imgUrl;
 
     const productLike = document.createElement("div");
-    productLike.classList.add("card-like"); //див для сердец - хз пока что с ним делать и как отрисовать
+    productLike.classList.add("card-like");
 
     const productTitle = document.createElement("h3");
     productTitle.classList.add("product-title");
@@ -120,7 +113,9 @@ function displayProducts(products) {
 
     const productType = document.createElement("p");
     productType.classList.add("product-type");
-    productType.textContent = `${product.type.charAt(0).toUpperCase()}${product.type.slice(1)}`;
+    productType.textContent = `${product.type
+      .charAt(0)
+      .toUpperCase()}${product.type.slice(1)}`;
     const productCountry = document.createElement("p");
     productCountry.classList.add("product-country");
     // productCountry.textContent = `Страна производитель: ${product.country}`; на случай если захотим вывести страну в карточку
@@ -133,13 +128,10 @@ function displayProducts(products) {
     productLink.href = product.link;
     productLink.classList.add("product-link");
     productLink.textContent = "More info";
-    
-    
-
 
     const productPopularity = document.createElement("p");
     productPopularity.classList.add("product-popularity");
-    // productPopularity.textContent = `Популярность: ${product.popularity}/5`;
+    // productPopularity.textContent = `Популярность: ${product.popularity}/5`; на случай если захотим вывести популярность в карточку
 
     const productComposition = document.createElement("p");
     productComposition.classList.add("product-composition");
@@ -147,7 +139,7 @@ function displayProducts(products) {
 
     const productBuyButton = document.createElement("button");
     productBuyButton.classList.add("buy-button");
-    productBuyButton.classList.add("add-to-cart")
+    productBuyButton.classList.add("add-to-cart");
     productBuyButton.setAttribute("data-name", `${product.title}`);
     productBuyButton.setAttribute("data-price", `${product.price}`);
     productBuyButton.setAttribute("data-image", `${product.imgUrl}`);
@@ -165,7 +157,6 @@ function displayProducts(products) {
     productCard.appendChild(productLink);
     productCard.appendChild(productBuyButton);
     productsContainer.appendChild(productCard);
-    
   });
 }
 
@@ -217,7 +208,6 @@ function onFilterChange() {
   const priceFilter = document.querySelector("#price-filter").value;
   // const volumeFilter = document.querySelector('#volume-filter').value;
   const popularityFilter = document.querySelector("#popularity-filter").value;
-  const ddFilter = document.querySelector("#dropdown-filter").value;
 
   let filteredProducts = products;
 
@@ -247,7 +237,7 @@ if (type) {
 
 if (search) {
   filteredProducts = filteredProducts.filter((product) => {
-    return ['title', 'composition', 'type', 'country'].some((field) => {
+    return ["title", "composition", "type", "country"].some((field) => {
       return product[field].toLowerCase().includes(search.toLowerCase());
     });
   });
@@ -272,13 +262,23 @@ function filterProducts() {
   // filteredProducts = filterByPopularity(filteredProducts, popularityFilter);
   displayProducts(filteredProducts);
 }
-
+displayProducts(filteredProducts);
 document
   .querySelector("#type-filter")
   .addEventListener("change", filterProducts);
 document
   .querySelector("#country-filter")
   .addEventListener("change", filterProducts);
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("add-to-cart")) {
+    // Get the product details from the dataset attributes of the clicked button
+    let name = event.target.dataset.name;
+    let price = event.target.dataset.price;
+    let image = event.target.dataset.image;
+    addToCartBasket(name, price, image);
+  }
+});
 // document.querySelector('#price-filter').addEventListener('change', filterProducts);
 // document.querySelector('#volume-filter').addEventListener('change', filterProducts);
 // document
@@ -291,7 +291,14 @@ document
 //     typeFilter.removeChild(typeFilter.options[0]);
 //   }, false);
 
-
+displayProducts(filteredProducts);
+let btn = document.querySelector(".add-to-cart");
+btn.addEventListener("click", () => {
+  btn.dataset.name;
+  btn.dataset.price;
+  btn.dataset.image;
+  addToCartBasket(name, price, image);
+});
 
 //коризна для каталога
 const body = document.body;
@@ -348,7 +355,6 @@ function removeFromCart(name) {
   showCart();
 }
 
-
 function clearCart() {
   cart = [];
   showCart();
@@ -356,27 +362,29 @@ function clearCart() {
 }
 
 function showCart() {
-    cartItems.innerHTML = "";
-    let totalPrice = 0;
-    for (let i = 0; i < cart.length; i++) {
-      let item = cart[i];
-      let cartItemImage = document.createElement("img");
-      cartItemImage.src = item.image;
-      let itemPrice = item.price * item.quantity;
-      let cartItem = document.createElement("div");
-      cartItem.classList.add("cart-item");
-      cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
+  cartItems.innerHTML = "";
+  let totalPrice = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let item = cart[i];
+    let cartItemImage = document.createElement("img");
+    cartItemImage.src = item.image;
+    let itemPrice = item.price * item.quantity;
+    let cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+    cartItem.innerHTML = `<img src="${item.image}" alt="" class="basket-image">
           <div class="items-in-busket"> 
           <div class="cart-item-name">${item.name}</div>
-          <div class="cart-item-quantity"><input type="number" min="1" value="${item.quantity}" data-name="${item.name}" data-price="${item.price}"></div>
+          <div class="cart-item-quantity"><input type="number" min="1" value="${
+            item.quantity
+          }" data-name="${item.name}" data-price="${item.price}"></div>
           <div class="cart-item-price">${itemPrice.toFixed(2)} $</div> 
           </div>
           <div class="cart-item-remove" data-name="${item.name}">&times;</div>`;
-      cartItems.appendChild(cartItem);
-      // cartItem.appendChild(cartItemImage);
-      totalPrice += itemPrice;
-    }
-  cartTotal.textContent =" $" +  totalPrice.toFixed(2);
+    cartItems.appendChild(cartItem);
+    // cartItem.appendChild(cartItemImage);
+    totalPrice += itemPrice;
+  }
+  cartTotal.textContent = " $" + totalPrice.toFixed(2);
 
   let quantityInputs = document.querySelectorAll(
     ".cart-item-quantity input[type='number']"

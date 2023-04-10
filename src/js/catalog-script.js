@@ -262,6 +262,16 @@ document
 document
   .querySelector("#country-filter")
   .addEventListener("change", filterProducts);
+
+  document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("add-to-cart")) {
+      // Get the product details from the dataset attributes of the clicked button
+      let name = event.target.dataset.name;
+      let price = event.target.dataset.price;
+      let image = event.target.dataset.image;
+      addToCartBasket(name, price, image);
+    }
+  });
 // document.querySelector('#price-filter').addEventListener('change', filterProducts);
 // document.querySelector('#volume-filter').addEventListener('change', filterProducts);
 // document
@@ -273,8 +283,14 @@ document
 //     // Удаляем первый элемент (Type) из списка options
 //     typeFilter.removeChild(typeFilter.options[0]);
 //   }, false);
-
-
+displayProducts(filteredProducts);
+let btn = document.querySelector('.add-to-cart');
+    btn.addEventListener('click', () =>{
+      btn.dataset.name
+      btn.dataset.price
+      btn.dataset.image
+      addToCartBasket(name, price, image);
+    });
 
 //коризна для каталога
 const body = document.body;
